@@ -75,3 +75,20 @@ combined_data = combined_data[['density', 'canopy', 'simulation', 'rank',  'area
 combined_data.to_csv('combined_results_simulations.csv', index=False)
 
 print("Data processing complete. File saved as 'combined_simulation_data_filtered.csv'.")
+
+
+# Get total light absorbed.
+file_path = 'combined_results_simulations.csv' 
+data = pd.read_csv(file_path)
+
+# Group the data by 'density', 'canopy', and 'simulation' and sum the specified columns
+grouped_data = data.groupby(['density', 'canopy', 'simulation']).agg({
+    'absorbedPAR [umol m^-2 s^-1]': 'sum',
+    'area_m2[m^2]': 'sum'
+}).reset_index()
+
+# Save the aggregated data to a new CSV file
+output_path = 'total_absorbedPAR.csv' 
+grouped_data.to_csv(output_path, index=False)
+
+print("Aggregation complete. Data saved to:", output_path)
