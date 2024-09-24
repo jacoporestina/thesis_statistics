@@ -1,0 +1,70 @@
+ANOVA Results for Rank 2:
+                          sum_sq    df         F    PR(>F)
+C(density)              0.666667   1.0  0.065395  0.801063
+C(canopy)              17.333333   2.0  0.850136  0.443815
+C(density):C(canopy)   50.333333   2.0  2.468665  0.112867
+Residual              183.500000  18.0       NaN       NaN
+ANOVA Results for Rank 3:
+                          sum_sq    df         F    PR(>F)
+C(density)              0.666667   1.0  0.101695  0.753476
+C(canopy)              52.583333   2.0  4.010593  0.036267
+C(density):C(canopy)   44.083333   2.0  3.362288  0.057450
+Residual              118.000000  18.0       NaN       NaN
+
+Post-hoc (LSD) Results for Rank 3:
+        Multiple Comparison of Means - Tukey HSD, FWER=0.05         
+====================================================================
+    group1         group2     meandiff p-adj   lower   upper  reject
+--------------------------------------------------------------------
+   HighcanopyA    HighcanopyB      6.5 0.0217  0.7463 12.2537   True
+   HighcanopyA Highexperiment     4.75 0.1419 -1.0037 10.5037  False
+   HighcanopyA     LowcanopyA      3.5 0.4151 -2.2537  9.2537  False
+   HighcanopyA     LowcanopyB     4.25 0.2264 -1.5037 10.0037  False
+   HighcanopyA  Lowexperiment      2.5 0.7374 -3.2537  8.2537  False
+   HighcanopyB Highexperiment    -1.75 0.9227 -7.5037  4.0037  False
+   HighcanopyB     LowcanopyA     -3.0 0.5745 -8.7537  2.7537  False
+   HighcanopyB     LowcanopyB    -2.25 0.8105 -8.0037  3.5037  False
+   HighcanopyB  Lowexperiment     -4.0  0.281 -9.7537  1.7537  False
+Highexperiment     LowcanopyA    -1.25 0.9807 -7.0037  4.5037  False
+Highexperiment     LowcanopyB     -0.5 0.9997 -6.2537  5.2537  False
+Highexperiment  Lowexperiment    -2.25 0.8105 -8.0037  3.5037  False
+    LowcanopyA     LowcanopyB     0.75 0.9982 -5.0037  6.5037  False
+    LowcanopyA  Lowexperiment     -1.0 0.9929 -6.7537  4.7537  False
+    LowcanopyB  Lowexperiment    -1.75 0.9227 -7.5037  4.0037  False
+--------------------------------------------------------------------
+ANOVA Results for Rank 4:
+                          sum_sq    df         F    PR(>F)
+C(density)              0.375000   1.0  0.030928  0.862365
+C(canopy)               6.583333   2.0  0.271478  0.765318
+C(density):C(canopy)   15.750000   2.0  0.649485  0.534128
+Residual              218.250000  18.0       NaN       NaN
+ANOVA Results for Rank 5:
+                          sum_sq    df         F    PR(>F)
+C(density)             20.166667   1.0  2.104348  0.164085
+C(canopy)              18.083333   2.0  0.943478  0.407697
+C(density):C(canopy)   16.583333   2.0  0.865217  0.437746
+Residual              172.500000  18.0       NaN       NaN
+ANOVA Results for Rank 6:
+                          sum_sq    df         F    PR(>F)
+C(density)              2.666667   1.0  0.243655  0.627548
+C(canopy)              30.083333   2.0  1.374365  0.278310
+C(density):C(canopy)    8.083333   2.0  0.369289  0.696342
+Residual              197.000000  18.0       NaN       NaN
+ANOVA Results for Rank 7:
+                          sum_sq    df         F    PR(>F)
+C(density)              9.375000   1.0  0.952045  0.342131
+C(canopy)               2.333333   2.0  0.118477  0.888959
+C(density):C(canopy)    9.000000   2.0  0.456982  0.640339
+Residual              177.250000  18.0       NaN       NaN
+ANOVA Results for Rank 8:
+                          sum_sq    df         F    PR(>F)
+C(density)              5.041667   1.0  0.396721  0.536702
+C(canopy)               9.250000   2.0  0.363934  0.699934
+C(density):C(canopy)    1.583333   2.0  0.062295  0.939807
+Residual              228.750000  18.0       NaN       NaN
+ANOVA Results for Rank 9:
+                          sum_sq    df         F    PR(>F)
+C(density)             12.041667   1.0  1.066421  0.315432
+C(canopy)               6.583333   2.0  0.291513  0.750593
+C(density):C(canopy)   11.083333   2.0  0.490775  0.620108
+Residual              203.250000  18.0       NaN       NaN
