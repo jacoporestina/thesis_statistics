@@ -1,0 +1,47 @@
+
+ANOVA results for total absorbedPAR: 
+                            sum_sq   df         F    PR(>F)
+C(density)            7098.809931  1.0  4.892903  0.068954
+C(canopy)              744.689468  2.0  0.256641  0.781725
+C(density):C(canopy)   144.024374  2.0  0.049635  0.951963
+Residual              8705.028752  6.0       NaN       NaN 
+
+Model summary: 
+                              OLS Regression Results                              
+==================================================================================
+Dep. Variable:     absorbedPAR_umol_m2_s1   R-squared:                       0.479
+Model:                                OLS   Adj. R-squared:                  0.044
+Method:                     Least Squares   F-statistic:                     1.101
+Date:                    Wed, 25 Sep 2024   Prob (F-statistic):              0.447
+Time:                            17:56:49   Log-Likelihood:                -56.548
+No. Observations:                      12   AIC:                             125.1
+Df Residuals:                           6   BIC:                             128.0
+Df Model:                               5                                         
+Covariance Type:                nonrobust                                         
+=============================================================================================================
+                                                coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------------------
+Intercept                                   205.3700     26.934      7.625      0.000     139.466     271.274
+C(density)[T.Low]                           -56.4593     38.090     -1.482      0.189    -149.662      36.743
+C(canopy)[T.canopyB]                          0.4684     38.090      0.012      0.991     -92.734      93.671
+C(canopy)[T.experiment]                      15.9752     38.090      0.419      0.690     -77.227     109.178
+C(density)[T.Low]:C(canopy)[T.canopyB]       16.8417     53.867      0.313      0.765    -114.967     148.650
+C(density)[T.Low]:C(canopy)[T.experiment]     6.6033     53.867      0.123      0.906    -125.205     138.412
+==============================================================================
+Omnibus:                        0.847   Durbin-Watson:                   2.597
+Prob(Omnibus):                  0.655   Jarque-Bera (JB):                0.625
+Skew:                           0.000   Prob(JB):                        0.732
+Kurtosis:                       1.882   Cond. No.                         9.77
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+Descriptive statistics:        absorbedPAR_umol_m2_s1  area_m2[m^2]
+count               12.000000     12.000000
+mean               186.529049      0.047696
+std                 38.955164      0.001138
+min                126.382801      0.046980
+25%                149.251665      0.046997
+50%                198.429905      0.047520
+75%                207.450878      0.047581
+max                256.165607      0.051161 

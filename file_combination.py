@@ -27,6 +27,10 @@ for file in file_paths:
     # Load the file
     df = pd.read_csv(file)
     
+    # Adjust the 'rank' column by subtracting 1 from each value to start ranks from 1
+    df['rank'] = df['rank'] - 1
+    print(df['rank'])
+
     # Remove rows where Organ_ID starts with "organs.Internode"
     df = df[~df['Organ_ID'].str.startswith('organs.Internode')]
 
@@ -46,21 +50,21 @@ for file in file_paths:
     df.drop(columns=columns_to_drop, inplace=True)
     
     # Create new column for absorbedPAR [umol m^-2 s^-1]
-    df['absorbedPAR [umol m^-2 s^-1]'] = df['absorbedPAR [umol s^-1]'] / df['area_m2[m^2]']
+    df['absorbedPAR_umol_m2_s1'] = df['absorbedPAR [umol s^-1]'] / df['area_m2[m^2]']
 
-    # Handle rank 2 separately by first summing the values for two leaves and then averaging
-    rank2_df = df[df['rank'] == 2]
-    numeric_columns = ['absorbedPAR [umol m^-2 s^-1]', 'area_m2[m^2]', 'absorbedPAR [umol s^-1]']
-    rank2_summed = rank2_df.groupby(['density', 'canopy', 'simulation', 'plantNb']).sum().reset_index()
-    rank2_averaged = rank2_summed.groupby(['density', 'canopy', 'simulation'])[numeric_columns].mean().reset_index()
-    rank2_averaged['rank'] = 2  # Assigning rank 2 for merged data
+    # Handle rank 1 separately by first summing the values for two leaves and then averaging
+    rank1_df = df[df['rank'] == 1]
+    numeric_columns = ['absorbedPAR_umol_m2_s1', 'area_m2[m^2]', 'absorbedPAR [umol s^-1]']
+    rank1_summed = rank1_df.groupby(['density', 'canopy', 'simulation', 'plantNb']).sum().reset_index()
+    rank1_averaged = rank1_summed.groupby(['density', 'canopy', 'simulation'])[numeric_columns].mean().reset_index()
+    rank1_averaged['rank'] = 1 
     
     # Handle other ranks normally
-    other_ranks_df = df[df['rank'] != 2]
+    other_ranks_df = df[df['rank'] != 1]
     other_ranks_mean = other_ranks_df.groupby(['density', 'canopy', 'simulation', 'rank'])[numeric_columns].mean().reset_index()
 
     # Combine rank 2 and other ranks
-    combined_df = pd.concat([rank2_averaged, other_ranks_mean], ignore_index=True)
+    combined_df = pd.concat([rank1_averaged, other_ranks_mean], ignore_index=True)
     
     # Append the processed DataFrame to the list
     dfs.append(combined_df)
@@ -69,7 +73,7 @@ for file in file_paths:
 combined_data = pd.concat(dfs, ignore_index=True)
 
 # Assuming 'combined_data' is your final DataFrame
-combined_data = combined_data[['density', 'canopy', 'simulation', 'rank',  'area_m2[m^2]', 'absorbedPAR [umol m^-2 s^-1]']]
+combined_data = combined_data[['density', 'canopy', 'simulation', 'rank',  'area_m2[m^2]', 'absorbedPAR_umol_m2_s1']]
 
 # Save the combined data to a new CSV
 combined_data.to_csv('combined_results_simulations.csv', index=False)
@@ -83,7 +87,7 @@ data = pd.read_csv(file_path)
 
 # Group the data by 'density', 'canopy', and 'simulation' and sum the specified columns
 grouped_data = data.groupby(['density', 'canopy', 'simulation']).agg({
-    'absorbedPAR [umol m^-2 s^-1]': 'sum',
+    'absorbedPAR_umol_m2_s1': 'sum',
     'area_m2[m^2]': 'sum'
 }).reset_index()
 
