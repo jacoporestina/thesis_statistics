@@ -1,0 +1,470 @@
+
+ANOVA Results for Rank 2:
+                          sum_sq    df         F    PR(>F)
+C(density)              0.666667   1.0  0.065395  0.801063
+C(canopy)              17.333333   2.0  0.850136  0.443815
+C(density):C(canopy)   50.333333   2.0  2.468665  0.112867
+Residual              183.500000  18.0       NaN       NaN
+
+Model Summary:
+                              OLS Regression Results                              
+==================================================================================
+Dep. Variable:     absorbedPAR_umol_m2_s1   R-squared:                       0.271
+Model:                                OLS   Adj. R-squared:                  0.069
+Method:                     Least Squares   F-statistic:                     1.341
+Date:                    Thu, 26 Sep 2024   Prob (F-statistic):              0.292
+Time:                            13:29:04   Log-Likelihood:                -58.464
+No. Observations:                      24   AIC:                             128.9
+Df Residuals:                          18   BIC:                             136.0
+Df Model:                               5                                         
+Covariance Type:                nonrobust                                         
+=============================================================================================================
+                                                coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------------------
+Intercept                                     5.5000      1.596      3.445      0.003       2.146       8.854
+C(density)[T.Low]                            -3.5000      2.258     -1.550      0.138      -8.243       1.243
+C(canopy)[T.canopyB]                          0.2500      2.258      0.111      0.913      -4.493       4.993
+C(canopy)[T.experiment]                      -1.5000      2.258     -0.664      0.515      -6.243       3.243
+C(density)[T.Low]:C(canopy)[T.canopyB]        2.5000      3.193      0.783      0.444      -4.208       9.208
+C(density)[T.Low]:C(canopy)[T.experiment]     7.0000      3.193      2.192      0.042       0.292      13.708
+==============================================================================
+Omnibus:                        1.129   Durbin-Watson:                   2.441
+Prob(Omnibus):                  0.569   Jarque-Bera (JB):                0.845
+Skew:                          -0.093   Prob(JB):                        0.656
+Kurtosis:                       2.100   Cond. No.                         9.77
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+Confidence Intervals for Model Parameters:
+                                                  0          1
+Intercept                                  2.146010   8.853990
+C(density)[T.Low]                         -8.243258   1.243258
+C(canopy)[T.canopyB]                      -4.493258   4.993258
+C(canopy)[T.experiment]                   -6.243258   3.243258
+C(density)[T.Low]:C(canopy)[T.canopyB]    -4.207979   9.207979
+C(density)[T.Low]:C(canopy)[T.experiment]  0.292021  13.707979
+
+Descriptive Statistics for Rank 2:
+                    count  mean       std  min   25%  50%    75%   max
+density canopy                                                        
+High    canopyA       4.0  5.50  3.109126  2.0  3.50  5.5   7.50   9.0
+        canopyB       4.0  5.75  3.862210  2.0  2.75  5.5   8.50  10.0
+        experiment    4.0  4.00  3.559026  1.0  1.75  3.0   5.25   9.0
+Low     canopyA       4.0  2.00  0.816497  1.0  1.75  2.0   2.25   3.0
+        canopyB       4.0  4.75  2.986079  1.0  3.25  5.0   6.50   8.0
+        experiment    4.0  7.50  3.785939  2.0  6.50  9.0  10.00  10.0
+
+ANOVA Results for Rank 3:
+                          sum_sq    df         F    PR(>F)
+C(density)              0.666667   1.0  0.101695  0.753476
+C(canopy)              52.583333   2.0  4.010593  0.036267
+C(density):C(canopy)   44.083333   2.0  3.362288  0.057450
+Residual              118.000000  18.0       NaN       NaN
+
+Model Summary:
+                              OLS Regression Results                              
+==================================================================================
+Dep. Variable:     absorbedPAR_umol_m2_s1   R-squared:                       0.452
+Model:                                OLS   Adj. R-squared:                  0.300
+Method:                     Least Squares   F-statistic:                     2.969
+Date:                    Thu, 26 Sep 2024   Prob (F-statistic):             0.0398
+Time:                            13:29:04   Log-Likelihood:                -53.166
+No. Observations:                      24   AIC:                             118.3
+Df Residuals:                          18   BIC:                             125.4
+Df Model:                               5                                         
+Covariance Type:                nonrobust                                         
+=============================================================================================================
+                                                coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------------------
+Intercept                                     1.7500      1.280      1.367      0.188      -0.940       4.440
+C(density)[T.Low]                             3.5000      1.810      1.933      0.069      -0.304       7.304
+C(canopy)[T.canopyB]                          6.5000      1.810      3.590      0.002       2.696      10.304
+C(canopy)[T.experiment]                       4.7500      1.810      2.624      0.017       0.946       8.554
+C(density)[T.Low]:C(canopy)[T.canopyB]       -5.7500      2.560     -2.246      0.038     -11.129      -0.371
+C(density)[T.Low]:C(canopy)[T.experiment]    -5.7500      2.560     -2.246      0.038     -11.129      -0.371
+==============================================================================
+Omnibus:                        0.025   Durbin-Watson:                   2.028
+Prob(Omnibus):                  0.988   Jarque-Bera (JB):                0.208
+Skew:                          -0.054   Prob(JB):                        0.901
+Kurtosis:                       2.557   Cond. No.                         9.77
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+Confidence Intervals for Model Parameters:
+                                                   0          1
+Intercept                                  -0.939581   4.439581
+C(density)[T.Low]                          -0.303642   7.303642
+C(canopy)[T.canopyB]                        2.696358  10.303642
+C(canopy)[T.experiment]                     0.946358   8.553642
+C(density)[T.Low]:C(canopy)[T.canopyB]    -11.129163  -0.370837
+C(density)[T.Low]:C(canopy)[T.experiment] -11.129163  -0.370837
+
+Descriptive Statistics for Rank 3:
+                    count  mean       std  min   25%  50%   75%   max
+density canopy                                                       
+High    canopyA       4.0  1.75  0.957427  1.0  1.00  1.5  2.25   3.0
+        canopyB       4.0  8.25  2.217356  5.0  8.00  9.0  9.25  10.0
+        experiment    4.0  6.50  3.109126  3.0  4.50  6.5  8.50  10.0
+Low     canopyA       4.0  5.25  2.986079  1.0  4.75  6.0  6.50   8.0
+        canopyB       4.0  6.00  1.414214  5.0  5.00  5.5  6.50   8.0
+        experiment    4.0  4.25  3.593976  1.0  1.75  3.5  6.00   9.0
+
+Post-hoc (Tukeyhsd) Results for Rank 3:
+        Multiple Comparison of Means - Tukey HSD, FWER=0.05         
+====================================================================
+    group1         group2     meandiff p-adj   lower   upper  reject
+--------------------------------------------------------------------
+   HighcanopyA    HighcanopyB      6.5 0.0217  0.7463 12.2537   True
+   HighcanopyA Highexperiment     4.75 0.1419 -1.0037 10.5037  False
+   HighcanopyA     LowcanopyA      3.5 0.4151 -2.2537  9.2537  False
+   HighcanopyA     LowcanopyB     4.25 0.2264 -1.5037 10.0037  False
+   HighcanopyA  Lowexperiment      2.5 0.7374 -3.2537  8.2537  False
+   HighcanopyB Highexperiment    -1.75 0.9227 -7.5037  4.0037  False
+   HighcanopyB     LowcanopyA     -3.0 0.5745 -8.7537  2.7537  False
+   HighcanopyB     LowcanopyB    -2.25 0.8105 -8.0037  3.5037  False
+   HighcanopyB  Lowexperiment     -4.0  0.281 -9.7537  1.7537  False
+Highexperiment     LowcanopyA    -1.25 0.9807 -7.0037  4.5037  False
+Highexperiment     LowcanopyB     -0.5 0.9997 -6.2537  5.2537  False
+Highexperiment  Lowexperiment    -2.25 0.8105 -8.0037  3.5037  False
+    LowcanopyA     LowcanopyB     0.75 0.9982 -5.0037  6.5037  False
+    LowcanopyA  Lowexperiment     -1.0 0.9929 -6.7537  4.7537  False
+    LowcanopyB  Lowexperiment    -1.75 0.9227 -7.5037  4.0037  False
+--------------------------------------------------------------------
+
+ANOVA Results for Rank 4:
+                          sum_sq    df         F    PR(>F)
+C(density)              0.375000   1.0  0.030928  0.862365
+C(canopy)               6.583333   2.0  0.271478  0.765318
+C(density):C(canopy)   15.750000   2.0  0.649485  0.534128
+Residual              218.250000  18.0       NaN       NaN
+
+Model Summary:
+                              OLS Regression Results                              
+==================================================================================
+Dep. Variable:     absorbedPAR_umol_m2_s1   R-squared:                       0.094
+Model:                                OLS   Adj. R-squared:                 -0.157
+Method:                     Least Squares   F-statistic:                    0.3746
+Date:                    Thu, 26 Sep 2024   Prob (F-statistic):              0.859
+Time:                            13:29:05   Log-Likelihood:                -60.546
+No. Observations:                      24   AIC:                             133.1
+Df Residuals:                          18   BIC:                             140.2
+Df Model:                               5                                         
+Covariance Type:                nonrobust                                         
+=============================================================================================================
+                                                coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------------------
+Intercept                                     5.2500      1.741      3.015      0.007       1.592       8.908
+C(density)[T.Low]                             1.7500      2.462      0.711      0.486      -3.423       6.923
+C(canopy)[T.canopyB]                         -0.5000      2.462     -0.203      0.841      -5.673       4.673
+C(canopy)[T.experiment]                       2.2500      2.462      0.914      0.373      -2.923       7.423
+C(density)[T.Low]:C(canopy)[T.canopyB]       -0.7500      3.482     -0.215      0.832      -8.066       6.566
+C(density)[T.Low]:C(canopy)[T.experiment]    -3.7500      3.482     -1.077      0.296     -11.066       3.566
+==============================================================================
+Omnibus:                        4.195   Durbin-Watson:                   1.977
+Prob(Omnibus):                  0.123   Jarque-Bera (JB):                1.511
+Skew:                          -0.039   Prob(JB):                        0.470
+Kurtosis:                       1.773   Cond. No.                         9.77
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+Confidence Intervals for Model Parameters:
+                                                   0         1
+Intercept                                   1.592193  8.907807
+C(density)[T.Low]                          -3.422921  6.922921
+C(canopy)[T.canopyB]                       -5.672921  4.672921
+C(canopy)[T.experiment]                    -2.922921  7.422921
+C(density)[T.Low]:C(canopy)[T.canopyB]     -8.065614  6.565614
+C(density)[T.Low]:C(canopy)[T.experiment] -11.065614  3.565614
+
+Descriptive Statistics for Rank 4:
+                    count  mean       std  min   25%  50%    75%   max
+density canopy                                                        
+High    canopyA       4.0  5.25  2.753785  2.0  3.50  5.5   7.25   8.0
+        canopyB       4.0  4.75  4.500000  1.0  1.00  4.0   7.75  10.0
+        experiment    4.0  7.50  2.645751  4.0  6.25  8.0   9.25  10.0
+Low     canopyA       4.0  7.00  2.828427  3.0  6.00  8.0   9.00   9.0
+        canopyB       4.0  5.75  1.707825  4.0  4.75  5.5   6.50   8.0
+        experiment    4.0  5.50  5.196152  1.0  1.00  5.5  10.00  10.0
+
+ANOVA Results for Rank 5:
+                          sum_sq    df         F    PR(>F)
+C(density)             20.166667   1.0  2.104348  0.164085
+C(canopy)              18.083333   2.0  0.943478  0.407697
+C(density):C(canopy)   16.583333   2.0  0.865217  0.437746
+Residual              172.500000  18.0       NaN       NaN
+
+Model Summary:
+                              OLS Regression Results                              
+==================================================================================
+Dep. Variable:     absorbedPAR_umol_m2_s1   R-squared:                       0.241
+Model:                                OLS   Adj. R-squared:                  0.030
+Method:                     Least Squares   F-statistic:                     1.144
+Date:                    Thu, 26 Sep 2024   Prob (F-statistic):              0.373
+Time:                            13:29:05   Log-Likelihood:                -57.723
+No. Observations:                      24   AIC:                             127.4
+Df Residuals:                          18   BIC:                             134.5
+Df Model:                               5                                         
+Covariance Type:                nonrobust                                         
+=============================================================================================================
+                                                coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------------------
+Intercept                                     6.0000      1.548      3.876      0.001       2.748       9.252
+C(density)[T.Low]                             2.7500      2.189      1.256      0.225      -1.849       7.349
+C(canopy)[T.canopyB]                       2.665e-15      2.189   1.22e-15      1.000      -4.599       4.599
+C(canopy)[T.experiment]                      -2.2500      2.189     -1.028      0.318      -6.849       2.349
+C(density)[T.Low]:C(canopy)[T.canopyB]       -3.2500      3.096     -1.050      0.308      -9.754       3.254
+C(density)[T.Low]:C(canopy)[T.experiment]     0.5000      3.096      0.162      0.873      -6.004       7.004
+==============================================================================
+Omnibus:                        2.210   Durbin-Watson:                   1.965
+Prob(Omnibus):                  0.331   Jarque-Bera (JB):                1.372
+Skew:                           0.310   Prob(JB):                        0.504
+Kurtosis:                       2.006   Cond. No.                         9.77
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+Confidence Intervals for Model Parameters:
+                                                  0         1
+Intercept                                  2.748092  9.251908
+C(density)[T.Low]                         -1.848892  7.348892
+C(canopy)[T.canopyB]                      -4.598892  4.598892
+C(canopy)[T.experiment]                   -6.848892  2.348892
+C(density)[T.Low]:C(canopy)[T.canopyB]    -9.753816  3.253816
+C(density)[T.Low]:C(canopy)[T.experiment] -6.003816  7.003816
+
+Descriptive Statistics for Rank 5:
+                    count  mean       std  min   25%  50%    75%   max
+density canopy                                                        
+High    canopyA       4.0  6.00  4.082483  2.0  2.75  6.0   9.25  10.0
+        canopyB       4.0  6.00  2.160247  4.0  4.75  5.5   6.75   9.0
+        experiment    4.0  3.75  3.593976  1.0  1.75  2.5   4.50   9.0
+Low     canopyA       4.0  8.75  1.892969  6.0  8.25  9.5  10.00  10.0
+        canopyB       4.0  5.50  3.316625  3.0  3.00  4.5   7.00  10.0
+        experiment    4.0  7.00  2.943920  3.0  6.00  7.5   8.50  10.0
+
+ANOVA Results for Rank 6:
+                          sum_sq    df         F    PR(>F)
+C(density)              2.666667   1.0  0.243655  0.627548
+C(canopy)              30.083333   2.0  1.374365  0.278310
+C(density):C(canopy)    8.083333   2.0  0.369289  0.696342
+Residual              197.000000  18.0       NaN       NaN
+
+Model Summary:
+                              OLS Regression Results                              
+==================================================================================
+Dep. Variable:     absorbedPAR_umol_m2_s1   R-squared:                       0.172
+Model:                                OLS   Adj. R-squared:                 -0.058
+Method:                     Least Squares   F-statistic:                    0.7462
+Date:                    Thu, 26 Sep 2024   Prob (F-statistic):              0.599
+Time:                            13:29:05   Log-Likelihood:                -59.316
+No. Observations:                      24   AIC:                             130.6
+Df Residuals:                          18   BIC:                             137.7
+Df Model:                               5                                         
+Covariance Type:                nonrobust                                         
+=============================================================================================================
+                                                coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------------------
+Intercept                                     5.0000      1.654      3.023      0.007       1.525       8.475
+C(density)[T.Low]                             0.2500      2.339      0.107      0.916      -4.665       5.165
+C(canopy)[T.canopyB]                          1.0000      2.339      0.427      0.674      -3.915       5.915
+C(canopy)[T.experiment]                      -0.2500      2.339     -0.107      0.916      -5.165       4.665
+C(density)[T.Low]:C(canopy)[T.canopyB]        2.0000      3.308      0.605      0.553      -4.950       8.950
+C(density)[T.Low]:C(canopy)[T.experiment]    -0.7500      3.308     -0.227      0.823      -7.700       6.200
+==============================================================================
+Omnibus:                        3.139   Durbin-Watson:                   2.753
+Prob(Omnibus):                  0.208   Jarque-Bera (JB):                1.499
+Skew:                           0.248   Prob(JB):                        0.473
+Kurtosis:                       1.881   Cond. No.                         9.77
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+Confidence Intervals for Model Parameters:
+                                                  0         1
+Intercept                                  1.524824  8.475176
+C(density)[T.Low]                         -4.664641  5.164641
+C(canopy)[T.canopyB]                      -3.914641  5.914641
+C(canopy)[T.experiment]                   -5.164641  4.664641
+C(density)[T.Low]:C(canopy)[T.canopyB]    -4.950352  8.950352
+C(density)[T.Low]:C(canopy)[T.experiment] -7.700352  6.200352
+
+Descriptive Statistics for Rank 6:
+                    count  mean       std  min   25%  50%    75%   max
+density canopy                                                        
+High    canopyA       4.0  5.00  3.559026  2.0  2.75  4.0   6.25  10.0
+        canopyB       4.0  6.00  3.559026  3.0  3.00  5.5   8.50  10.0
+        experiment    4.0  4.75  3.095696  2.0  2.75  4.0   6.00   9.0
+Low     canopyA       4.0  5.25  3.304038  1.0  4.00  5.5   6.75   9.0
+        canopyB       4.0  8.25  2.872281  4.0  7.75  9.5  10.00  10.0
+        experiment    4.0  4.25  3.403430  1.0  2.50  3.5   5.25   9.0
+
+ANOVA Results for Rank 7:
+                          sum_sq    df         F    PR(>F)
+C(density)              9.375000   1.0  0.952045  0.342131
+C(canopy)               2.333333   2.0  0.118477  0.888959
+C(density):C(canopy)    9.000000   2.0  0.456982  0.640339
+Residual              177.250000  18.0       NaN       NaN
+
+Model Summary:
+                              OLS Regression Results                              
+==================================================================================
+Dep. Variable:     absorbedPAR_umol_m2_s1   R-squared:                       0.105
+Model:                                OLS   Adj. R-squared:                 -0.144
+Method:                     Least Squares   F-statistic:                    0.4206
+Date:                    Thu, 26 Sep 2024   Prob (F-statistic):              0.828
+Time:                            13:29:05   Log-Likelihood:                -58.049
+No. Observations:                      24   AIC:                             128.1
+Df Residuals:                          18   BIC:                             135.2
+Df Model:                               5                                         
+Covariance Type:                nonrobust                                         
+=============================================================================================================
+                                                coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------------------
+Intercept                                     5.7500      1.569      3.665      0.002       2.454       9.046
+C(density)[T.Low]                             1.2500      2.219      0.563      0.580      -3.412       5.912
+C(canopy)[T.canopyB]                          1.2500      2.219      0.563      0.580      -3.412       5.912
+C(canopy)[T.experiment]                    7.105e-15      2.219    3.2e-15      1.000      -4.662       4.662
+C(density)[T.Low]:C(canopy)[T.canopyB]       -1.5000      3.138     -0.478      0.638      -8.093       5.093
+C(density)[T.Low]:C(canopy)[T.experiment]     1.5000      3.138      0.478      0.638      -5.093       8.093
+==============================================================================
+Omnibus:                        3.017   Durbin-Watson:                   1.870
+Prob(Omnibus):                  0.221   Jarque-Bera (JB):                2.065
+Skew:                          -0.719   Prob(JB):                        0.356
+Kurtosis:                       3.012   Cond. No.                         9.77
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+Confidence Intervals for Model Parameters:
+                                                  0         1
+Intercept                                  2.453623  9.046377
+C(density)[T.Low]                         -3.411780  5.911780
+C(canopy)[T.canopyB]                      -3.411780  5.911780
+C(canopy)[T.experiment]                   -4.661780  4.661780
+C(density)[T.Low]:C(canopy)[T.canopyB]    -8.092753  5.092753
+C(density)[T.Low]:C(canopy)[T.experiment] -5.092753  8.092753
+
+Descriptive Statistics for Rank 7:
+                    count  mean       std  min   25%  50%    75%   max
+density canopy                                                        
+High    canopyA       4.0  5.75  0.500000  5.0  5.75  6.0   6.00   6.0
+        canopyB       4.0  7.00  4.000000  1.0  7.00  9.0   9.00   9.0
+        experiment    4.0  5.75  4.924429  1.0  1.75  6.0  10.00  10.0
+Low     canopyA       4.0  7.00  1.154701  6.0  6.00  7.0   8.00   8.0
+        canopyB       4.0  6.75  4.031129  1.0  5.50  8.0   9.25  10.0
+        experiment    4.0  8.50  1.000000  7.0  8.50  9.0   9.00   9.0
+
+ANOVA Results for Rank 8:
+                          sum_sq    df         F    PR(>F)
+C(density)              5.041667   1.0  0.396721  0.536702
+C(canopy)               9.250000   2.0  0.363934  0.699934
+C(density):C(canopy)    1.583333   2.0  0.062295  0.939807
+Residual              228.750000  18.0       NaN       NaN
+
+Model Summary:
+                              OLS Regression Results                              
+==================================================================================
+Dep. Variable:     absorbedPAR_umol_m2_s1   R-squared:                       0.065
+Model:                                OLS   Adj. R-squared:                 -0.195
+Method:                     Least Squares   F-statistic:                    0.2498
+Date:                    Thu, 26 Sep 2024   Prob (F-statistic):              0.934
+Time:                            13:29:06   Log-Likelihood:                -61.109
+No. Observations:                      24   AIC:                             134.2
+Df Residuals:                          18   BIC:                             141.3
+Df Model:                               5                                         
+Covariance Type:                nonrobust                                         
+=============================================================================================================
+                                                coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------------------
+Intercept                                     5.7500      1.782      3.226      0.005       2.005       9.495
+C(density)[T.Low]                             1.0000      2.521      0.397      0.696      -4.296       6.296
+C(canopy)[T.canopyB]                         -1.5000      2.521     -0.595      0.559      -6.796       3.796
+C(canopy)[T.experiment]                       0.5000      2.521      0.198      0.845      -4.796       5.796
+C(density)[T.Low]:C(canopy)[T.canopyB]        0.5000      3.565      0.140      0.890      -6.990       7.990
+C(density)[T.Low]:C(canopy)[T.experiment]    -0.7500      3.565     -0.210      0.836      -8.240       6.740
+==============================================================================
+Omnibus:                        8.064   Durbin-Watson:                   1.216
+Prob(Omnibus):                  0.018   Jarque-Bera (JB):                2.163
+Skew:                          -0.224   Prob(JB):                        0.339
+Kurtosis:                       1.599   Cond. No.                         9.77
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+Confidence Intervals for Model Parameters:
+                                                  0         1
+Intercept                                  2.005238  9.494762
+C(density)[T.Low]                         -4.295893  6.295893
+C(canopy)[T.canopyB]                      -6.795893  3.795893
+C(canopy)[T.experiment]                   -4.795893  5.795893
+C(density)[T.Low]:C(canopy)[T.canopyB]    -6.989524  7.989524
+C(density)[T.Low]:C(canopy)[T.experiment] -8.239524  6.739524
+
+Descriptive Statistics for Rank 8:
+                    count  mean       std  min   25%  50%    75%   max
+density canopy                                                        
+High    canopyA       4.0  5.75  2.986079  2.0  4.25  6.0   7.50   9.0
+        canopyB       4.0  4.25  2.753785  1.0  2.50  4.5   6.25   7.0
+        experiment    4.0  6.25  3.862210  1.0  4.75  7.0   8.50  10.0
+Low     canopyA       4.0  6.75  3.947573  2.0  4.25  7.5  10.00  10.0
+        canopyB       4.0  5.75  3.500000  2.0  3.50  5.5   7.75  10.0
+        experiment    4.0  6.50  4.123106  2.0  3.50  7.0  10.00  10.0
+
+ANOVA Results for Rank 9:
+                          sum_sq    df         F    PR(>F)
+C(density)             12.041667   1.0  1.066421  0.315432
+C(canopy)               6.583333   2.0  0.291513  0.750593
+C(density):C(canopy)   11.083333   2.0  0.490775  0.620108
+Residual              203.250000  18.0       NaN       NaN
+
+Model Summary:
+                              OLS Regression Results                              
+==================================================================================
+Dep. Variable:     absorbedPAR_umol_m2_s1   R-squared:                       0.128
+Model:                                OLS   Adj. R-squared:                 -0.115
+Method:                     Least Squares   F-statistic:                    0.5262
+Date:                    Thu, 26 Sep 2024   Prob (F-statistic):              0.753
+Time:                            13:29:06   Log-Likelihood:                -59.691
+No. Observations:                      24   AIC:                             131.4
+Df Residuals:                          18   BIC:                             138.5
+Df Model:                               5                                         
+Covariance Type:                nonrobust                                         
+=============================================================================================================
+                                                coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------------------
+Intercept                                     6.2500      1.680      3.720      0.002       2.720       9.780
+C(density)[T.Low]                             0.5000      2.376      0.210      0.836      -4.492       5.492
+C(canopy)[T.canopyB]                          1.0000      2.376      0.421      0.679      -3.992       5.992
+C(canopy)[T.experiment]                       0.2500      2.376      0.105      0.917      -4.742       5.242
+C(density)[T.Low]:C(canopy)[T.canopyB]       -2.7500      3.360     -0.818      0.424      -9.810       4.310
+C(density)[T.Low]:C(canopy)[T.experiment]    -3.0000      3.360     -0.893      0.384     -10.060       4.060
+==============================================================================
+Omnibus:                        2.695   Durbin-Watson:                   1.780
+Prob(Omnibus):                  0.260   Jarque-Bera (JB):                1.315
+Skew:                          -0.172   Prob(JB):                        0.518
+Kurtosis:                       1.906   Cond. No.                         9.77
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+Confidence Intervals for Model Parameters:
+                                                   0         1
+Intercept                                   2.720128  9.779872
+C(density)[T.Low]                          -4.491993  5.491993
+C(canopy)[T.canopyB]                       -3.991993  5.991993
+C(canopy)[T.experiment]                    -4.741993  5.241993
+C(density)[T.Low]:C(canopy)[T.canopyB]     -9.809744  4.309744
+C(density)[T.Low]:C(canopy)[T.experiment] -10.059744  4.059744
+
+Descriptive Statistics for Rank 9:
+                    count  mean       std  min   25%  50%    75%   max
+density canopy                                                        
+High    canopyA       4.0  6.25  3.095696  2.0  5.00  7.0   8.25   9.0
+        canopyB       4.0  7.25  3.774917  2.0  5.75  8.5  10.00  10.0
+        experiment    4.0  6.50  3.316625  2.0  5.75  7.0   7.75  10.0
+Low     canopyA       4.0  6.75  2.217356  5.0  5.75  6.0   7.00  10.0
+        canopyB       4.0  5.00  4.242641  1.0  1.75  4.5   7.75  10.0
+        experiment    4.0  4.00  3.162278  1.0  1.75  3.5   5.75   8.0
