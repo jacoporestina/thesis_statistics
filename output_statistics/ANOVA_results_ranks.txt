@@ -1,0 +1,950 @@
+
+ANOVA Results for Rank 1:
+                                  sum_sq     df            F  PR(>F)
+C(density)                  41508.894208    1.0  1589.474777  <0.001
+C(architecture)             19453.389320    5.0   148.983355  <0.001
+C(density):C(architecture)   6321.998227    5.0    48.416885  <0.001
+Residual                     5954.185633  228.0          NaN     NaN
+
+Confidence Intervals for Model Parameters:
+                                                            0          1
+Intercept                                           12.335235  16.838405
+C(density)[T.Low]                                   27.866589  34.235032
+C(architecture)[T.architectureB]                    -2.073494   4.294949
+C(architecture)[T.architectureC]                     4.930392  11.298835
+C(architecture)[T.architectureD]                    -6.243720   0.124723
+C(architecture)[T.architectureE]                   -11.259002  -4.890559
+C(architecture)[T.control]                          -2.430992   3.937451
+C(density)[T.Low]:C(architecture)[T.architectureB]  -3.247820   5.758519
+C(density)[T.Low]:C(architecture)[T.architectureC]  -5.349594   3.656744
+C(density)[T.Low]:C(architecture)[T.architectureD]  -0.386809   8.619529
+C(density)[T.Low]:C(architecture)[T.architectureE] -31.091400 -22.085061
+C(density)[T.Low]:C(architecture)[T.control]       -10.930838  -1.924499
+
+Post-hoc (Tukeyhsd) Results for Rank 1:
+            Multiple Comparison of Means - Tukey HSD, FWER=0.05             
+============================================================================
+      group1            group2      meandiff p-adj   lower    upper   reject
+----------------------------------------------------------------------------
+HigharchitectureA HigharchitectureB   1.1107 0.9999   -4.226   6.4474  False
+HigharchitectureA HigharchitectureC   8.1146 0.0001   2.7779  13.4513   True
+HigharchitectureA HigharchitectureD  -3.0595 0.7623  -8.3962   2.2772  False
+HigharchitectureA HigharchitectureE  -8.0748 0.0001 -13.4115  -2.7381   True
+HigharchitectureA       Highcontrol   0.7532    1.0  -4.5835   6.0899  False
+HigharchitectureA  LowarchitectureA  31.0508    0.0  25.7141  36.3875   True
+HigharchitectureA  LowarchitectureB  33.4169    0.0  28.0802  38.7536   True
+HigharchitectureA  LowarchitectureC   38.319    0.0  32.9823  43.6557   True
+HigharchitectureA  LowarchitectureD  32.1077    0.0   26.771  37.4444   True
+HigharchitectureA  LowarchitectureE  -3.6122  0.526  -8.9489   1.7245  False
+HigharchitectureA        Lowcontrol  25.3764    0.0  20.0397  30.7131   True
+HigharchitectureB HigharchitectureC   7.0039 0.0013   1.6672  12.3406   True
+HigharchitectureB HigharchitectureD  -4.1702  0.297  -9.5069   1.1665  False
+HigharchitectureB HigharchitectureE  -9.1855    0.0 -14.5222  -3.8488   True
+HigharchitectureB       Highcontrol  -0.3575    1.0  -5.6942   4.9792  False
+HigharchitectureB  LowarchitectureA  29.9401    0.0  24.6034  35.2768   True
+HigharchitectureB  LowarchitectureB  32.3062    0.0  26.9694  37.6429   True
+HigharchitectureB  LowarchitectureC  37.2083    0.0  31.8716   42.545   True
+HigharchitectureB  LowarchitectureD  30.9969    0.0  25.6602  36.3337   True
+HigharchitectureB  LowarchitectureE  -4.7229 0.1401 -10.0596   0.6138  False
+HigharchitectureB        Lowcontrol  24.2656    0.0  18.9289  29.6024   True
+HigharchitectureC HigharchitectureD -11.1741    0.0 -16.5108  -5.8374   True
+HigharchitectureC HigharchitectureE -16.1894    0.0 -21.5261 -10.8527   True
+HigharchitectureC       Highcontrol  -7.3614 0.0005 -12.6981  -2.0247   True
+HigharchitectureC  LowarchitectureA  22.9362    0.0  17.5995  28.2729   True
+HigharchitectureC  LowarchitectureB  25.3023    0.0  19.9656   30.639   True
+HigharchitectureC  LowarchitectureC  30.2044    0.0  24.8677  35.5411   True
+HigharchitectureC  LowarchitectureD  23.9931    0.0  18.6563  29.3298   True
+HigharchitectureC  LowarchitectureE -11.7268    0.0 -17.0635  -6.3901   True
+HigharchitectureC        Lowcontrol  17.2618    0.0   11.925  22.5985   True
+HigharchitectureD HigharchitectureE  -5.0153 0.0878  -10.352   0.3214  False
+HigharchitectureD       Highcontrol   3.8127 0.4381   -1.524   9.1494  False
+HigharchitectureD  LowarchitectureA  34.1103    0.0  28.7736   39.447   True
+HigharchitectureD  LowarchitectureB  36.4764    0.0  31.1397  41.8131   True
+HigharchitectureD  LowarchitectureC  41.3785    0.0  36.0418  46.7152   True
+HigharchitectureD  LowarchitectureD  35.1672    0.0  29.8305  40.5039   True
+HigharchitectureD  LowarchitectureE  -0.5527    1.0  -5.8894    4.784  False
+HigharchitectureD        Lowcontrol  28.4359    0.0  23.0992  33.7726   True
+HigharchitectureE       Highcontrol    8.828    0.0   3.4913  14.1647   True
+HigharchitectureE  LowarchitectureA  39.1256    0.0  33.7889  44.4623   True
+HigharchitectureE  LowarchitectureB  41.4917    0.0   36.155  46.8284   True
+HigharchitectureE  LowarchitectureC  46.3938    0.0  41.0571  51.7305   True
+HigharchitectureE  LowarchitectureD  40.1825    0.0  34.8457  45.5192   True
+HigharchitectureE  LowarchitectureE   4.4626  0.204  -0.8741   9.7993  False
+HigharchitectureE        Lowcontrol  33.4512    0.0  28.1144  38.7879   True
+      Highcontrol  LowarchitectureA  30.2976    0.0  24.9609  35.6343   True
+      Highcontrol  LowarchitectureB  32.6637    0.0  27.3269  38.0004   True
+      Highcontrol  LowarchitectureC  37.5658    0.0  32.2291  42.9025   True
+      Highcontrol  LowarchitectureD  31.3544    0.0  26.0177  36.6912   True
+      Highcontrol  LowarchitectureE  -4.3654 0.2324  -9.7021   0.9713  False
+      Highcontrol        Lowcontrol  24.6231    0.0  19.2864  29.9599   True
+ LowarchitectureA  LowarchitectureB   2.3661 0.9486  -2.9706   7.7028  False
+ LowarchitectureA  LowarchitectureC   7.2682 0.0007   1.9315  12.6049   True
+ LowarchitectureA  LowarchitectureD   1.0569    1.0  -4.2798   6.3936  False
+ LowarchitectureA  LowarchitectureE  -34.663    0.0 -39.9997 -29.3263   True
+ LowarchitectureA        Lowcontrol  -5.6744 0.0262 -11.0111  -0.3377   True
+ LowarchitectureB  LowarchitectureC   4.9021 0.1058  -0.4346  10.2388  False
+ LowarchitectureB  LowarchitectureD  -1.3092 0.9997  -6.6459   4.0275  False
+ LowarchitectureB  LowarchitectureE -37.0291    0.0 -42.3658 -31.6924   True
+ LowarchitectureB        Lowcontrol  -8.0405 0.0001 -13.3772  -2.7038   True
+ LowarchitectureC  LowarchitectureD  -6.2113 0.0085  -11.548  -0.8746   True
+ LowarchitectureC  LowarchitectureE -41.9312    0.0 -47.2679 -36.5945   True
+ LowarchitectureC        Lowcontrol -12.9426    0.0 -18.2793  -7.6059   True
+ LowarchitectureD  LowarchitectureE -35.7199    0.0 -41.0566 -30.3832   True
+ LowarchitectureD        Lowcontrol  -6.7313 0.0025  -12.068  -1.3946   True
+ LowarchitectureE        Lowcontrol  28.9886    0.0  23.6519  34.3253   True
+----------------------------------------------------------------------------
+
+ANOVA Results for Rank 2:
+                                  sum_sq     df           F  PR(>F)
+C(density)                  17873.535101    1.0  680.076677  <0.001
+C(architecture)              4031.894772    5.0   30.682208  <0.001
+C(density):C(architecture)   1095.884771    5.0    8.339544  <0.001
+Residual                     5992.215493  228.0         NaN     NaN
+
+Confidence Intervals for Model Parameters:
+                                                            0          1
+Intercept                                            6.363760  10.881287
+C(density)[T.Low]                                   16.863247  23.251996
+C(architecture)[T.architectureB]                    -0.422107   5.966642
+C(architecture)[T.architectureC]                     4.789277  11.178026
+C(architecture)[T.architectureD]                    -3.756709   2.632040
+C(architecture)[T.architectureE]                    -4.439178   1.949571
+C(architecture)[T.control]                          -1.923542   4.465207
+C(density)[T.Low]:C(architecture)[T.architectureB]  -5.643971   3.391084
+C(density)[T.Low]:C(architecture)[T.architectureC]  -7.721491   1.313563
+C(density)[T.Low]:C(architecture)[T.architectureD]  -5.418278   3.616777
+C(density)[T.Low]:C(architecture)[T.architectureE] -16.518407  -7.483352
+C(density)[T.Low]:C(architecture)[T.control]        -4.073888   4.961167
+
+Post-hoc (Tukeyhsd) Results for Rank 2:
+            Multiple Comparison of Means - Tukey HSD, FWER=0.05             
+============================================================================
+      group1            group2      meandiff p-adj   lower    upper   reject
+----------------------------------------------------------------------------
+HigharchitectureA HigharchitectureB   2.7723  0.862  -2.5815    8.126  False
+HigharchitectureA HigharchitectureC   7.9837 0.0001   2.6299  13.3374   True
+HigharchitectureA HigharchitectureD  -0.5623    1.0  -5.9161   4.7914  False
+HigharchitectureA HigharchitectureE  -1.2448 0.9998  -6.5985   4.1089  False
+HigharchitectureA       Highcontrol   1.2708 0.9998  -4.0829   6.6246  False
+HigharchitectureA  LowarchitectureA  20.0576    0.0  14.7039  25.4113   True
+HigharchitectureA  LowarchitectureB  21.7034    0.0  16.3497  27.0572   True
+HigharchitectureA  LowarchitectureC  24.8373    0.0  19.4836   30.191   True
+HigharchitectureA  LowarchitectureD  18.5945    0.0  13.2408  23.9483   True
+HigharchitectureA  LowarchitectureE   6.8119 0.0022   1.4582  12.1657   True
+HigharchitectureA        Lowcontrol  21.7721    0.0  16.4184  27.1258   True
+HigharchitectureB HigharchitectureC   5.2114 0.0645  -0.1423  10.5651  False
+HigharchitectureB HigharchitectureD  -3.3346 0.6538  -8.6883   2.0191  False
+HigharchitectureB HigharchitectureE  -4.0171 0.3593  -9.3708   1.3367  False
+HigharchitectureB       Highcontrol  -1.5014 0.9988  -6.8552   3.8523  False
+HigharchitectureB  LowarchitectureA  17.2854    0.0  11.9316  22.6391   True
+HigharchitectureB  LowarchitectureB  18.9312    0.0  13.5775  24.2849   True
+HigharchitectureB  LowarchitectureC   22.065    0.0  16.7113  27.4188   True
+HigharchitectureB  LowarchitectureD  15.8223    0.0  10.4685   21.176   True
+HigharchitectureB  LowarchitectureE   4.0397 0.3505  -1.3141   9.3934  False
+HigharchitectureB        Lowcontrol  18.9998    0.0  13.6461  24.3536   True
+HigharchitectureC HigharchitectureD   -8.546    0.0 -13.8997  -3.1923   True
+HigharchitectureC HigharchitectureE  -9.2285    0.0 -14.5822  -3.8747   True
+HigharchitectureC       Highcontrol  -6.7128 0.0028 -12.0665  -1.3591   True
+HigharchitectureC  LowarchitectureA   12.074    0.0   6.7202  17.4277   True
+HigharchitectureC  LowarchitectureB  13.7198    0.0   8.3661  19.0735   True
+HigharchitectureC  LowarchitectureC  16.8537    0.0  11.4999  22.2074   True
+HigharchitectureC  LowarchitectureD  10.6109    0.0   5.2572  15.9646   True
+HigharchitectureC  LowarchitectureE  -1.1717 0.9999  -6.5254    4.182  False
+HigharchitectureC        Lowcontrol  13.7884    0.0   8.4347  19.1422   True
+HigharchitectureD HigharchitectureE  -0.6825    1.0  -6.0362   4.6713  False
+HigharchitectureD       Highcontrol   1.8332  0.993  -3.5206   7.1869  False
+HigharchitectureD  LowarchitectureA    20.62    0.0  15.2662  25.9737   True
+HigharchitectureD  LowarchitectureB  22.2658    0.0  16.9121  27.6195   True
+HigharchitectureD  LowarchitectureC  25.3996    0.0  20.0459  30.7534   True
+HigharchitectureD  LowarchitectureD  19.1569    0.0  13.8031  24.5106   True
+HigharchitectureD  LowarchitectureE   7.3743 0.0005   2.0205   12.728   True
+HigharchitectureD        Lowcontrol  22.3344    0.0  16.9807  27.6882   True
+HigharchitectureE       Highcontrol   2.5156  0.924  -2.8381   7.8694  False
+HigharchitectureE  LowarchitectureA  21.3024    0.0  15.9487  26.6562   True
+HigharchitectureE  LowarchitectureB  22.9482    0.0  17.5945   28.302   True
+HigharchitectureE  LowarchitectureC  26.0821    0.0  20.7284  31.4358   True
+HigharchitectureE  LowarchitectureD  19.8393    0.0  14.4856  25.1931   True
+HigharchitectureE  LowarchitectureE   8.0567 0.0001    2.703  13.4105   True
+HigharchitectureE        Lowcontrol  23.0169    0.0  17.6632  28.3706   True
+      Highcontrol  LowarchitectureA  18.7868    0.0  13.4331  24.1405   True
+      Highcontrol  LowarchitectureB  20.4326    0.0  15.0789  25.7863   True
+      Highcontrol  LowarchitectureC  23.5665    0.0  18.2128  28.9202   True
+      Highcontrol  LowarchitectureD  17.3237    0.0    11.97  22.6774   True
+      Highcontrol  LowarchitectureE   5.5411 0.0352   0.1874  10.8948   True
+      Highcontrol        Lowcontrol  20.5013    0.0  15.1475   25.855   True
+ LowarchitectureA  LowarchitectureB   1.6458 0.9972  -3.7079   6.9996  False
+ LowarchitectureA  LowarchitectureC   4.7797 0.1314   -0.574  10.1334  False
+ LowarchitectureA  LowarchitectureD  -1.4631 0.9991  -6.8168   3.8906  False
+ LowarchitectureA  LowarchitectureE -13.2457    0.0 -18.5994   -7.892   True
+ LowarchitectureA        Lowcontrol   1.7145  0.996  -3.6393   7.0682  False
+ LowarchitectureB  LowarchitectureC   3.1339 0.7372  -2.2199   8.4876  False
+ LowarchitectureB  LowarchitectureD  -3.1089  0.747  -8.4626   2.2448  False
+ LowarchitectureB  LowarchitectureE -14.8915    0.0 -20.2452  -9.5378   True
+ LowarchitectureB        Lowcontrol   0.0686    1.0  -5.2851   5.4224  False
+ LowarchitectureC  LowarchitectureD  -6.2428 0.0083 -11.5965   -0.889   True
+ LowarchitectureC  LowarchitectureE -18.0254    0.0 -23.3791 -12.6716   True
+ LowarchitectureC        Lowcontrol  -3.0652 0.7638  -8.4189   2.2885  False
+ LowarchitectureD  LowarchitectureE -11.7826    0.0 -17.1363  -6.4289   True
+ LowarchitectureD        Lowcontrol   3.1776 0.7197  -2.1762   8.5313  False
+ LowarchitectureE        Lowcontrol  14.9602    0.0   9.6064  20.3139   True
+----------------------------------------------------------------------------
+
+ANOVA Results for Rank 3:
+                                  sum_sq     df           F  PR(>F)
+C(density)                  18981.083225    1.0  547.211005  <0.001
+C(architecture)              6489.204768    5.0   37.415823  <0.001
+C(density):C(architecture)    361.087507    5.0    2.081979   0.069
+Residual                     7908.625625  228.0         NaN     NaN
+
+Confidence Intervals for Model Parameters:
+                                                            0          1
+Intercept                                           10.818891  16.008775
+C(density)[T.Low]                                   14.967484  22.307087
+C(architecture)[T.architectureB]                    -0.215612   7.123992
+C(architecture)[T.architectureC]                     4.372543  11.712146
+C(architecture)[T.architectureD]                    -6.095573   1.244030
+C(architecture)[T.architectureE]                   -10.962344  -3.622741
+C(architecture)[T.control]                          -2.228035   5.111568
+C(density)[T.Low]:C(architecture)[T.architectureB]  -5.520524   4.859243
+C(density)[T.Low]:C(architecture)[T.architectureC]  -7.970862   2.408905
+C(density)[T.Low]:C(architecture)[T.architectureD]  -3.981502   6.398265
+C(density)[T.Low]:C(architecture)[T.architectureE] -10.398363  -0.018596
+C(density)[T.Low]:C(architecture)[T.control]        -3.184263   7.195504
+
+Post-hoc (Tukeyhsd) Results for Rank 3:
+            Multiple Comparison of Means - Tukey HSD, FWER=0.05             
+============================================================================
+      group1            group2      meandiff p-adj   lower    upper   reject
+----------------------------------------------------------------------------
+HigharchitectureA HigharchitectureB   3.4542 0.7855  -2.6963   9.6047  False
+HigharchitectureA HigharchitectureC   8.0423 0.0014   1.8918  14.1929   True
+HigharchitectureA HigharchitectureD  -2.4258 0.9781  -8.5763   3.7248  False
+HigharchitectureA HigharchitectureE  -7.2925 0.0065 -13.4431   -1.142   True
+HigharchitectureA       Highcontrol   1.4418 0.9998  -4.7088   7.5923  False
+HigharchitectureA  LowarchitectureA  18.6373    0.0  12.4867  24.7878   True
+HigharchitectureA  LowarchitectureB  21.7608    0.0  15.6103  27.9114   True
+HigharchitectureA  LowarchitectureC  23.8987    0.0  17.7481  30.0492   True
+HigharchitectureA  LowarchitectureD  17.4199    0.0  11.2694  23.5704   True
+HigharchitectureA  LowarchitectureE   6.1363 0.0511  -0.0143  12.2868  False
+HigharchitectureA        Lowcontrol  22.0847    0.0  15.9341  28.2352   True
+HigharchitectureB HigharchitectureC   4.5882 0.3685  -1.5624  10.7387  False
+HigharchitectureB HigharchitectureD    -5.88 0.0758 -12.0305   0.2706  False
+HigharchitectureB HigharchitectureE -10.7467    0.0 -16.8973  -4.5962   True
+HigharchitectureB       Highcontrol  -2.0124 0.9952   -8.163   4.1381  False
+HigharchitectureB  LowarchitectureA  15.1831    0.0   9.0326  21.3336   True
+HigharchitectureB  LowarchitectureB  18.3066    0.0  12.1561  24.4572   True
+HigharchitectureB  LowarchitectureC  20.4445    0.0  14.2939   26.595   True
+HigharchitectureB  LowarchitectureD  13.9657    0.0   7.8152  20.1162   True
+HigharchitectureB  LowarchitectureE   2.6821 0.9542  -3.4685   8.8326  False
+HigharchitectureB        Lowcontrol  18.6305    0.0  12.4799   24.781   True
+HigharchitectureC HigharchitectureD -10.4681    0.0 -16.6187  -4.3176   True
+HigharchitectureC HigharchitectureE -15.3349    0.0 -21.4854  -9.1844   True
+HigharchitectureC       Highcontrol  -6.6006 0.0236 -12.7511    -0.45   True
+HigharchitectureC  LowarchitectureA  10.5949    0.0   4.4444  16.7455   True
+HigharchitectureC  LowarchitectureB  13.7185    0.0    7.568   19.869   True
+HigharchitectureC  LowarchitectureC  15.8563    0.0   9.7058  22.0068   True
+HigharchitectureC  LowarchitectureD   9.3776 0.0001    3.227  15.5281   True
+HigharchitectureC  LowarchitectureE  -1.9061  0.997  -8.0566   4.2445  False
+HigharchitectureC        Lowcontrol  14.0423    0.0   7.8918  20.1929   True
+HigharchitectureD HigharchitectureE  -4.8668 0.2787 -11.0173   1.2838  False
+HigharchitectureD       Highcontrol   3.8675 0.6399   -2.283  10.0181  False
+HigharchitectureD  LowarchitectureA  21.0631    0.0  14.9125  27.2136   True
+HigharchitectureD  LowarchitectureB  24.1866    0.0  18.0361  30.3371   True
+HigharchitectureD  LowarchitectureC  26.3244    0.0  20.1739   32.475   True
+HigharchitectureD  LowarchitectureD  19.8457    0.0  13.6951  25.9962   True
+HigharchitectureD  LowarchitectureE    8.562 0.0004   2.4115  14.7126   True
+HigharchitectureD        Lowcontrol  24.5104    0.0  18.3599   30.661   True
+HigharchitectureE       Highcontrol   8.7343 0.0003   2.5838  14.8848   True
+HigharchitectureE  LowarchitectureA  25.9298    0.0  19.7793  32.0804   True
+HigharchitectureE  LowarchitectureB  29.0534    0.0  22.9028  35.2039   True
+HigharchitectureE  LowarchitectureC  31.1912    0.0  25.0407  37.3417   True
+HigharchitectureE  LowarchitectureD  24.7124    0.0  18.5619   30.863   True
+HigharchitectureE  LowarchitectureE  13.4288    0.0   7.2783  19.5793   True
+HigharchitectureE        Lowcontrol  29.3772    0.0  23.2267  35.5278   True
+      Highcontrol  LowarchitectureA  17.1955    0.0   11.045  23.3461   True
+      Highcontrol  LowarchitectureB  20.3191    0.0  14.1685  26.4696   True
+      Highcontrol  LowarchitectureC  22.4569    0.0  16.3063  28.6074   True
+      Highcontrol  LowarchitectureD  15.9781    0.0   9.8276  22.1287   True
+      Highcontrol  LowarchitectureE   4.6945 0.3326   -1.456   10.845  False
+      Highcontrol        Lowcontrol  20.6429    0.0  14.4924  26.7934   True
+ LowarchitectureA  LowarchitectureB   3.1235 0.8768   -3.027   9.2741  False
+ LowarchitectureA  LowarchitectureC   5.2614 0.1767  -0.8892  11.4119  False
+ LowarchitectureA  LowarchitectureD  -1.2174    1.0  -7.3679   4.9331  False
+ LowarchitectureA  LowarchitectureE  -12.501    0.0 -18.6516  -6.3505   True
+ LowarchitectureA        Lowcontrol   3.4474 0.7877  -2.7031   9.5979  False
+ LowarchitectureB  LowarchitectureC   2.1378  0.992  -4.0127   8.2884  False
+ LowarchitectureB  LowarchitectureD  -4.3409  0.458 -10.4915   1.8096  False
+ LowarchitectureB  LowarchitectureE -15.6246    0.0 -21.7751   -9.474   True
+ LowarchitectureB        Lowcontrol   0.3238    1.0  -5.8267   6.4744  False
+ LowarchitectureC  LowarchitectureD  -6.4788 0.0291 -12.6293  -0.3282   True
+ LowarchitectureC  LowarchitectureE -17.7624    0.0 -23.9129 -11.6119   True
+ LowarchitectureC        Lowcontrol   -1.814 0.9981  -7.9645   4.3366  False
+ LowarchitectureD  LowarchitectureE -11.2836    0.0 -17.4342  -5.1331   True
+ LowarchitectureD        Lowcontrol   4.6648 0.3425  -1.4858  10.8153  False
+ LowarchitectureE        Lowcontrol  15.9484    0.0   9.7979  22.0989   True
+----------------------------------------------------------------------------
+
+ANOVA Results for Rank 4:
+                                  sum_sq     df           F  PR(>F)
+C(density)                  51691.223395    1.0  714.149154  <0.001
+C(architecture)             17592.729850    5.0   48.611088  <0.001
+C(density):C(architecture)   1956.174576    5.0    5.405175  <0.001
+Residual                    16502.993616  228.0         NaN     NaN
+
+Confidence Intervals for Model Parameters:
+                                                            0          1
+Intercept                                           21.199044  28.696060
+C(density)[T.Low]                                   29.784088  40.386470
+C(architecture)[T.architectureB]                     1.344336  11.946718
+C(architecture)[T.architectureC]                     3.679938  14.282320
+C(architecture)[T.architectureD]                   -12.479576  -1.877194
+C(architecture)[T.architectureE]                   -14.015055  -3.412673
+C(architecture)[T.control]                           2.417506  13.019888
+C(density)[T.Low]:C(architecture)[T.architectureB] -11.216975   3.777058
+C(density)[T.Low]:C(architecture)[T.architectureC] -11.788353   3.205679
+C(density)[T.Low]:C(architecture)[T.architectureD]  -9.189749   5.804284
+C(density)[T.Low]:C(architecture)[T.architectureE] -24.981863  -9.987830
+C(density)[T.Low]:C(architecture)[T.control]       -14.709810   0.284222
+
+Post-hoc (Tukeyhsd) Results for Rank 4:
+            Multiple Comparison of Means - Tukey HSD, FWER=0.05             
+============================================================================
+      group1            group2      meandiff p-adj   lower    upper   reject
+----------------------------------------------------------------------------
+HigharchitectureA HigharchitectureB   6.6455 0.3643  -2.2392  15.5302  False
+HigharchitectureA HigharchitectureC   8.9811 0.0449   0.0964  17.8659   True
+HigharchitectureA HigharchitectureD  -7.1784 0.2492 -16.0631   1.7063  False
+HigharchitectureA HigharchitectureE  -8.7139 0.0602 -17.5986   0.1709  False
+HigharchitectureA       Highcontrol   7.7187 0.1594   -1.166  16.6034  False
+HigharchitectureA  LowarchitectureA  35.0853    0.0  26.2006    43.97   True
+HigharchitectureA  LowarchitectureB  38.0108    0.0  29.1261  46.8956   True
+HigharchitectureA  LowarchitectureC  39.7751    0.0  30.8903  48.6598   True
+HigharchitectureA  LowarchitectureD  26.2142    0.0  17.3294  35.0989   True
+HigharchitectureA  LowarchitectureE   8.8866 0.0499   0.0018  17.7713   True
+HigharchitectureA        Lowcontrol  35.5912    0.0  26.7065  44.4759   True
+HigharchitectureB HigharchitectureC   2.3356 0.9993  -6.5491  11.2203  False
+HigharchitectureB HigharchitectureD -13.8239    0.0 -22.7086  -4.9392   True
+HigharchitectureB HigharchitectureE -15.3594    0.0 -24.2441  -6.4747   True
+HigharchitectureB       Highcontrol   1.0732    1.0  -7.8116   9.9579  False
+HigharchitectureB  LowarchitectureA  28.4398    0.0   19.555  37.3245   True
+HigharchitectureB  LowarchitectureB  31.3653    0.0  22.4806    40.25   True
+HigharchitectureB  LowarchitectureC  33.1295    0.0  24.2448  42.0143   True
+HigharchitectureB  LowarchitectureD  19.5686    0.0  10.6839  28.4534   True
+HigharchitectureB  LowarchitectureE    2.241 0.9996  -6.6437  11.1258  False
+HigharchitectureB        Lowcontrol  28.9457    0.0  20.0609  37.8304   True
+HigharchitectureC HigharchitectureD -16.1595    0.0 -25.0442  -7.2748   True
+HigharchitectureC HigharchitectureE  -17.695    0.0 -26.5797  -8.8103   True
+HigharchitectureC       Highcontrol  -1.2624    1.0 -10.1472   7.6223  False
+HigharchitectureC  LowarchitectureA  26.1041    0.0  17.2194  34.9889   True
+HigharchitectureC  LowarchitectureB  29.0297    0.0   20.145  37.9144   True
+HigharchitectureC  LowarchitectureC  30.7939    0.0  21.9092  39.6787   True
+HigharchitectureC  LowarchitectureD   17.233    0.0   8.3483  26.1178   True
+HigharchitectureC  LowarchitectureE  -0.0946    1.0  -8.9793   8.7902  False
+HigharchitectureC        Lowcontrol  26.6101    0.0  17.7253  35.4948   True
+HigharchitectureD HigharchitectureE  -1.5355    1.0 -10.4202   7.3492  False
+HigharchitectureD       Highcontrol  14.8971    0.0   6.0124  23.7818   True
+HigharchitectureD  LowarchitectureA  42.2637    0.0  33.3789  51.1484   True
+HigharchitectureD  LowarchitectureB  45.1892    0.0  36.3045   54.074   True
+HigharchitectureD  LowarchitectureC  46.9535    0.0  38.0687  55.8382   True
+HigharchitectureD  LowarchitectureD  33.3925    0.0  24.5078  42.2773   True
+HigharchitectureD  LowarchitectureE   16.065    0.0   7.1802  24.9497   True
+HigharchitectureD        Lowcontrol  42.7696    0.0  33.8848  51.6543   True
+HigharchitectureE       Highcontrol  16.4326    0.0   7.5478  25.3173   True
+HigharchitectureE  LowarchitectureA  43.7991    0.0  34.9144  52.6839   True
+HigharchitectureE  LowarchitectureB  46.7247    0.0    37.84  55.6094   True
+HigharchitectureE  LowarchitectureC  48.4889    0.0  39.6042  57.3737   True
+HigharchitectureE  LowarchitectureD   34.928    0.0  26.0433  43.8127   True
+HigharchitectureE  LowarchitectureE  17.6004    0.0   8.7157  26.4852   True
+HigharchitectureE        Lowcontrol   44.305    0.0  35.4203  53.1898   True
+      Highcontrol  LowarchitectureA  27.3666    0.0  18.4819  36.2513   True
+      Highcontrol  LowarchitectureB  30.2922    0.0  21.4074  39.1769   True
+      Highcontrol  LowarchitectureC  32.0564    0.0  23.1717  40.9411   True
+      Highcontrol  LowarchitectureD  18.4955    0.0   9.6107  27.3802   True
+      Highcontrol  LowarchitectureE   1.1679    1.0  -7.7169  10.0526  False
+      Highcontrol        Lowcontrol  27.8725    0.0  18.9878  36.7572   True
+ LowarchitectureA  LowarchitectureB   2.9256  0.995  -5.9592  11.8103  False
+ LowarchitectureA  LowarchitectureC   4.6898 0.8461  -4.1949  13.5745  False
+ LowarchitectureA  LowarchitectureD  -8.8711 0.0508 -17.7558   0.0136  False
+ LowarchitectureA  LowarchitectureE -26.1987    0.0 -35.0834  -17.314   True
+ LowarchitectureA        Lowcontrol   0.5059    1.0  -8.3788   9.3906  False
+ LowarchitectureB  LowarchitectureC   1.7642    1.0  -7.1205  10.6489  False
+ LowarchitectureB  LowarchitectureD -11.7967 0.0011 -20.6814   -2.912   True
+ LowarchitectureB  LowarchitectureE -29.1243    0.0  -38.009 -20.2396   True
+ LowarchitectureB        Lowcontrol  -2.4197 0.9991 -11.3044   6.4651  False
+ LowarchitectureC  LowarchitectureD -13.5609 0.0001 -22.4456  -4.6762   True
+ LowarchitectureC  LowarchitectureE -30.8885    0.0 -39.7732 -22.0038   True
+ LowarchitectureC        Lowcontrol  -4.1839  0.923 -13.0686   4.7008  False
+ LowarchitectureD  LowarchitectureE -17.3276    0.0 -26.2123  -8.4429   True
+ LowarchitectureD        Lowcontrol    9.377 0.0285   0.4923  18.2617   True
+ LowarchitectureE        Lowcontrol  26.7046    0.0  17.8199  35.5893   True
+----------------------------------------------------------------------------
+
+ANOVA Results for Rank 5:
+                                  sum_sq     df           F  PR(>F)
+C(density)                  89422.871873    1.0  708.922553  <0.001
+C(architecture)             41464.008839    5.0   65.743294  <0.001
+C(density):C(architecture)   1820.390625    5.0    2.886322   0.015
+Residual                    28759.720946  228.0         NaN     NaN
+
+Confidence Intervals for Model Parameters:
+                                                            0          1
+Intercept                                           47.809755  57.706661
+C(density)[T.Low]                                   38.293591  52.289929
+C(architecture)[T.architectureB]                    -4.854788   9.141550
+C(architecture)[T.architectureC]                     8.196892  22.193230
+C(architecture)[T.architectureD]                   -14.209411  -0.213073
+C(architecture)[T.architectureE]                   -25.261473 -11.265135
+C(architecture)[T.control]                          11.789062  25.785400
+C(density)[T.Low]:C(architecture)[T.architectureB] -13.609427   6.184384
+C(density)[T.Low]:C(architecture)[T.architectureC] -25.449909  -5.656098
+C(density)[T.Low]:C(architecture)[T.architectureD] -15.085986   4.707825
+C(density)[T.Low]:C(architecture)[T.architectureE] -22.472223  -2.678412
+C(density)[T.Low]:C(architecture)[T.control]       -12.984808   6.809003
+
+Post-hoc (Tukeyhsd) Results for Rank 5:
+            Multiple Comparison of Means - Tukey HSD, FWER=0.05             
+============================================================================
+      group1            group2      meandiff p-adj   lower    upper   reject
+----------------------------------------------------------------------------
+HigharchitectureA HigharchitectureB   2.1434    1.0  -9.5855  13.8722  False
+HigharchitectureA HigharchitectureC  15.1951 0.0016   3.4662  26.9239   True
+HigharchitectureA HigharchitectureD  -7.2112 0.6722 -18.9401   4.5176  False
+HigharchitectureA HigharchitectureE -18.2633    0.0 -29.9921  -6.5345   True
+HigharchitectureA       Highcontrol  18.7872    0.0   7.0584  30.5161   True
+HigharchitectureA  LowarchitectureA  45.2918    0.0  33.5629  57.0206   True
+HigharchitectureA  LowarchitectureB  43.7226    0.0  31.9938  55.4515   True
+HigharchitectureA  LowarchitectureC  44.9338    0.0   33.205  56.6626   True
+HigharchitectureA  LowarchitectureD  32.8914    0.0  21.1626  44.6203   True
+HigharchitectureA  LowarchitectureE  14.4531 0.0037   2.7243   26.182   True
+HigharchitectureA        Lowcontrol  60.9911    0.0  49.2623  72.7199   True
+HigharchitectureB HigharchitectureC  13.0517 0.0153   1.3228  24.7805   True
+HigharchitectureB HigharchitectureD  -9.3546 0.2673 -21.0835   2.3742  False
+HigharchitectureB HigharchitectureE -20.4067    0.0 -32.1355  -8.6779   True
+HigharchitectureB       Highcontrol  16.6439 0.0003    4.915  28.3727   True
+HigharchitectureB  LowarchitectureA  43.1484    0.0  31.4195  54.8772   True
+HigharchitectureB  LowarchitectureB  41.5792    0.0  29.8504  53.3081   True
+HigharchitectureB  LowarchitectureC  42.7904    0.0  31.0616  54.5193   True
+HigharchitectureB  LowarchitectureD  30.7481    0.0  19.0192  42.4769   True
+HigharchitectureB  LowarchitectureE  12.3098 0.0303   0.5809  24.0386   True
+HigharchitectureB        Lowcontrol  58.8477    0.0  47.1189  70.5765   True
+HigharchitectureC HigharchitectureD -22.4063    0.0 -34.1351 -10.6775   True
+HigharchitectureC HigharchitectureE -33.4584    0.0 -45.1872 -21.7295   True
+HigharchitectureC       Highcontrol   3.5922 0.9973  -8.1367   15.321  False
+HigharchitectureC  LowarchitectureA  30.0967    0.0  18.3679  41.8255   True
+HigharchitectureC  LowarchitectureB  28.5276    0.0  16.7987  40.2564   True
+HigharchitectureC  LowarchitectureC  29.7388    0.0  18.0099  41.4676   True
+HigharchitectureC  LowarchitectureD  17.6964 0.0001   5.9675  29.4252   True
+HigharchitectureC  LowarchitectureE  -0.7419    1.0 -12.4708  10.9869  False
+HigharchitectureC        Lowcontrol   45.796    0.0  34.0672  57.5249   True
+HigharchitectureD HigharchitectureE -11.0521 0.0859 -22.7809   0.6768  False
+HigharchitectureD       Highcontrol  25.9985    0.0  14.2696  37.7273   True
+HigharchitectureD  LowarchitectureA   52.503    0.0  40.7742  64.2318   True
+HigharchitectureD  LowarchitectureB  50.9339    0.0   39.205  62.6627   True
+HigharchitectureD  LowarchitectureC  52.1451    0.0  40.4162  63.8739   True
+HigharchitectureD  LowarchitectureD  40.1027    0.0  28.3738  51.8315   True
+HigharchitectureD  LowarchitectureE  21.6644    0.0   9.9355  33.3932   True
+HigharchitectureD        Lowcontrol  68.2023    0.0  56.4735  79.9312   True
+HigharchitectureE       Highcontrol  37.0505    0.0  25.3217  48.7794   True
+HigharchitectureE  LowarchitectureA  63.5551    0.0  51.8262  75.2839   True
+HigharchitectureE  LowarchitectureB  61.9859    0.0  50.2571  73.7148   True
+HigharchitectureE  LowarchitectureC  63.1971    0.0  51.4683   74.926   True
+HigharchitectureE  LowarchitectureD  51.1547    0.0  39.4259  62.8836   True
+HigharchitectureE  LowarchitectureE  32.7164    0.0  20.9876  44.4453   True
+HigharchitectureE        Lowcontrol  79.2544    0.0  67.5256  90.9832   True
+      Highcontrol  LowarchitectureA  26.5045    0.0  14.7757  38.2334   True
+      Highcontrol  LowarchitectureB  24.9354    0.0  13.2066  36.6642   True
+      Highcontrol  LowarchitectureC  26.1466    0.0  14.4178  37.8754   True
+      Highcontrol  LowarchitectureD  14.1042 0.0053   2.3754   25.833   True
+      Highcontrol  LowarchitectureE  -4.3341 0.9869 -16.0629   7.3947  False
+      Highcontrol        Lowcontrol  42.2039    0.0   30.475  53.9327   True
+ LowarchitectureA  LowarchitectureB  -1.5691    1.0  -13.298  10.1597  False
+ LowarchitectureA  LowarchitectureC  -0.3579    1.0 -12.0868  11.3709  False
+ LowarchitectureA  LowarchitectureD -12.4003 0.0279 -24.1292  -0.6715   True
+ LowarchitectureA  LowarchitectureE -30.8386    0.0 -42.5675 -19.1098   True
+ LowarchitectureA        Lowcontrol  15.6993 0.0009   3.9705  27.4282   True
+ LowarchitectureB  LowarchitectureC   1.2112    1.0 -10.5176    12.94  False
+ LowarchitectureB  LowarchitectureD -10.8312 0.1014   -22.56   0.8977  False
+ LowarchitectureB  LowarchitectureE -29.2695    0.0 -40.9983 -17.5406   True
+ LowarchitectureB        Lowcontrol  17.2685 0.0001   5.5396  28.9973   True
+ LowarchitectureC  LowarchitectureD -12.0424 0.0383 -23.7712  -0.3135   True
+ LowarchitectureC  LowarchitectureE -30.4807    0.0 -42.2095 -18.7518   True
+ LowarchitectureC        Lowcontrol  16.0573 0.0006   4.3284  27.7861   True
+ LowarchitectureD  LowarchitectureE -18.4383    0.0 -30.1671  -6.7095   True
+ LowarchitectureD        Lowcontrol  28.0997    0.0  16.3708  39.8285   True
+ LowarchitectureE        Lowcontrol   46.538    0.0  34.8091  58.2668   True
+----------------------------------------------------------------------------
+
+ANOVA Results for Rank 6:
+                                  sum_sq     df           F  PR(>F)
+C(density)                  67022.078853    1.0  377.233482  <0.001
+C(architecture)             20341.484970    5.0   22.898392  <0.001
+C(density):C(architecture)   1984.071848    5.0    2.233468   0.052
+Residual                    40508.159303  228.0         NaN     NaN
+
+Confidence Intervals for Model Parameters:
+                                                            0          1
+Intercept                                           86.918397  98.664082
+C(density)[T.Low]                                   30.439501  47.050408
+C(architecture)[T.architectureB]                   -23.085934  -6.475028
+C(architecture)[T.architectureC]                    -9.799639   6.811268
+C(architecture)[T.architectureD]                   -20.592454  -3.981547
+C(architecture)[T.architectureE]                   -31.668525 -15.057618
+C(architecture)[T.control]                          -1.927728  14.683178
+C(density)[T.Low]:C(architecture)[T.architectureB] -22.488138   1.003232
+C(density)[T.Low]:C(architecture)[T.architectureC] -24.277699  -0.786329
+C(density)[T.Low]:C(architecture)[T.architectureD] -15.405805   8.085565
+C(density)[T.Low]:C(architecture)[T.architectureE]  -8.329108  15.162262
+C(density)[T.Low]:C(architecture)[T.control]       -20.164993   3.326376
+
+Post-hoc (Tukeyhsd) Results for Rank 6:
+            Multiple Comparison of Means - Tukey HSD, FWER=0.05             
+============================================================================
+      group1            group2      meandiff p-adj   lower    upper   reject
+----------------------------------------------------------------------------
+HigharchitectureA HigharchitectureB -14.7805 0.0266 -28.7003  -0.8607   True
+HigharchitectureA HigharchitectureC  -1.4942    1.0  -15.414  12.4256  False
+HigharchitectureA HigharchitectureD  -12.287 0.1427 -26.2068   1.6328  False
+HigharchitectureA HigharchitectureE -23.3631    0.0 -37.2829  -9.4432   True
+HigharchitectureA       Highcontrol   6.3777 0.9357  -7.5421  20.2975  False
+HigharchitectureA  LowarchitectureA   38.745    0.0  24.8251  52.6648   True
+HigharchitectureA  LowarchitectureB   13.222 0.0802  -0.6978  27.1418  False
+HigharchitectureA  LowarchitectureC  24.7188    0.0  10.7989  38.6386   True
+HigharchitectureA  LowarchitectureD  22.7978    0.0    8.878  36.7177   True
+HigharchitectureA  LowarchitectureE  18.7985 0.0008   4.8786  32.7183   True
+HigharchitectureA        Lowcontrol  36.7034    0.0  22.7835  50.6232   True
+HigharchitectureB HigharchitectureC  13.2863 0.0769  -0.6335  27.2061  False
+HigharchitectureB HigharchitectureD   2.4935    1.0 -11.4263  16.4133  False
+HigharchitectureB HigharchitectureE  -8.5826 0.6682 -22.5024   5.3372  False
+HigharchitectureB       Highcontrol  21.1582 0.0001   7.2384   35.078   True
+HigharchitectureB  LowarchitectureA  53.5254    0.0  39.6056  67.4453   True
+HigharchitectureB  LowarchitectureB  28.0025    0.0  14.0827  41.9223   True
+HigharchitectureB  LowarchitectureC  39.4992    0.0  25.5794  53.4191   True
+HigharchitectureB  LowarchitectureD  37.5783    0.0  23.6585  51.4981   True
+HigharchitectureB  LowarchitectureE  33.5789    0.0  19.6591  47.4988   True
+HigharchitectureB        Lowcontrol  51.4839    0.0   37.564  65.4037   True
+HigharchitectureC HigharchitectureD -10.7928 0.3087 -24.7126    3.127  False
+HigharchitectureC HigharchitectureE -21.8689    0.0 -35.7887  -7.9491   True
+HigharchitectureC       Highcontrol   7.8719 0.7779  -6.0479  21.7917  False
+HigharchitectureC  LowarchitectureA  40.2391    0.0  26.3193   54.159   True
+HigharchitectureC  LowarchitectureB  14.7162  0.028   0.7964   28.636   True
+HigharchitectureC  LowarchitectureC  26.2129    0.0  12.2931  40.1328   True
+HigharchitectureC  LowarchitectureD   24.292    0.0  10.3722  38.2118   True
+HigharchitectureC  LowarchitectureE  20.2926 0.0002   6.3728  34.2125   True
+HigharchitectureC        Lowcontrol  38.1976    0.0  24.2777  52.1174   True
+HigharchitectureD HigharchitectureE -11.0761 0.2706 -24.9959   2.8438  False
+HigharchitectureD       Highcontrol  18.6647 0.0009   4.7449  32.5845   True
+HigharchitectureD  LowarchitectureA   51.032    0.0  37.1121  64.9518   True
+HigharchitectureD  LowarchitectureB   25.509    0.0  11.5892  39.4288   True
+HigharchitectureD  LowarchitectureC  37.0058    0.0  23.0859  50.9256   True
+HigharchitectureD  LowarchitectureD  35.0848    0.0   21.165  49.0047   True
+HigharchitectureD  LowarchitectureE  31.0855    0.0  17.1656  45.0053   True
+HigharchitectureD        Lowcontrol  48.9904    0.0  35.0705  62.9102   True
+HigharchitectureE       Highcontrol  29.7408    0.0   15.821  43.6606   True
+HigharchitectureE  LowarchitectureA   62.108    0.0  48.1882  76.0278   True
+HigharchitectureE  LowarchitectureB  36.5851    0.0  22.6653  50.5049   True
+HigharchitectureE  LowarchitectureC  48.0818    0.0   34.162  62.0016   True
+HigharchitectureE  LowarchitectureD  46.1609    0.0  32.2411  60.0807   True
+HigharchitectureE  LowarchitectureE  42.1615    0.0  28.2417  56.0814   True
+HigharchitectureE        Lowcontrol  60.0664    0.0  46.1466  73.9863   True
+      Highcontrol  LowarchitectureA  32.3672    0.0  18.4474  46.2871   True
+      Highcontrol  LowarchitectureB   6.8443 0.8987  -7.0755  20.7641  False
+      Highcontrol  LowarchitectureC   18.341 0.0012   4.4212  32.2609   True
+      Highcontrol  LowarchitectureD  16.4201  0.007   2.5003  30.3399   True
+      Highcontrol  LowarchitectureE  12.4207 0.1319  -1.4991  26.3406  False
+      Highcontrol        Lowcontrol  30.3256    0.0  16.4058  44.2455   True
+ LowarchitectureA  LowarchitectureB -25.5229    0.0 -39.4428 -11.6031   True
+ LowarchitectureA  LowarchitectureC -14.0262 0.0464  -27.946  -0.1064   True
+ LowarchitectureA  LowarchitectureD -15.9471 0.0105 -29.8669  -2.0273   True
+ LowarchitectureA  LowarchitectureE -19.9465 0.0002 -33.8663  -6.0267   True
+ LowarchitectureA        Lowcontrol  -2.0416    1.0 -15.9614  11.8782  False
+ LowarchitectureB  LowarchitectureC  11.4967 0.2197  -2.4231  25.4166  False
+ LowarchitectureB  LowarchitectureD   9.5758 0.4997   -4.344  23.4956  False
+ LowarchitectureB  LowarchitectureE   5.5764 0.9754  -8.3434  19.4963  False
+ LowarchitectureB        Lowcontrol  23.4814    0.0   9.5615  37.4012   True
+ LowarchitectureC  LowarchitectureD  -1.9209    1.0 -15.8407  11.9989  False
+ LowarchitectureC  LowarchitectureE  -5.9203 0.9617 -19.8401   7.9995  False
+ LowarchitectureC        Lowcontrol  11.9846 0.1693  -1.9352  25.9044  False
+ LowarchitectureD  LowarchitectureE  -3.9994 0.9985 -17.9192   9.9204  False
+ LowarchitectureD        Lowcontrol  13.9055 0.0505  -0.0143  27.8254  False
+ LowarchitectureE        Lowcontrol  17.9049 0.0018   3.9851  31.8247   True
+----------------------------------------------------------------------------
+
+ANOVA Results for Rank 7:
+                                  sum_sq     df           F  PR(>F)
+C(density)                  37228.546320    1.0  176.319767  <0.001
+C(architecture)             45196.369771    5.0   42.811306  <0.001
+C(density):C(architecture)   2173.168471    5.0    2.058488   0.072
+Residual                    48140.425284  228.0         NaN     NaN
+
+Confidence Intervals for Model Parameters:
+                                                             0           1
+Intercept                                           139.678937  152.483420
+C(density)[T.Low]                                    14.514066   32.622340
+C(architecture)[T.architectureB]                    -31.911291  -13.803017
+C(architecture)[T.architectureC]                    -31.985091  -13.876817
+C(architecture)[T.architectureD]                    -19.370441   -1.262167
+C(architecture)[T.architectureE]                    -28.281467  -10.173194
+C(architecture)[T.control]                          -46.970505  -28.862232
+C(density)[T.Low]:C(architecture)[T.architectureB]   -8.931999   16.676967
+C(density)[T.Low]:C(architecture)[T.architectureC]  -13.833031   11.775935
+C(density)[T.Low]:C(architecture)[T.architectureD]   -3.519041   22.089925
+C(density)[T.Low]:C(architecture)[T.architectureE]   -7.180806   18.428160
+C(density)[T.Low]:C(architecture)[T.control]        -22.510650    3.098316
+
+Post-hoc (Tukeyhsd) Results for Rank 7:
+            Multiple Comparison of Means - Tukey HSD, FWER=0.05             
+============================================================================
+      group1            group2      meandiff p-adj   lower    upper   reject
+----------------------------------------------------------------------------
+HigharchitectureA HigharchitectureB -22.8572 0.0001 -38.0318  -7.6825   True
+HigharchitectureA HigharchitectureC  -22.931 0.0001 -38.1056  -7.7563   True
+HigharchitectureA HigharchitectureD -10.3163 0.5189 -25.4909   4.8583  False
+HigharchitectureA HigharchitectureE -19.2273 0.0024 -34.4019  -4.0527   True
+HigharchitectureA       Highcontrol -37.9164    0.0  -53.091 -22.7418   True
+HigharchitectureA  LowarchitectureA  23.5682    0.0   8.3936  38.7428   True
+HigharchitectureA  LowarchitectureB   4.5835 0.9976 -10.5911  19.7581  False
+HigharchitectureA  LowarchitectureC  -0.3913    1.0 -15.5659  14.7833  False
+HigharchitectureA  LowarchitectureD  22.5373 0.0001   7.3627  37.7119   True
+HigharchitectureA  LowarchitectureE   9.9645 0.5741  -5.2101  25.1392  False
+HigharchitectureA        Lowcontrol -24.0543    0.0 -39.2289  -8.8797   True
+HigharchitectureB HigharchitectureC  -0.0738    1.0 -15.2484  15.1008  False
+HigharchitectureB HigharchitectureD  12.5409 0.2189  -2.6338  27.7155  False
+HigharchitectureB HigharchitectureE   3.6298 0.9997 -11.5448  18.8044  False
+HigharchitectureB       Highcontrol -15.0592 0.0538 -30.2338   0.1154  False
+HigharchitectureB  LowarchitectureA  46.4254    0.0  31.2508     61.6   True
+HigharchitectureB  LowarchitectureB  27.4407    0.0  12.2661  42.6153   True
+HigharchitectureB  LowarchitectureC  22.4659 0.0001   7.2913  37.6405   True
+HigharchitectureB  LowarchitectureD  45.3945    0.0  30.2199  60.5691   True
+HigharchitectureB  LowarchitectureE  32.8217    0.0  17.6471  47.9963   True
+HigharchitectureB        Lowcontrol  -1.1972    1.0 -16.3718  13.9774  False
+HigharchitectureC HigharchitectureD  12.6146 0.2114    -2.56  27.7893  False
+HigharchitectureC HigharchitectureE   3.7036 0.9997  -11.471  18.8782  False
+HigharchitectureC       Highcontrol -14.9854 0.0564   -30.16   0.1892  False
+HigharchitectureC  LowarchitectureA  46.4992    0.0  31.3246  61.6738   True
+HigharchitectureC  LowarchitectureB  27.5145    0.0  12.3399  42.6891   True
+HigharchitectureC  LowarchitectureC  22.5397 0.0001    7.365  37.7143   True
+HigharchitectureC  LowarchitectureD  45.4683    0.0  30.2937  60.6429   True
+HigharchitectureC  LowarchitectureE  32.8955    0.0  17.7209  48.0701   True
+HigharchitectureC        Lowcontrol  -1.1234    1.0  -16.298  14.0512  False
+HigharchitectureD HigharchitectureE   -8.911 0.7332 -24.0856   6.2636  False
+HigharchitectureD       Highcontrol -27.6001    0.0 -42.7747 -12.4255   True
+HigharchitectureD  LowarchitectureA  33.8845    0.0  18.7099  49.0591   True
+HigharchitectureD  LowarchitectureB  14.8998 0.0595  -0.2748  30.0744  False
+HigharchitectureD  LowarchitectureC    9.925 0.5803  -5.2496  25.0996  False
+HigharchitectureD  LowarchitectureD  32.8536    0.0   17.679  48.0283   True
+HigharchitectureD  LowarchitectureE  20.2809 0.0009   5.1062  35.4555   True
+HigharchitectureD        Lowcontrol  -13.738 0.1184 -28.9126   1.4366  False
+HigharchitectureE       Highcontrol  -18.689 0.0037 -33.8636  -3.5144   True
+HigharchitectureE  LowarchitectureA  42.7955    0.0  27.6209  57.9701   True
+HigharchitectureE  LowarchitectureB  23.8109    0.0   8.6363  38.9855   True
+HigharchitectureE  LowarchitectureC   18.836 0.0033   3.6614  34.0106   True
+HigharchitectureE  LowarchitectureD  41.7647    0.0  26.5901  56.9393   True
+HigharchitectureE  LowarchitectureE  29.1919    0.0  14.0173  44.3665   True
+HigharchitectureE        Lowcontrol   -4.827 0.9963 -20.0016  10.3476  False
+      Highcontrol  LowarchitectureA  61.4846    0.0    46.31  76.6592   True
+      Highcontrol  LowarchitectureB  42.4999    0.0  27.3253  57.6745   True
+      Highcontrol  LowarchitectureC  37.5251    0.0  22.3505  52.6997   True
+      Highcontrol  LowarchitectureD  60.4537    0.0  45.2791  75.6283   True
+      Highcontrol  LowarchitectureE  47.8809    0.0  32.7063  63.0555   True
+      Highcontrol        Lowcontrol   13.862 0.1105  -1.3126  29.0366  False
+ LowarchitectureA  LowarchitectureB -18.9847 0.0029 -34.1593  -3.8101   True
+ LowarchitectureA  LowarchitectureC -23.9595    0.0 -39.1341  -8.7849   True
+ LowarchitectureA  LowarchitectureD  -1.0309    1.0 -16.2055  14.1437  False
+ LowarchitectureA  LowarchitectureE -13.6037 0.1275 -28.7783    1.571  False
+ LowarchitectureA        Lowcontrol -47.6225    0.0 -62.7971 -32.4479   True
+ LowarchitectureB  LowarchitectureC  -4.9748 0.9952 -20.1494  10.1998  False
+ LowarchitectureB  LowarchitectureD  17.9538 0.0067   2.7792  33.1284   True
+ LowarchitectureB  LowarchitectureE    5.381 0.9906  -9.7936  20.5556  False
+ LowarchitectureB        Lowcontrol -28.6379    0.0 -43.8125 -13.4633   True
+ LowarchitectureC  LowarchitectureD  22.9286 0.0001    7.754  38.1032   True
+ LowarchitectureC  LowarchitectureE  10.3558 0.5127  -4.8188  25.5305  False
+ LowarchitectureC        Lowcontrol  -23.663    0.0 -38.8376  -8.4884   True
+ LowarchitectureD  LowarchitectureE -12.5728 0.2157 -27.7474   2.6018  False
+ LowarchitectureD        Lowcontrol -46.5917    0.0 -61.7663 -31.4171   True
+ LowarchitectureE        Lowcontrol -34.0189    0.0 -49.1935 -18.8443   True
+----------------------------------------------------------------------------
+
+ANOVA Results for Rank 8:
+                                  sum_sq     df           F  PR(>F)
+C(density)                  32810.837388    1.0  117.305672  <0.001
+C(architecture)             65282.457635    5.0   46.679714  <0.001
+C(density):C(architecture)   1512.725505    5.0    1.081663   0.371
+Residual                    63772.457160  228.0         NaN     NaN
+
+Confidence Intervals for Model Parameters:
+                                                             0           1
+Intercept                                           147.184811  161.922305
+C(density)[T.Low]                                    10.539754   31.381719
+C(architecture)[T.architectureB]                    -10.654768   10.187197
+C(architecture)[T.architectureC]                    -43.380889  -22.538924
+C(architecture)[T.architectureD]                     11.819908   32.661873
+C(architecture)[T.architectureE]                      5.548407   26.390372
+C(architecture)[T.control]                          -15.366862    5.475103
+C(density)[T.Low]:C(architecture)[T.architectureB]  -19.809293    9.665696
+C(density)[T.Low]:C(architecture)[T.architectureC]   -6.485634   22.989355
+C(density)[T.Low]:C(architecture)[T.architectureD]  -12.098441   17.376549
+C(density)[T.Low]:C(architecture)[T.architectureE]  -15.257780   14.217210
+C(density)[T.Low]:C(architecture)[T.control]         -5.492149   23.982841
+
+Post-hoc (Tukeyhsd) Results for Rank 8:
+            Multiple Comparison of Means - Tukey HSD, FWER=0.05             
+============================================================================
+      group1            group2      meandiff p-adj   lower    upper   reject
+----------------------------------------------------------------------------
+HigharchitectureA HigharchitectureB  -0.2338    1.0 -17.6992  17.2316  False
+HigharchitectureA HigharchitectureC -32.9599    0.0 -50.4253 -15.4945   True
+HigharchitectureA HigharchitectureD  22.2409 0.0022   4.7755  39.7063   True
+HigharchitectureA HigharchitectureE  15.9694 0.1097   -1.496  33.4348  False
+HigharchitectureA       Highcontrol  -4.9459 0.9987 -22.4113  12.5195  False
+HigharchitectureA  LowarchitectureA  20.9607 0.0055   3.4953  38.4262   True
+HigharchitectureA  LowarchitectureB  15.6552 0.1276  -1.8103  33.1206  False
+HigharchitectureA  LowarchitectureC  -3.7473 0.9999 -21.2127  13.7181  False
+HigharchitectureA  LowarchitectureD  45.8407    0.0  28.3753  63.3061   True
+HigharchitectureA  LowarchitectureE  36.4098    0.0  18.9444  53.8753   True
+HigharchitectureA        Lowcontrol  25.2602 0.0002   7.7948  42.7256   True
+HigharchitectureB HigharchitectureC -32.7261    0.0 -50.1915 -15.2607   True
+HigharchitectureB HigharchitectureD  22.4747 0.0018   5.0093  39.9401   True
+HigharchitectureB HigharchitectureE  16.2032 0.0977  -1.2622  33.6686  False
+HigharchitectureB       Highcontrol  -4.7121 0.9992 -22.1775  12.7533  False
+HigharchitectureB  LowarchitectureA  21.1945 0.0046   3.7291  38.6599   True
+HigharchitectureB  LowarchitectureB  15.8889 0.1141  -1.5765  33.3544  False
+HigharchitectureB  LowarchitectureC  -3.5135    1.0 -20.9789  13.9519  False
+HigharchitectureB  LowarchitectureD  46.0745    0.0   28.609  63.5399   True
+HigharchitectureB  LowarchitectureE  36.6436    0.0  19.1782   54.109   True
+HigharchitectureB        Lowcontrol   25.494 0.0002   8.0286  42.9594   True
+HigharchitectureC HigharchitectureD  55.2008    0.0  37.7354  72.6662   True
+HigharchitectureC HigharchitectureE  48.9293    0.0  31.4639  66.3947   True
+HigharchitectureC       Highcontrol   28.014    0.0  10.5486  45.4794   True
+HigharchitectureC  LowarchitectureA  53.9206    0.0  36.4552  71.3861   True
+HigharchitectureC  LowarchitectureB  48.6151    0.0  31.1496  66.0805   True
+HigharchitectureC  LowarchitectureC  29.2126    0.0  11.7472   46.678   True
+HigharchitectureC  LowarchitectureD  78.8006    0.0  61.3352   96.266   True
+HigharchitectureC  LowarchitectureE  69.3697    0.0  51.9043  86.8352   True
+HigharchitectureC        Lowcontrol  58.2201    0.0  40.7547  75.6855   True
+HigharchitectureD HigharchitectureE  -6.2715 0.9896 -23.7369  11.1939  False
+HigharchitectureD       Highcontrol -27.1868    0.0 -44.6522  -9.7214   True
+HigharchitectureD  LowarchitectureA  -1.2802    1.0 -18.7456  16.1853  False
+HigharchitectureD  LowarchitectureB  -6.5857 0.9846 -24.0512  10.8797  False
+HigharchitectureD  LowarchitectureC -25.9882 0.0001 -43.4536  -8.5228   True
+HigharchitectureD  LowarchitectureD  23.5998 0.0008   6.1344  41.0652   True
+HigharchitectureD  LowarchitectureE   14.169 0.2436  -3.2965  31.6344  False
+HigharchitectureD        Lowcontrol   3.0193    1.0 -14.4461  20.4847  False
+HigharchitectureE       Highcontrol -20.9153 0.0057 -38.3807  -3.4498   True
+HigharchitectureE  LowarchitectureA   4.9913 0.9986 -12.4741  22.4568  False
+HigharchitectureE  LowarchitectureB  -0.3142    1.0 -17.7797  17.1512  False
+HigharchitectureE  LowarchitectureC -19.7167 0.0127 -37.1821  -2.2513   True
+HigharchitectureE  LowarchitectureD  29.8713    0.0  12.4059  47.3367   True
+HigharchitectureE  LowarchitectureE  20.4405 0.0079    2.975  37.9059   True
+HigharchitectureE        Lowcontrol   9.2908 0.8393  -8.1746  26.7562  False
+      Highcontrol  LowarchitectureA  25.9066 0.0001   8.4412   43.372   True
+      Highcontrol  LowarchitectureB   20.601  0.007   3.1356  38.0665   True
+      Highcontrol  LowarchitectureC   1.1986    1.0 -16.2668   18.664  False
+      Highcontrol  LowarchitectureD  50.7866    0.0  33.3211   68.252   True
+      Highcontrol  LowarchitectureE  41.3557    0.0  23.8903  58.8211   True
+      Highcontrol        Lowcontrol  30.2061    0.0  12.7407  47.6715   True
+ LowarchitectureA  LowarchitectureB  -5.3056 0.9975  -22.771  12.1598  False
+ LowarchitectureA  LowarchitectureC  -24.708 0.0003 -42.1735  -7.2426   True
+ LowarchitectureA  LowarchitectureD  24.8799 0.0003   7.4145  42.3454   True
+ LowarchitectureA  LowarchitectureE  15.4491 0.1405  -2.0163  32.9145  False
+ LowarchitectureA        Lowcontrol   4.2995 0.9996  -13.166  21.7649  False
+ LowarchitectureB  LowarchitectureC -19.4025 0.0156 -36.8679   -1.937   True
+ LowarchitectureB  LowarchitectureD  30.1855    0.0  12.7201  47.6509   True
+ LowarchitectureB  LowarchitectureE  20.7547 0.0063   3.2893  38.2201   True
+ LowarchitectureB        Lowcontrol   9.6051 0.8076  -7.8604  27.0705  False
+ LowarchitectureC  LowarchitectureD   49.588    0.0  32.1226  67.0534   True
+ LowarchitectureC  LowarchitectureE  40.1572    0.0  22.6917  57.6226   True
+ LowarchitectureC        Lowcontrol  29.0075    0.0  11.5421  46.4729   True
+ LowarchitectureD  LowarchitectureE  -9.4308 0.8255 -26.8963   8.0346  False
+ LowarchitectureD        Lowcontrol -20.5805 0.0071 -38.0459  -3.1151   True
+ LowarchitectureE        Lowcontrol -11.1496 0.6175 -28.6151   6.3158  False
+----------------------------------------------------------------------------
+
+ANOVA Results for Rank 9:
+                                   sum_sq     df          F  PR(>F)
+C(density)                   26951.682044    1.0  71.015079  <0.001
+C(architecture)             159042.046320    5.0  83.812086  <0.001
+C(density):C(architecture)    9738.748224    5.0   5.132132  <0.001
+Residual                     86530.685709  228.0        NaN     NaN
+
+Confidence Intervals for Model Parameters:
+                                                             0           1
+Intercept                                           161.880411  179.047322
+C(density)[T.Low]                                    11.684283   35.961962
+C(architecture)[T.architectureB]                     21.638329   45.916008
+C(architecture)[T.architectureC]                    -40.031875  -15.754196
+C(architecture)[T.architectureD]                     43.311216   67.588894
+C(architecture)[T.architectureE]                     37.462552   61.740231
+C(architecture)[T.control]                          -13.352951   10.924728
+C(density)[T.Low]:C(architecture)[T.architectureB]  -20.401084   13.932739
+C(density)[T.Low]:C(architecture)[T.architectureC]  -14.132071   20.201751
+C(density)[T.Low]:C(architecture)[T.architectureD]  -29.972589    4.361233
+C(density)[T.Low]:C(architecture)[T.architectureE]  -38.896329   -4.562507
+C(density)[T.Low]:C(architecture)[T.control]          1.794066   36.127889
+
+Post-hoc (Tukeyhsd) Results for Rank 9:
+            Multiple Comparison of Means - Tukey HSD, FWER=0.05             
+============================================================================
+      group1            group2      meandiff p-adj   lower    upper   reject
+----------------------------------------------------------------------------
+HigharchitectureA HigharchitectureB  33.7772    0.0  13.4326  54.1217   True
+HigharchitectureA HigharchitectureC  -27.893 0.0006 -48.2376  -7.5485   True
+HigharchitectureA HigharchitectureD  55.4501    0.0  35.1055  75.7946   True
+HigharchitectureA HigharchitectureE  49.6014    0.0  29.2569  69.9459   True
+HigharchitectureA       Highcontrol  -1.2141    1.0 -21.5586  19.1304  False
+HigharchitectureA  LowarchitectureA  23.8231 0.0078   3.4786  44.1676   True
+HigharchitectureA  LowarchitectureB  54.3661    0.0  34.0216  74.7106   True
+HigharchitectureA  LowarchitectureC  -1.0351    1.0 -21.3796  19.3095  False
+HigharchitectureA  LowarchitectureD  66.4675    0.0   46.123   86.812   True
+HigharchitectureA  LowarchitectureE  51.6951    0.0  31.3506  72.0396   True
+HigharchitectureA        Lowcontrol    41.57    0.0  21.2255  61.9145   True
+HigharchitectureB HigharchitectureC -61.6702    0.0 -82.0147 -41.3257   True
+HigharchitectureB HigharchitectureD  21.6729 0.0257   1.3284  42.0174   True
+HigharchitectureB HigharchitectureE  15.8242 0.3039  -4.5203  36.1687  False
+HigharchitectureB       Highcontrol -34.9913    0.0 -55.3358 -14.6468   True
+HigharchitectureB  LowarchitectureA   -9.954 0.9017 -30.2986  10.3905  False
+HigharchitectureB  LowarchitectureB  20.5889 0.0444   0.2444  40.9335   True
+HigharchitectureB  LowarchitectureC -34.8122    0.0 -55.1568 -14.4677   True
+HigharchitectureB  LowarchitectureD  32.6903    0.0  12.3458  53.0349   True
+HigharchitectureB  LowarchitectureE  17.9179 0.1449  -2.4266  38.2625  False
+HigharchitectureB        Lowcontrol   7.7928 0.9826 -12.5517  28.1373  False
+HigharchitectureC HigharchitectureD  83.3431    0.0  62.9986 103.6876   True
+HigharchitectureC HigharchitectureE  77.4944    0.0  57.1499   97.839   True
+HigharchitectureC       Highcontrol  26.6789 0.0013   6.3344  47.0234   True
+HigharchitectureC  LowarchitectureA  51.7162    0.0  31.3716  72.0607   True
+HigharchitectureC  LowarchitectureB  82.2592    0.0  61.9146 102.6037   True
+HigharchitectureC  LowarchitectureC   26.858 0.0012   6.5134  47.2025   True
+HigharchitectureC  LowarchitectureD  94.3605    0.0   74.016 114.7051   True
+HigharchitectureC  LowarchitectureE  79.5881    0.0  59.2436  99.9327   True
+HigharchitectureC        Lowcontrol   69.463    0.0  49.1185  89.8075   True
+HigharchitectureD HigharchitectureE  -5.8487 0.9985 -26.1932  14.4959  False
+HigharchitectureD       Highcontrol -56.6642    0.0 -77.0087 -36.3196   True
+HigharchitectureD  LowarchitectureA -31.6269    0.0 -51.9715 -11.2824   True
+HigharchitectureD  LowarchitectureB  -1.0839    1.0 -21.4285  19.2606  False
+HigharchitectureD  LowarchitectureC -56.4851    0.0 -76.8297 -36.1406   True
+HigharchitectureD  LowarchitectureD  11.0174 0.8228  -9.3271   31.362  False
+HigharchitectureD  LowarchitectureE   -3.755    1.0 -24.0995  16.5896  False
+HigharchitectureD        Lowcontrol -13.8801 0.5132 -34.2246   6.4645  False
+HigharchitectureE       Highcontrol -50.8155    0.0   -71.16  -30.471   True
+HigharchitectureE  LowarchitectureA -25.7783 0.0024 -46.1228  -5.4337   True
+HigharchitectureE  LowarchitectureB   4.7647 0.9998 -15.5798  25.1093  False
+HigharchitectureE  LowarchitectureC -50.6365    0.0  -70.981 -30.2919   True
+HigharchitectureE  LowarchitectureD  16.8661 0.2149  -3.4784  37.2106  False
+HigharchitectureE  LowarchitectureE   2.0937    1.0 -18.2508  22.4382  False
+HigharchitectureE        Lowcontrol  -8.0314  0.978 -28.3759  12.3131  False
+      Highcontrol  LowarchitectureA  25.0372 0.0038   4.6927  45.3818   True
+      Highcontrol  LowarchitectureB  55.5802    0.0  35.2357  75.9248   True
+      Highcontrol  LowarchitectureC    0.179    1.0 -20.1655  20.5236  False
+      Highcontrol  LowarchitectureD  67.6816    0.0  47.3371  88.0261   True
+      Highcontrol  LowarchitectureE  52.9092    0.0  32.5647  73.2537   True
+      Highcontrol        Lowcontrol  42.7841    0.0  22.4396  63.1286   True
+ LowarchitectureA  LowarchitectureB   30.543 0.0001  10.1985  50.8875   True
+ LowarchitectureA  LowarchitectureC -24.8582 0.0042 -45.2027  -4.5137   True
+ LowarchitectureA  LowarchitectureD  42.6444    0.0  22.2999  62.9889   True
+ LowarchitectureA  LowarchitectureE   27.872 0.0006   7.5275  48.2165   True
+ LowarchitectureA        Lowcontrol  17.7469  0.155  -2.5977  38.0914  False
+ LowarchitectureB  LowarchitectureC -55.4012    0.0 -75.7457 -35.0567   True
+ LowarchitectureB  LowarchitectureD  12.1014 0.7169  -8.2431  32.4459  False
+ LowarchitectureB  LowarchitectureE   -2.671    1.0 -23.0155  17.6735  False
+ LowarchitectureB        Lowcontrol -12.7961 0.6396 -33.1407   7.5484  False
+ LowarchitectureC  LowarchitectureD  67.5026    0.0   47.158  87.8471   True
+ LowarchitectureC  LowarchitectureE  52.7302    0.0  32.3856  73.0747   True
+ LowarchitectureC        Lowcontrol  42.6051    0.0  22.2605  62.9496   True
+ LowarchitectureD  LowarchitectureE -14.7724 0.4118 -35.1169   5.5721  False
+ LowarchitectureD        Lowcontrol -24.8975 0.0041  -45.242   -4.553   True
+ LowarchitectureE        Lowcontrol -10.1251 0.8909 -30.4696  10.2194  False
+----------------------------------------------------------------------------
+
+ANOVA Results for Rank 10:
+                                   sum_sq     df           F  PR(>F)
+C(density)                   71966.822204    1.0  272.495376  <0.001
+C(architecture)             147397.036612    5.0  111.620910  <0.001
+C(density):C(architecture)    7885.962161    5.0    5.971886  <0.001
+Residual                     60215.463764  228.0         NaN     NaN
+
+Confidence Intervals for Model Parameters:
+                                                             0           1
+Intercept                                           198.957261  213.277857
+C(density)[T.Low]                                   -50.141758  -29.889376
+C(architecture)[T.architectureB]                     40.164800   60.417181
+C(architecture)[T.architectureC]                    -26.301688   -6.049306
+C(architecture)[T.architectureD]                     45.065287   65.317669
+C(architecture)[T.architectureE]                     32.553733   52.806115
+C(architecture)[T.control]                            2.294697   22.547079
+C(density)[T.Low]:C(architecture)[T.architectureB]  -19.066633    9.574560
+C(density)[T.Low]:C(architecture)[T.architectureC]   -4.816910   23.824282
+C(density)[T.Low]:C(architecture)[T.architectureD]  -12.668010   15.973183
+C(density)[T.Low]:C(architecture)[T.architectureE]  -17.375531   11.265661
+C(density)[T.Low]:C(architecture)[T.control]         14.619300   43.260493
+
+Post-hoc (Tukeyhsd) Results for Rank 10:
+             Multiple Comparison of Means - Tukey HSD, FWER=0.05              
+==============================================================================
+      group1            group2       meandiff p-adj    lower    upper   reject
+------------------------------------------------------------------------------
+HigharchitectureA HigharchitectureB    50.291    0.0   33.3196  67.2623   True
+HigharchitectureA HigharchitectureC  -16.1755 0.0779  -33.1468   0.7959  False
+HigharchitectureA HigharchitectureD   55.1915    0.0   38.2201  72.1628   True
+HigharchitectureA HigharchitectureE   42.6799    0.0   25.7086  59.6513   True
+HigharchitectureA       Highcontrol   12.4209  0.399   -4.5505  29.3922  False
+HigharchitectureA  LowarchitectureA  -40.0156    0.0  -56.9869 -23.0442   True
+HigharchitectureA  LowarchitectureB    5.5294 0.9954   -11.442  22.5007  False
+HigharchitectureA  LowarchitectureC  -46.6874    0.0  -63.6587  -29.716   True
+HigharchitectureA  LowarchitectureD   16.8285 0.0543   -0.1429  33.7999  False
+HigharchitectureA  LowarchitectureE   -0.3906    1.0  -17.3619  16.5808  False
+HigharchitectureA        Lowcontrol    1.3452    1.0  -15.6261  18.3166  False
+HigharchitectureB HigharchitectureC  -66.4665    0.0  -83.4378 -49.4951   True
+HigharchitectureB HigharchitectureD    4.9005 0.9984  -12.0709  21.8718  False
+HigharchitectureB HigharchitectureE   -7.6111 0.9444  -24.5824   9.3603  False
+HigharchitectureB       Highcontrol  -37.8701    0.0  -54.8415 -20.8987   True
+HigharchitectureB  LowarchitectureA  -90.3066    0.0 -107.2779 -73.3352   True
+HigharchitectureB  LowarchitectureB  -44.7616    0.0   -61.733 -27.7903   True
+HigharchitectureB  LowarchitectureC  -96.9784    0.0 -113.9497  -80.007   True
+HigharchitectureB  LowarchitectureD  -33.4625    0.0  -50.4338 -16.4911   True
+HigharchitectureB  LowarchitectureE  -50.6816    0.0  -67.6529 -33.7102   True
+HigharchitectureB        Lowcontrol  -48.9458    0.0  -65.9171 -31.9744   True
+HigharchitectureC HigharchitectureD    71.367    0.0   54.3956  88.3383   True
+HigharchitectureC HigharchitectureE   58.8554    0.0   41.8841  75.8268   True
+HigharchitectureC       Highcontrol   28.5964    0.0    11.625  45.5677   True
+HigharchitectureC  LowarchitectureA  -23.8401 0.0004  -40.8114  -6.8687   True
+HigharchitectureC  LowarchitectureB   21.7049  0.002    4.7335  38.6762   True
+HigharchitectureC  LowarchitectureC  -30.5119    0.0  -47.4832 -13.5405   True
+HigharchitectureC  LowarchitectureD    33.004    0.0   16.0326  49.9753   True
+HigharchitectureC  LowarchitectureE   15.7849 0.0957   -1.1864  32.7563  False
+HigharchitectureC        Lowcontrol   17.5207 0.0362    0.5494  34.4921   True
+HigharchitectureD HigharchitectureE  -12.5116 0.3873  -29.4829   4.4598  False
+HigharchitectureD       Highcontrol  -42.7706    0.0  -59.7419 -25.7992   True
+HigharchitectureD  LowarchitectureA   -95.207    0.0 -112.1784 -78.2357   True
+HigharchitectureD  LowarchitectureB  -49.6621    0.0  -66.6334 -32.6907   True
+HigharchitectureD  LowarchitectureC -101.8789    0.0 -118.8502 -84.9075   True
+HigharchitectureD  LowarchitectureD   -38.363    0.0  -55.3343 -21.3916   True
+HigharchitectureD  LowarchitectureE  -55.5821    0.0  -72.5534 -38.6107   True
+HigharchitectureD        Lowcontrol  -53.8463    0.0  -70.8176 -36.8749   True
+HigharchitectureE       Highcontrol   -30.259    0.0  -47.2304 -13.2877   True
+HigharchitectureE  LowarchitectureA  -82.6955    0.0  -99.6668 -65.7241   True
+HigharchitectureE  LowarchitectureB  -37.1505    0.0  -54.1219 -20.1792   True
+HigharchitectureE  LowarchitectureC  -89.3673    0.0 -106.3387 -72.3959   True
+HigharchitectureE  LowarchitectureD  -25.8514 0.0001  -42.8228  -8.8801   True
+HigharchitectureE  LowarchitectureE  -43.0705    0.0  -60.0419 -26.0991   True
+HigharchitectureE        Lowcontrol  -41.3347    0.0  -58.3061 -24.3634   True
+      Highcontrol  LowarchitectureA  -52.4365    0.0  -69.4078 -35.4651   True
+      Highcontrol  LowarchitectureB   -6.8915 0.9727  -23.8629  10.0799  False
+      Highcontrol  LowarchitectureC  -59.1083    0.0  -76.0796 -42.1369   True
+      Highcontrol  LowarchitectureD    4.4076 0.9994  -12.5637   21.379  False
+      Highcontrol  LowarchitectureE  -12.8115 0.3498  -29.7828   4.1599  False
+      Highcontrol        Lowcontrol  -11.0757 0.5837   -28.047   5.8957  False
+ LowarchitectureA  LowarchitectureB    45.545    0.0   28.5736  62.5163   True
+ LowarchitectureA  LowarchitectureC   -6.6718 0.9787  -23.6432  10.2995  False
+ LowarchitectureA  LowarchitectureD   56.8441    0.0   39.8727  73.8154   True
+ LowarchitectureA  LowarchitectureE    39.625    0.0   22.6536  56.5963   True
+ LowarchitectureA        Lowcontrol   41.3608    0.0   24.3894  58.3321   True
+ LowarchitectureB  LowarchitectureC  -52.2168    0.0  -69.1881 -35.2454   True
+ LowarchitectureB  LowarchitectureD   11.2991 0.5524   -5.6722  28.2705  False
+ LowarchitectureB  LowarchitectureE     -5.92 0.9918  -22.8913  11.0514  False
+ LowarchitectureB        Lowcontrol   -4.1842 0.9996  -21.1555  12.7872  False
+ LowarchitectureC  LowarchitectureD   63.5159    0.0   46.5445  80.4872   True
+ LowarchitectureC  LowarchitectureE   46.2968    0.0   29.3254  63.2682   True
+ LowarchitectureC        Lowcontrol   48.0326    0.0   31.0612  65.0039   True
+ LowarchitectureD  LowarchitectureE  -17.2191 0.0433  -34.1904  -0.2477   True
+ LowarchitectureD        Lowcontrol  -15.4833 0.1116  -32.4546   1.4881  False
+ LowarchitectureE        Lowcontrol    1.7358    1.0  -15.2356  18.7071  False
+------------------------------------------------------------------------------

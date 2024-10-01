@@ -1,30 +1,87 @@
-setwd("C:/Users/jacop/OneDrive/Desktop/Thesis/Data analysis/Statistics")
-total_absorbedPAR <- read.csv("total_absorbedPAR.csv")
-head(total_absorbedPAR)
+# Load necessary libraries
+library(readr)
+library(dplyr)
 library(stats)
+library(agricolae)
+library(ggplot2)
+library(gridExtra)
+library(car)
 
-# Fit the ANOVA model
-anova_model <- aov(absorbedPAR_umol_m2_s1 ~ density * canopy, data = total_absorbedPAR)
+# Read the data
+data <- read_csv("combined_results_simulations.csv")
 
-# Display the summary of the ANOVA model
-summary(anova_model)
+# Create output directories if they don't exist
+if (!dir.exists("output_statistics")) dir.create("output_statistics")
+if (!dir.exists("qq_plots")) dir.create("qq_plots")
+if (!dir.exists("plots")) dir.create("plots")
 
+# Opening output files
+anova_output <- file("output_statistics/ANOVA_results.txt", open = "wt")
+assumptions_output <- file("output_statistics/assumption_checks_ranks.txt", open = "wt")
 
-
-# Assuming you've already loaded your data into a DataFrame called new_data
-new_data <- read.csv("combined_results_simulations_fake.csv")
-
-# Split the data by rank
-data_by_rank <- split(new_data, new_data$rank)
-
-# Initialize a list to store ANOVA results
-anova_results <- list()
-
-# Loop through each rank and perform ANOVA
-for (rank in names(data_by_rank)) {
-  model <- aov(absorbedPAR_umol_m2_s1 ~ density * canopy, data = data_by_rank[[rank]])
-  anova_results[[rank]] <- summary(model)
+# Process data by rank
+unique_ranks <- unique(data$rank)
+for (rank in unique_ranks) {
+  # Filter data for the current rank
+  rank_data <- filter(data, rank == rank)
+  
+  # ANOVA model
+  rank_data$density <- as.factor(rank_data$density)
+  rank_data$architecture <- as.factor(rank_data$architecture)
+  model <- aov(absorbedPAR_umol_m2_s1 ~ density * architecture, data = rank_data)
+  anova_results <- summary(model)
+  
+  # Write ANOVA results to file
+  writeLines(paste("\nANOVA Results for Rank", rank, ":\n", capture.output(anova_results)), anova_output)
+  
+  # Get and write confidence intervals for model parameters
+  conf_intervals <- confint(model)
+  writeLines(paste("\nConfidence Intervals for Model Parameters:\n", capture.output(conf_intervals)), anova_output)
+  
+  # LSD Test if model is significant
+  if (summary(model)[[1]][["Pr(>F)"]][1] < 0.05) {
+    lsd_test <- LSD.test(model, "density:architecture", group = TRUE, console = TRUE)
+    writeLines(paste("\nLSD Test Results for Rank", rank, ":\n", capture.output(lsd_test$groups)), anova_output)
+  }
+  
+  # Assumption checks: Levene's Test and Shapiro-Wilk Test
+  levene_test <- leveneTest(residuals(model), rank_data$density)
+  shapiro_test <- shapiro.test(residuals(model))
+  writeLines(paste("\nLevene Test for Rank", rank, ": Stat=", levene_test$statistic, ", p=", levene_test$p.value), assumptions_output)
+  writeLines(paste("\nShapiro-Wilk Test for Rank", rank, ": Stat=", shapiro_test$statistic, ", p=", shapiro_test$p.value), assumptions_output)
+  
+  # Plotting residuals for assumption checks
+  png(filename = paste("qq_plots/qqplot_rank_", rank, ".png", sep=""))
+  qqnorm(residuals(model))
+  qqline(residuals(model))
+  dev.off()
 }
 
-# Print the results for each rank
-anova_results
+# Close output files
+close(anova_output)
+close(assumptions_output)
+
+# Calculate means, standard deviations, and standard errors
+data_summary <- data %>%
+  group_by(density, architecture, rank) %>%
+  summarise(
+    mean = mean(absorbedPAR_umol_m2_s1, na.rm = TRUE),
+    sd = sd(absorbedPAR_umol_m2_s1, na.rm = TRUE),
+    n = n(),
+    std.error = sd / sqrt(n),
+    .groups = 'drop'
+  )
+
+# Create visualization of the results
+png("plots/mean_absorbedPAR_over_ranks.png", width = 960, height = 480, res = 120)
+for (density in unique(data_summary$density)) {
+  filtered_data <- filter(data_summary, density == density)
+  gg <- ggplot(filtered_data, aes(x = rank, y = mean, group = architecture, color = architecture)) +
+    geom_line() +
+    geom_point() +
+    geom_errorbar(aes(ymin = mean - std.error, ymax = mean + std.error), width = 0.1) +
+    facet_wrap(~architecture) +
+    labs(title = paste("Absorbed PAR over Leaf Ranks for Density:", density), x = "Rank", y = "Absorbed PAR (umol m-2 s-1)")
+  print(gg)
+}
+dev.off()

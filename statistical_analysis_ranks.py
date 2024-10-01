@@ -7,28 +7,13 @@ import seaborn as sns
 from scipy.stats import levene, shapiro
 import numpy as np
 from scipy.stats import sem, t
+import scikit_posthocs as sp
 
 # Load the data.
-data = pd.read_csv('combined_results_simulations_fake.csv')
-
-'''
-# Print basic infor about the dataframe.
-print(data.info())
-print("\nUnique values in 'density':", data['density'].unique())
-print("Unique values in 'canopy':", data['canopy'].unique())
-print("Unique values in 'rank':", data['rank'].unique())
-
-# Check for any NaN values.
-print("\nNaN counts in DataFrame:")
-print(data.isna().sum())
-
-# Summary statistics for numeric columns.
-print("\nSummary statistics for numeric columns:")
-print(data.describe())
-'''
+data = pd.read_csv('combined_results_simulations.csv')
 
 # Opening output files for ANOVA results and assumption checks.
-anova_output = open('output_statistics/ANOVA_results.txt', 'w')
+anova_output = open('output_statistics/ANOVA_results_ranks.txt', 'w')
 assumptions_output = open('output_statistics/assumption_checks_ranks.txt', 'w')
 
 # Process data by rank.
@@ -37,33 +22,33 @@ for rank in data['rank'].unique():
     rank_data = data[data['rank'] == rank]
 
    # ANOVA model.
-    try:
-        model = ols('absorbedPAR_umol_m2_s1 ~ C(density) * C(canopy)', data=rank_data).fit()
-        anova_results = sm.stats.anova_lm(model, typ=2)
-        
-        # Write ANOVA results and summary to file.txt
-        anova_output.write(f'\nANOVA Results for Rank {rank}:\n{anova_results}\n')
-        anova_output.write("\nModel Summary:\n")
-        anova_output.write(model.summary().as_text())
+    model = ols('absorbedPAR_umol_m2_s1 ~ C(density) * C(architecture)', data=rank_data).fit()
+    anova_results = sm.stats.anova_lm(model, typ=2)
 
-        # Get and write confidence intervals for model parameters
-        conf_intervals = model.conf_int()
-        anova_output.write(f'\nConfidence Intervals for Model Parameters:\n{conf_intervals}\n')
+    # Function to format p-values with a minimum display value of 0.001
+    def format_p_value(p):
+        if p < 0.001:
+            return "<0.001"
+        else:
+            return round(p, 3)  # Round to 3 decimal places
 
-        # Get descriptive statistics grouped by 'density' and 'canopy'
-        desc_stats = rank_data.groupby(['density', 'canopy'])['absorbedPAR_umol_m2_s1'].describe()
-        anova_output.write(f'\nDescriptive Statistics for Rank {rank}:\n{desc_stats}\n')
+    # Apply the function to the ANOVA results' p-values
+    anova_results['PR(>F)'] = anova_results['PR(>F)'].apply(format_p_value)
+    
+    # Write ANOVA results and summary to file.txt
+    anova_output.write(f'\nANOVA Results for Rank {rank}:\n{anova_results}\n')
 
-    except Exception as e:
-        print("Error in running ANOVA:", e)
-   
+    # Get and write confidence intervals for model parameters
+    conf_intervals = model.conf_int()
+    anova_output.write(f'\nConfidence Intervals for Model Parameters:\n{conf_intervals}\n')
+
     # Post-hoc test (TukeyHSD).
     if model.f_pvalue < 0.05:  # Check if the overall model is significant.
-        mc = pairwise_tukeyhsd(rank_data['absorbedPAR_umol_m2_s1'], rank_data['density'] + rank_data['canopy'])
+        mc = pairwise_tukeyhsd(rank_data['absorbedPAR_umol_m2_s1'], rank_data['density'] + rank_data['architecture'])
         anova_output.write(f'\nPost-hoc (Tukeyhsd) Results for Rank {rank}:\n{mc}\n')
 
     # Assumption Checks: Levene's Test and Normality Test.
-    grouped_data = rank_data.groupby(['density', 'canopy'])
+    grouped_data = rank_data.groupby(['density', 'architecture'])
     groups = [group['absorbedPAR_umol_m2_s1'] for name, group in grouped_data]
     levene_stat, levene_p = levene(*groups)
     shapiro_stat, shapiro_p = shapiro(model.resid)
@@ -81,11 +66,11 @@ for rank in data['rank'].unique():
 anova_output.close()
 assumptions_output.close()
 
-
+'''
 # Create visualization of the results.
 
 # 1) Calculate mean, std dev, and count for each combination
-grouped = data.groupby(['density', 'canopy', 'rank'])['absorbedPAR_umol_m2_s1']
+grouped = data.groupby(['density', 'architecture', 'rank'])['absorbedPAR_umol_m2_s1']
 mean_values = grouped.mean().reset_index(name='mean')
 mean_values['std_dev'] = grouped.std().reset_index(name='std_dev')['std_dev']
 mean_values['n'] = grouped.count().reset_index(name='count')['count']
@@ -110,17 +95,17 @@ for density in densities:
     # Filter data for current density
     filtered_data = mean_values[mean_values['density'] == density]
     
-    # Plotting lineplot for each canopy type within the current density
-    for canopy in filtered_data['canopy'].unique():
-        canopy_data = filtered_data[filtered_data['canopy'] == canopy]
-        sns.lineplot(x='rank', y='mean', data=canopy_data, label=canopy, marker='o')
+    # Plotting lineplot for each architecture type within the current density
+    for architecture in filtered_data['architecture'].unique():
+        architecture_data = filtered_data[filtered_data['architecture'] == architecture]
+        sns.lineplot(x='rank', y='mean', data=architecture_data, label=architecture, marker='o')
         # Adding the confidence interval as a shaded area
-        plt.fill_between(canopy_data['rank'], canopy_data['ci_lower'], canopy_data['ci_upper'], alpha=0.3)
+        plt.fill_between(architecture_data['rank'], architecture_data['ci_lower'], architecture_data['ci_upper'], alpha=0.3)
     
     plt.title(f'Absorbed PAR over Leaf Ranks for Density: {density}')
     plt.xlabel('Rank')
     plt.ylabel('Absorbed PAR umol m-2 s-1')
-    plt.legend(title='Canopy')
+    plt.legend(title='Architecture Type')
     plt.savefig(f'plots/mean_absorbedPAR_for_{density}_density.png')
-    plt.show()
     plt.close()
+'''

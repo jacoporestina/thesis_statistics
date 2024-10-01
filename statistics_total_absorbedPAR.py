@@ -16,7 +16,7 @@ anova_output = open('output_statistics/ANOVA_total_absorbedPAR.txt', 'w')
 assumptions = open('output_statistics/assumptions_total_absorbedPAR.txt', 'w') 
 
 # ANOVA 2-way.
-model = ols('absorbedPAR_umol_m2_s1 ~ C(density) * C(canopy)', data=data).fit()
+model = ols('absorbedPAR_umol_m2_s1 ~ C(density) * C(architecture)', data=data).fit()
 anova_results = sm.stats.anova_lm(model, typ=2)
 print(anova_results)
 
@@ -32,7 +32,7 @@ anova_output.write(f"\nDescriptive statistics: {descriptive_statistics} \n")
 
 # Post-hoc test (TukeyHSD).
 if model.f_pvalue < 0.05:  # Check if the overall model is significant.
-    mc = pairwise_tukeyhsd(data['absorbedPAR_umol_m2_s1'], data['density'] + data['canopy'])
+    mc = pairwise_tukeyhsd(data['absorbedPAR_umol_m2_s1'], data['density'] + data['architecture'])
     anova_output.write(f'\nPost-hoc (Tukeyhsd) Results:\n{mc}\n')
 
 # Assumption Checks: Levene's Test and Normality Test.
@@ -56,7 +56,7 @@ assumptions.close()
 
 # Make a visualization of results with a bar chart. 
 # 1) Calculate mean and st dev of data within densities.
-data_grouped = data.groupby(['density', 'canopy'])['absorbedPAR_umol_m2_s1']
+data_grouped = data.groupby(['density', 'architecture'])['absorbedPAR_umol_m2_s1']
 mean_values = data_grouped.mean().reset_index(name='mean')
 mean_values['sd_dev'] = data_grouped.std().reset_index(name='std_dev')['std_dev']
 densities = mean_values['density'].unique()
@@ -67,14 +67,13 @@ print(densities)
 for density in densities:
     # Filter dataset for densities
     filtered_density_data = mean_values[mean_values['density'] == density]
-    print(filtered_density_data['canopy'])
+    print(filtered_density_data['architecture'])
     print(filtered_density_data['mean'])
     
     # Make the bar chart.
     fig, ax = plt.subplots(figsize=(10, 6))
-    colors = ['red', 'green', 'yellow']
-    ax.bar(filtered_density_data['canopy'], filtered_density_data['mean'], yerr=filtered_density_data['sd_dev'], 
-           width=0.5, edgecolor='black', linewidth=0.5, capsize=5, color=colors)
+    ax.bar(filtered_density_data['architecture'], filtered_density_data['mean'], yerr=filtered_density_data['sd_dev'], 
+           width=0.5, edgecolor='black', linewidth=0.5, capsize=5, color='green')
     
     # Set the title and labels
     ax.set_title(f'Total Absorbed PAR for {density} density')

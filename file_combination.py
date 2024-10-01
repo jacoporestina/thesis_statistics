@@ -1,24 +1,21 @@
 import pandas as pd
 import re  
+import os
 
-# List of file paths for each simulation
-file_paths = [
-    'output_model/20231114_High_experiment_1.csv', 'output_model/20231114_High_canopyA_1.csv', 
-    'output_model/20231114_High_canopyB_1.csv', 'output_model/20231114_Low_experiment_1.csv',
-    'output_model/20231114_Low_canopyA_1.csv', 'output_model/20231114_Low_canopyB_1.csv',
-    'output_model/20231114_High_experiment_2.csv', 'output_model/20231114_High_canopyA_2.csv', 
-    'output_model/20231114_High_canopyB_2.csv', 'output_model/20231114_Low_experiment_2.csv',
-    'output_model/20231114_Low_canopyA_2.csv', 'output_model/20231114_Low_canopyB_2.csv'
-]
+# Path to the folder containing your files
+folder_path = 'output_model/'
+
+# List to store all file paths
+file_paths = [os.path.join(folder_path, f) for f in os.listdir(folder_path) if f.endswith('.csv')]
 
 # Initialize an empty list to store dataframes
 dfs = []
 
-# Function to extract density, canopy, and simulation number from the filename
+# Function to extract repetition, density, and architecture from the filename
 def extract_simulation_info(file_path):
-    match = re.search(r'(\d{8})_(High|Low)_(experiment|canopyA|canopyB)_(\d+)', file_path) # For extracting parts of the filename
+    match = re.search(r'repetition_(\d+)_(High|Low)_(architecture[A-E]|control)', file_path)
     if match:
-        return match.group(2), match.group(3), match.group(4)
+        return match.group(1), match.group(2), match.group(3)  # repetition, density, architecture
     else:
         return 'Unknown', 'Unknown', 'Unknown'
 
@@ -29,18 +26,17 @@ for file in file_paths:
     
     # Adjust the 'rank' column by subtracting 1 from each value to start ranks from 1
     df['rank'] = df['rank'] - 1
-    print(df['rank'])
 
     # Remove rows where Organ_ID starts with "organs.Internode"
     df = df[~df['Organ_ID'].str.startswith('organs.Internode')]
 
-    # Extract density, canopy, and simulation number from the filename
-    density, canopy_type, sim_number = extract_simulation_info(file)
-    
+    # Extract repetition, density, and architecture from the filename
+    repetition, density, architecture = extract_simulation_info(file)
+
     # Add the extracted information as new columns
     df['density'] = density
-    df['canopy'] = canopy_type
-    df['simulation'] = f'Sim{sim_number}'
+    df['architecture'] = architecture
+    df['repetition'] = repetition  
 
     # Drop unnecessary columns
     columns_to_drop = [
@@ -55,13 +51,13 @@ for file in file_paths:
     # Handle rank 1 separately by first summing the values for two leaves and then averaging
     rank1_df = df[df['rank'] == 1]
     numeric_columns = ['absorbedPAR_umol_m2_s1', 'area_m2[m^2]', 'absorbedPAR [umol s^-1]']
-    rank1_summed = rank1_df.groupby(['density', 'canopy', 'simulation', 'plantNb']).sum().reset_index()
-    rank1_averaged = rank1_summed.groupby(['density', 'canopy', 'simulation'])[numeric_columns].mean().reset_index()
+    rank1_summed = rank1_df.groupby(['density', 'architecture', 'repetition', 'plantNb']).sum().reset_index()
+    rank1_averaged = rank1_summed.groupby(['density', 'architecture', 'repetition'])[numeric_columns].mean().reset_index()
     rank1_averaged['rank'] = 1 
     
     # Handle other ranks normally
     other_ranks_df = df[df['rank'] != 1]
-    other_ranks_mean = other_ranks_df.groupby(['density', 'canopy', 'simulation', 'rank'])[numeric_columns].mean().reset_index()
+    other_ranks_mean = other_ranks_df.groupby(['density', 'architecture', 'repetition', 'rank'])[numeric_columns].mean().reset_index()
 
     # Combine rank 2 and other ranks
     combined_df = pd.concat([rank1_averaged, other_ranks_mean], ignore_index=True)
@@ -73,7 +69,7 @@ for file in file_paths:
 combined_data = pd.concat(dfs, ignore_index=True)
 
 # Assuming 'combined_data' is your final DataFrame
-combined_data = combined_data[['density', 'canopy', 'simulation', 'rank',  'area_m2[m^2]', 'absorbedPAR_umol_m2_s1']]
+combined_data = combined_data[['density', 'architecture', 'repetition', 'rank',  'area_m2[m^2]', 'absorbedPAR_umol_m2_s1']]
 
 # Save the combined data to a new CSV
 combined_data.to_csv('combined_results_simulations.csv', index=False)
@@ -85,8 +81,8 @@ print("Data processing complete. File saved as 'combined_simulation_data_filtere
 file_path = 'combined_results_simulations.csv' 
 data = pd.read_csv(file_path)
 
-# Group the data by 'density', 'canopy', and 'simulation' and sum the specified columns
-grouped_data = data.groupby(['density', 'canopy', 'simulation']).agg({
+# Group the data by 'density', 'architecture', 'repetition' and sum the specified columns
+grouped_data = data.groupby(['density', 'architecture', 'repetition']).agg({
     'absorbedPAR_umol_m2_s1': 'sum',
     'area_m2[m^2]': 'sum'
 }).reset_index()

@@ -1,7 +1,0 @@
-               Df Sum Sq Mean Sq F value Pr(>F)  
-density         1   7099    7099   4.893  0.069 .
-canopy          2    745     372   0.257  0.782  
-density:canopy  2    144      72   0.050  0.952  
-Residuals       6   8705    1451                 
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
