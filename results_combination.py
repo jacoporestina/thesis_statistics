@@ -8,8 +8,9 @@ folder_path = 'output_model/'
 # List to store all file paths
 file_paths = [os.path.join(folder_path, f) for f in os.listdir(folder_path) if f.endswith('.csv')]
 
-# Initialize an empty list to store dataframes
-dfs = []
+# Initialize two lists to store dataframes by density
+dfs_high = []
+dfs_low = []
 
 # Function to extract repetition, density, and architecture from the filename
 def extract_simulation_info(file_path):
@@ -62,33 +63,50 @@ for file in file_paths:
     # Combine rank 2 and other ranks
     combined_df = pd.concat([rank1_averaged, other_ranks_mean], ignore_index=True)
     
-    # Append the processed DataFrame to the list
-    dfs.append(combined_df)
+    # Append the processed DataFrame to the appropriate list based on density
+    if density == 'High':
+        dfs_high.append(combined_df)
+    elif density == 'Low':
+        dfs_low.append(combined_df)
 
-# Concatenate all dataframes into one
-combined_data = pd.concat(dfs, ignore_index=True)
+# Concatenate all High density dataframes into one
+combined_high = pd.concat(dfs_high, ignore_index=True)
 
-# Assuming 'combined_data' is your final DataFrame
-combined_data = combined_data[['density', 'architecture', 'repetition', 'rank',  'area_m2[m^2]', 'absorbedPAR_umol_m2_s1']]
+# Concatenate all Low density dataframes into one
+combined_low = pd.concat(dfs_low, ignore_index=True)
 
-# Save the combined data to a new CSV
-combined_data.to_csv('combined_results_simulations.csv', index=False)
+# Assuming 'combined_high' and 'combined_low' are your final DataFrames
+combined_high = combined_high[['density', 'architecture', 'repetition', 'rank',  'area_m2[m^2]', 'absorbedPAR_umol_m2_s1']]
+combined_low = combined_low[['density', 'architecture', 'repetition', 'rank',  'area_m2[m^2]', 'absorbedPAR_umol_m2_s1']]
 
-print("Data processing complete. File saved as 'combined_simulation_data_filtered.csv'.")
+# Save the combined data to two new CSV files
+combined_high.to_csv('combined_high_ranks.csv', index=False)
+combined_low.to_csv('combined_low_ranks.csv', index=False)
 
+print("Data processing complete. Files saved as 'combined_high_density.csv' and 'combined_low_density.csv'.")
 
-# Get total light absorbed.
-file_path = 'combined_results_simulations.csv' 
-data = pd.read_csv(file_path)
+# Create total absorbedPAR files for both high and low density.
+# Define a function to process and aggregate the data
+def aggregate_absorbed_PAR(file_path, output_path):
+    # Load the data
+    data = pd.read_csv(file_path)
+    
+    # Group the data by 'density', 'architecture', 'repetition' and sum the specified columns
+    grouped_data = data.groupby(['density', 'architecture', 'repetition']).agg({
+        'absorbedPAR_umol_m2_s1': 'sum',
+        'area_m2[m^2]': 'sum'
+    }).reset_index()
+    
+    # Save the aggregated data to a new CSV file
+    grouped_data.to_csv(output_path, index=False)
+    print(f"Aggregation complete. Data saved to: {output_path}")
 
-# Group the data by 'density', 'architecture', 'repetition' and sum the specified columns
-grouped_data = data.groupby(['density', 'architecture', 'repetition']).agg({
-    'absorbedPAR_umol_m2_s1': 'sum',
-    'area_m2[m^2]': 'sum'
-}).reset_index()
+# File paths for high and low density data
+file_paths = {
+    'high': ('combined_high_ranks.csv', 'high_total_absorbedPAR.csv'),
+    'low': ('combined_low_ranks.csv', 'low_total_absorbedPAR.csv')
+}
 
-# Save the aggregated data to a new CSV file
-output_path = 'total_absorbedPAR.csv' 
-grouped_data.to_csv(output_path, index=False)
-
-print("Aggregation complete. Data saved to:", output_path)
+# Loop through both high and low files and apply the aggregation
+for density, (input_file, output_file) in file_paths.items():
+    aggregate_absorbed_PAR(input_file, output_file)

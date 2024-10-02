@@ -6,8 +6,9 @@ import os
 folder_path = "output_sensors/"
 file_paths = [os.path.join(folder_path, f) for f in os.listdir(folder_path) if f.endswith('.csv')]
 
-# Initialize an empty list to contain pandas DataFrames.
-dfs = []
+# Initialize two lists to store dataframes by density
+dfs_high = []
+dfs_low = []
 
 # Function to extract repetition, density, and architecture from the filename
 def extract_simulation_info(file_path):
@@ -43,16 +44,22 @@ for file in file_paths:
     # Drop unnecessary columns from the mean_df
     mean_df.drop(columns=[' Tile z cohordinate [m]', 'absorbedPARTile [umol^s-1]'], inplace=True)
     
-    # Append the processed DataFrame (mean of each file) to the list
-    dfs.append(mean_df)
+    # Append the processed DataFrame to the appropriate list based on density
+    if density == 'High':
+        dfs_high.append(mean_df)
+    elif density == 'Low':
+        dfs_low.append(mean_df)
 
-# Concatenate all dataframes (one per file) into one
-combined_data = pd.concat(dfs, ignore_index=True)
+# Concatenate all high and low density dataframes.
+combined_high = pd.concat(dfs_high, ignore_index=True)
+combined_low = pd.concat(dfs_low, ignore_index=True)
 
 # Assuming 'combined_data' is your final DataFrame
-combined_data = combined_data[['density', 'architecture', 'repetition', 'absorbedPAR_umol_m2_s1']]
+combined_high = combined_high[['density', 'architecture', 'repetition', 'absorbedPAR_umol_m2_s1']]
+combined_low = combined_low[['density', 'architecture', 'repetition', 'absorbedPAR_umol_m2_s1']]
 
 # Save the combined data to a new CSV
-combined_data.to_csv('combined_sensors_data.csv', index=False)
+combined_high.to_csv('combined_high_sensors.csv', index=False)
+combined_low.to_csv('combined_low_sensors.csv', index=False)
 
 print("Data processing complete.")
