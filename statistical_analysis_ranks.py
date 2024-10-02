@@ -66,7 +66,6 @@ for rank in data['rank'].unique():
 anova_output.close()
 assumptions_output.close()
 
-'''
 # Create visualization of the results.
 
 # 1) Calculate mean, std dev, and count for each combination
@@ -108,4 +107,3 @@ for density in densities:
     plt.legend(title='Architecture Type')
     plt.savefig(f'plots/mean_absorbedPAR_for_{density}_density.png')
     plt.close()
-'''
