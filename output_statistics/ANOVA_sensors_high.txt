@@ -1,0 +1,67 @@
+
+ANOVA results for total absorbedPAR: 
+                       sum_sq     df          F  PR(>F)
+C(architecture)  1219.341034    5.0  45.831567  <0.001
+Residual          606.590119  114.0        NaN     NaN 
+
+Model summary: 
+                              OLS Regression Results                              
+==================================================================================
+Dep. Variable:     absorbedPAR_umol_m2_s1   R-squared:                       0.668
+Model:                                OLS   Adj. R-squared:                  0.653
+Method:                     Least Squares   F-statistic:                     45.83
+Date:                    Thu, 03 Oct 2024   Prob (F-statistic):           9.71e-26
+Time:                            16:37:25   Log-Likelihood:                -267.49
+No. Observations:                     120   AIC:                             547.0
+Df Residuals:                         114   BIC:                             563.7
+Df Model:                               5                                         
+Covariance Type:                nonrobust                                         
+====================================================================================================
+                                       coef    std err          t      P>|t|      [0.025      0.975]
+----------------------------------------------------------------------------------------------------
+Intercept                            5.1269      0.516      9.940      0.000       4.105       6.149
+C(architecture)[T.architectureB]     0.3352      0.729      0.460      0.647      -1.110       1.780
+C(architecture)[T.architectureC]     5.0156      0.729      6.876      0.000       3.571       6.461
+C(architecture)[T.architectureD]    -2.3937      0.729     -3.281      0.001      -3.839      -0.949
+C(architecture)[T.architectureE]     7.0115      0.729      9.612      0.000       5.566       8.457
+C(architecture)[T.control]           1.0891      0.729      1.493      0.138      -0.356       2.534
+==============================================================================
+Omnibus:                        2.535   Durbin-Watson:                   1.972
+Prob(Omnibus):                  0.282   Jarque-Bera (JB):                2.081
+Skew:                           0.183   Prob(JB):                        0.353
+Kurtosis:                       3.532   Cond. No.                         6.85
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+Descriptive statistics:        repetition  absorbedPAR_umol_m2_s1
+count  120.000000              120.000000
+mean    10.500000                6.969899
+std      5.790459                3.917137
+min      1.000000                0.814949
+25%      5.750000                3.930801
+50%     10.500000                6.044917
+75%     15.250000                9.091199
+max     20.000000               18.976476 
+
+Post-hoc (Tukeyhsd) Results:
+           Multiple Comparison of Means - Tukey HSD, FWER=0.05            
+==========================================================================
+      group1            group2      meandiff p-adj   lower   upper  reject
+--------------------------------------------------------------------------
+HigharchitectureA HigharchitectureB   0.3352 0.9974 -1.7793  2.4497  False
+HigharchitectureA HigharchitectureC   5.0156    0.0  2.9011  7.1301   True
+HigharchitectureA HigharchitectureD  -2.3937 0.0168 -4.5082 -0.2792   True
+HigharchitectureA HigharchitectureE   7.0115    0.0   4.897   9.126   True
+HigharchitectureA       Highcontrol   1.0891 0.6694 -1.0254  3.2036  False
+HigharchitectureB HigharchitectureC   4.6804    0.0  2.5659  6.7949   True
+HigharchitectureB HigharchitectureD  -2.7289 0.0038 -4.8434 -0.6144   True
+HigharchitectureB HigharchitectureE   6.6763    0.0  4.5618  8.7908   True
+HigharchitectureB       Highcontrol   0.7539 0.9057 -1.3606  2.8684  False
+HigharchitectureC HigharchitectureD  -7.4093    0.0 -9.5238 -5.2948   True
+HigharchitectureC HigharchitectureE   1.9959  0.076 -0.1186  4.1104  False
+HigharchitectureC       Highcontrol  -3.9265    0.0  -6.041  -1.812   True
+HigharchitectureD HigharchitectureE   9.4052    0.0  7.2907 11.5197   True
+HigharchitectureD       Highcontrol   3.4828 0.0001  1.3683  5.5973   True
+HigharchitectureE       Highcontrol  -5.9224    0.0 -8.0369 -3.8079   True
+--------------------------------------------------------------------------

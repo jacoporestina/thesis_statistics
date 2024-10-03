@@ -1,92 +1,141 @@
 import pandas as pd
 import statsmodels.api as sm
 from statsmodels.formula.api import ols
-from statsmodels.stats.multicomp import pairwise_tukeyhsd, MultiComparison
+from statsmodels.stats.multicomp import pairwise_tukeyhsd
 import matplotlib.pyplot as plt
 from scipy.stats import levene, shapiro
-import seaborn as sns
 
 
-# Import file and read as pandas dataframe.
-filename = "combined_sensors_data.csv"
-data = pd.read_csv(filename)
-print(data)
+# Define a function to process ANOVA, assumptions, and plotting for each dataset.
+def process_data(input_file, output_anova, output_assumptions, qqplot_path):
+    # Load the data.
+    data = pd.read_csv(input_file)
+    print(data)
 
-# Create output.txt for anova results and assumptions.
-anova_output = open('output_statistics/ANOVA_sensors.txt', 'w')
-assumptions = open('output_statistics/assumptions_sensors.txt', 'w') 
+    # Create output.txt for anova results and assumptions.
+    anova_output = open(output_anova, 'w')
+    assumptions = open(output_assumptions, 'w')
 
-# ANOVA 2-way.
-model = ols('absorbedPAR_umol_m2_s1 ~ C(density) * C(architecture)', data=data).fit()
-anova_results = sm.stats.anova_lm(model, typ=2)
+    # ANOVA 1-way.
+    model = ols('absorbedPAR_umol_m2_s1 ~ C(architecture)', data=data).fit()
+    anova_results = sm.stats.anova_lm(model, typ=2)
+    print(anova_results)
 
-# Function to format p-values with a minimum display value of 0.001
-def format_p_value(p):
-    if p < 0.001:
-        return "<0.001"
-    else:
-        return round(p, 3)  # Round to 3 decimal places
+    # Function to format p-values with a minimum display value of 0.001
+    def format_p_value(p):
+        if p < 0.001:
+            return "<0.001"
+        else:
+            return round(p, 3)
 
-# Apply the function to the ANOVA results' p-values
-anova_results['PR(>F)'] = anova_results['PR(>F)'].apply(format_p_value)
+    # Apply the function to the ANOVA results' p-values
+    anova_results['PR(>F)'] = anova_results['PR(>F)'].apply(format_p_value)
 
-# Get descriptive statistics.
-descriptive_statistics = data.describe()
+    # Get descriptive statistics.
+    descriptive_statistics = data.describe()
+    print(descriptive_statistics)
 
-# Write ANOVA results, model summary and descriptive statistics in txt file.
-anova_output.write(f"\nANOVA results for total absorbedPAR: \n {anova_results} \n")
+    # Write ANOVA results, model summary and descriptive statistics in txt file.
+    anova_output.write(f"\nANOVA results for total absorbedPAR: \n {anova_results} \n")
+    anova_output.write("\nModel summary: \n")
+    anova_output.write(model.summary().as_text())
+    anova_output.write(f"\nDescriptive statistics: {descriptive_statistics} \n")
 
-# Post-hoc test (TukeyHSD).
-if model.f_pvalue < 0.05:  # Check if the overall model is significant.
-    comparison = MultiComparison(data['absorbedPAR_umol_m2_s1'], data['density'] + data['architecture'])
-    tukey_result = comparison.tukeyhsd()
-    anova_output.write(f'\nPost-hoc (TukeyHSD) Results:\n{tukey_result.summary()}\n')
+    # Post-hoc test (TukeyHSD).
+    if model.f_pvalue < 0.05:  # Check if the overall model is significant.
+        mc = pairwise_tukeyhsd(data['absorbedPAR_umol_m2_s1'], data['architecture'])
+        anova_output.write(f'\nPost-hoc (Tukeyhsd) Results:\n{mc}\n')
 
-# Assumption Checks: Levene's Test and Normality Test.
-group_a = data[data['density'] == 'High']['absorbedPAR_umol_m2_s1']
-group_b = data[data['density'] == 'Low']['absorbedPAR_umol_m2_s1']
-levene_stat, levene_p = levene(group_a, group_b)
-shapiro_stat, shapiro_p = shapiro(model.resid)
-assumptions.write(f'\nLevene Test: Stat={levene_stat}, p={levene_p}\n')
-assumptions.write(f'Shapiro-Wilk Test: Stat={shapiro_stat}, p={shapiro_p}\n')
+    # Assumption Checks: Levene's Test and Shapiro-Wilk Test for normality
+    levene_stat, levene_p = levene(*[group['absorbedPAR_umol_m2_s1'] for name, group in data.groupby('architecture')])
+    shapiro_stat, shapiro_p = shapiro(model.resid)
+    assumptions.write(f'\nLevene Test: Stat={levene_stat}, p={levene_p}\n')
+    assumptions.write(f'\nShapiro-Wilk Test: Stat={shapiro_stat}, p={shapiro_p}\n')
 
-# Plotting residuals for assumption checks.
-residuals = model.resid
-plt.figure()
-sm.qqplot(residuals, line='s')
-plt.title(f'Q-Q plot for residuals')
-plt.savefig(f'qq_plots/qqplot_sensors.png')
+    # Plotting residuals for assumption checks.
+    residuals = model.resid
+    plt.figure()
+    sm.qqplot(residuals, line='s')
+    plt.title(f'Q-Q plot for residuals')
+    plt.savefig(qqplot_path)
 
-# Close output files.
-anova_output.close()
-assumptions.close()
+    # Close output files.
+    anova_output.close()
+    assumptions.close()
 
-# Make a visualization of results with a bar chart. 
-# 1) Calculate mean and st dev of data within densities.
-data_grouped = data.groupby(['density', 'architecture'])['absorbedPAR_umol_m2_s1']
-mean_values = data_grouped.mean().reset_index(name='mean')
-mean_values['sd_dev'] = data_grouped.std().reset_index(name='std_dev')['std_dev']
-densities = mean_values['density'].unique()
-print(mean_values)
-print(densities)
 
-# 2)Create the bar charts.
-for density in densities:
-    # Filter dataset for densities
-    filtered_density_data = mean_values[mean_values['density'] == density]
-    print(filtered_density_data['architecture'])
-    print(filtered_density_data['mean'])
-    
-    # Make the bar chart.
+# Define input files and corresponding output paths for high and low densities.
+files = [
+    {
+        'input_file': 'combined_high_sensors.csv',
+        'output_anova': 'output_statistics/ANOVA_sensors_high.txt',
+        'output_assumptions': 'output_statistics/assumptions_sensors_high.txt',
+        'qqplot_path': 'qq_plots/sensors_high.png',
+    },
+    {
+        'input_file': 'combined_low_sensors.csv',
+        'output_anova': 'output_statistics/ANOVA_sensors_low.txt',
+        'output_assumptions': 'output_statistics/assumptions_sensors_low.txt',
+        'qqplot_path': 'qq_plots/sensors_low.png',
+    }
+]
+
+# Loop through the files and apply the function to each file
+for file_info in files:
+    process_data(
+        input_file=file_info['input_file'],
+        output_anova=file_info['output_anova'],
+        output_assumptions=file_info['output_assumptions'],
+        qqplot_path=file_info['qqplot_path'],
+    )
+
+print("Analysis completed for both datasets.")
+
+
+# Plotting part.
+# Load datasets for high and low densities
+data_high = pd.read_csv('combined_high_sensors.csv')
+data_low = pd.read_csv('combined_low_sensors.csv')
+
+# Function to calculate mean, std dev, and confidence intervals
+def calculate_statistics(data):
+    grouped = data.groupby(['architecture'])['absorbedPAR_umol_m2_s1']
+    mean_values = grouped.mean().reset_index(name='mean')
+    mean_values['std_dev'] = grouped.std().reset_index(name='std_dev')['std_dev']
+    mean_values['n'] = grouped.count().reset_index(name='count')['count']
+        
+    return mean_values
+
+# Calculate statistics for both high-density and low-density datasets
+mean_values_high = calculate_statistics(data_high)
+mean_values_low = calculate_statistics(data_low)
+
+# Plotting function to avoid repetition
+def barplot_absorbedPAR(mean_values, density_label, output_file):
     fig, ax = plt.subplots(figsize=(10, 6))
-    ax.bar(filtered_density_data['architecture'], filtered_density_data['mean'], yerr=filtered_density_data['sd_dev'], 
-           width=0.5, edgecolor='black', linewidth=0.5, capsize=5, color='green')
     
+    # Plotting lineplot for each architecture type within the current density
+    for architecture in mean_values['architecture'].unique():
+        architecture_data = mean_values[mean_values['architecture'] == architecture]
+        ax.bar(architecture_data['architecture'], architecture_data['mean'], yerr=architecture_data['std_dev'], 
+        width=0.5, edgecolor='black', linewidth=0.5, capsize=5, color='green')
+
     # Set the title and labels
-    ax.set_title(f' Absorbed PAR sensors for {density} density')
-    ax.set_xlabel('Canopy')
+    ax.set_title(f'Total Absorbed PAR sensors for {density_label} density')
+    ax.set_xlabel('Architecture')
     ax.set_ylabel('Absorbed PAR (umol m-2 s-1)')
 
-    #plt.legend(bars, filtered_density_data['canopy'], title='Canopy')
-    plt.savefig(f'plots/absorbedPAR sensors {density}.png')
+    plt.savefig(output_file)
     plt.close(fig)
+
+
+# Plot for high-density data
+barplot_absorbedPAR(mean_values_high, 'High', 'plots/sensors_high_density.png')
+
+# Plot for low-density data
+barplot_absorbedPAR(mean_values_low, 'Low', 'plots/sensors_low_density.png')
+
+print("Plots generated successfully for high and low densities.")
+
+
+

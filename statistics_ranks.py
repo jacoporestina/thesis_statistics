@@ -43,8 +43,7 @@ def process_anova(input_file, output_anova, output_assumptions, qqplot_path):
         # Post-hoc test (TukeyHSD).
         if model.f_pvalue < 0.05:  # Check if the overall model is significant.
             mc = pairwise_tukeyhsd(rank_data['absorbedPAR_umol_m2_s1'], rank_data['architecture'])
-            tukey_results = mc.summary
-            anova_output.write(f'\nPost-hoc (TukeyHSD) Results for rank {rank}:\n{tukey_results}\n')
+            anova_output.write(f'\nPost-hoc (TukeyHSD) Results for rank {rank}:\n{mc}\n')
 
         # Assumption Checks: Levene's Test and Shapiro-Wilk Test for normality
         levene_stat, levene_p = levene(*[group['absorbedPAR_umol_m2_s1'] for name, group in data.groupby('architecture')])
