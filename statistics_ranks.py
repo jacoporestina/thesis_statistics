@@ -40,11 +40,11 @@ def process_anova(input_file, output_anova, output_assumptions, qqplot_path):
         # Write ANOVA results for this rank to the file
         anova_output.write(f"\nANOVA results for rank {rank}:\n{anova_results}\n")
 
-        # Post-hoc test (TukeyHSD).
-    if model.f_pvalue < 0.05:  # Check if the overall model is significant.
-        posthoc = sp.posthoc_tukey_hsd(data['absorbedPAR_umol_m2_s1'], data['architecture'])
-        posthoc = posthoc.map(lambda x: f"{x:.3f}")
-        anova_output.write(f'\nPost-hoc (Tukeyhsd) Results:\n{posthoc}\n')
+            # Post-hoc test (TukeyHSD).
+        if model.f_pvalue < 0.05:  # Check if the overall model is significant.
+            posthoc = sp.posthoc_tukey_hsd(data['absorbedPAR_umol_m2_s1'], data['architecture'])
+            posthoc = posthoc.map(lambda x: f"{x:.3f}")
+            anova_output.write(f'\nPost-hoc (Tukeyhsd) Results:\n{posthoc}\n')
 
         # Assumption Checks: Levene's Test and Shapiro-Wilk Test for normality
         levene_stat, levene_p = levene(*[group['absorbedPAR_umol_m2_s1'] for name, group in data.groupby('architecture')])
@@ -71,13 +71,13 @@ def process_anova(input_file, output_anova, output_assumptions, qqplot_path):
 # Define input files and corresponding output paths
 files = [
     {
-        'input': 'combined_high_ranks.csv',
+        'input': 'combined_files/combined_high_ranks_cleaned.csv',
         'output_anova': 'output_statistics/ANOVA_high_ranks.txt',
         'output_assumption': 'output_statistics/assumptions_high_ranks.txt',
         'qqplot': 'qq_plots/high_density_qqplot.png'
     },
     {
-        'input': 'combined_low_ranks.csv',
+        'input': 'combined_files/combined_low_ranks_cleaned.csv',
         'output_anova': 'output_statistics/ANOVA_low_ranks.txt',
         'output_assumption': 'output_statistics/assumptions_low_ranks.txt',
         'qqplot': 'qq_plots/low_density_qqplot.png'
@@ -93,8 +93,8 @@ print("ANOVA processing complete for all files.")
 
 # Plotting part.
 # Load datasets for high and low densities
-data_high = pd.read_csv('combined_high_ranks.csv')
-data_low = pd.read_csv('combined_low_ranks.csv')
+data_high = pd.read_csv('combined_files/combined_high_ranks_cleaned.csv')
+data_low = pd.read_csv('combined_files/combined_low_ranks_cleaned.csv')
 
 # Function to calculate mean, std dev, and confidence intervals
 def calculate_statistics(data, confidence=0.95):

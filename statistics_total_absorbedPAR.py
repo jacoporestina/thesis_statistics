@@ -69,13 +69,13 @@ def process_data(input_file, output_anova, output_assumptions, qqplot_path):
 # Define input files and corresponding output paths for high and low densities.
 files = [
     {
-        'input_file': 'total_absorbedPAR_high.csv',
+        'input_file': 'combined_files/total_absorbedPAR_high.csv',
         'output_anova': 'output_statistics/ANOVA_total_absorbedPAR_high.txt',
         'output_assumptions': 'output_statistics/assumptions_total_absorbedPAR_high.txt',
         'qqplot_path': 'qq_plots/total_absorbedPAR_high.png',
     },
     {
-        'input_file': 'total_absorbedPAR_low.csv',
+        'input_file': 'combined_files/total_absorbedPAR_low.csv',
         'output_anova': 'output_statistics/ANOVA_total_absorbedPAR_low.txt',
         'output_assumptions': 'output_statistics/assumptions_total_absorbedPAR_low.txt',
         'qqplot_path': 'qq_plots/total_absorbedPAR_low.png',
@@ -96,8 +96,8 @@ print("Analysis completed for both datasets.")
 
 # Plotting part.
 # Load datasets for high and low densities
-data_high = pd.read_csv('total_absorbedPAR_high.csv')
-data_low = pd.read_csv('total_absorbedPAR_low.csv')
+data_high = pd.read_csv('combined_files/total_absorbedPAR_high.csv')
+data_low = pd.read_csv('combined_files/total_absorbedPAR_low.csv')
 
 # Function to calculate mean, std dev, and confidence intervals
 def calculate_statistics(data):

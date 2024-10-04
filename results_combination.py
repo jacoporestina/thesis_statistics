@@ -80,10 +80,11 @@ combined_high = combined_high[['density', 'architecture', 'repetition', 'rank', 
 combined_low = combined_low[['density', 'architecture', 'repetition', 'rank',  'area_m2[m^2]', 'absorbedPAR_umol_m2_s1']]
 
 # Save the combined data to two new CSV files
-combined_high.to_csv('combined_high_ranks.csv', index=False)
-combined_low.to_csv('combined_low_ranks.csv', index=False)
+combined_high.to_csv('combined_files/combined_high_ranks.csv', index=False)
+combined_low.to_csv('combined_files/combined_low_ranks.csv', index=False)
 
 print("Data processing complete. Files saved as 'combined_high_density.csv' and 'combined_low_density.csv'.")
+
 
 # Create total absorbedPAR files for both high and low density.
 # Define a function to process and aggregate the data
@@ -103,8 +104,8 @@ def aggregate_absorbed_PAR(file_path, output_path):
 
 # File paths for high and low density data
 file_paths = {
-    'high': ('combined_high_ranks.csv', 'total_absorbedPAR_high.csv'),
-    'low': ('combined_low_ranks.csv', 'total_absorbedPAR_low.csv')
+    'high': ('combined_files/combined_high_ranks.csv', 'combined_files/total_absorbedPAR_high.csv'),
+    'low': ('combined_files/combined_low_ranks.csv', 'combined_files/total_absorbedPAR_low.csv')
 }
 
 # Loop through both high and low files and apply the aggregation

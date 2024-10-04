@@ -59,7 +59,7 @@ combined_high = combined_high[['density', 'architecture', 'repetition', 'absorbe
 combined_low = combined_low[['density', 'architecture', 'repetition', 'absorbedPAR_umol_m2_s1']]
 
 # Save the combined data to a new CSV
-combined_high.to_csv('combined_high_sensors.csv', index=False)
-combined_low.to_csv('combined_low_sensors.csv', index=False)
+combined_high.to_csv('combined_files/combined_high_sensors.csv', index=False)
+combined_low.to_csv('combined_files/combined_low_sensors.csv', index=False)
 
 print("Data processing complete.")
