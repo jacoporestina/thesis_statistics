@@ -14,7 +14,7 @@ dfs_low = []
 
 # Function to extract repetition, density, and architecture from the filename
 def extract_simulation_info(file_path):
-    match = re.search(r'repetition_(\d+)_(High|Low)_(architecture[A-E]|control)', file_path)
+    match = re.search(r'repetition_(\d+)_(High|Low)_(architecture[A-D]|control)', file_path)
     if match:
         return match.group(1), match.group(2), match.group(3)  # repetition, density, architecture
     else:
@@ -103,8 +103,8 @@ def aggregate_absorbed_PAR(file_path, output_path):
 
 # File paths for high and low density data
 file_paths = {
-    'high': ('combined_high_ranks.csv', 'high_total_absorbedPAR.csv'),
-    'low': ('combined_low_ranks.csv', 'low_total_absorbedPAR.csv')
+    'high': ('combined_high_ranks.csv', 'total_absorbedPAR_high.csv'),
+    'low': ('combined_low_ranks.csv', 'total_absorbedPAR_low.csv')
 }
 
 # Loop through both high and low files and apply the aggregation

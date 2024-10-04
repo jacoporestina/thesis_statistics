@@ -12,7 +12,7 @@ dfs_low = []
 
 # Function to extract repetition, density, and architecture from the filename
 def extract_simulation_info(file_path):
-    match = re.search(r'sensors_export_below_canopy\.csv_repetition_(\d+)_(High|Low)_(architecture[A-E]|control)', file_path)
+    match = re.search(r'sensors_export_below_canopy\.csv_repetition_(\d+)_(High|Low)_(architecture[A-D]|control)', file_path)
     if match:
         return match.group(1), match.group(2), match.group(3)  # repetition, density, architecture
     else:

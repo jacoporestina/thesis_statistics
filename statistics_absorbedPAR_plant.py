@@ -1,5 +1,6 @@
 import pandas as pd
 import statsmodels.api as sm
+import scikit_posthocs as sp
 from statsmodels.formula.api import ols
 from statsmodels.stats.multicomp import pairwise_tukeyhsd
 import matplotlib.pyplot as plt
@@ -43,8 +44,9 @@ def process_data(input_file, output_anova, output_assumptions, qqplot_path):
 
     # Post-hoc test (TukeyHSD).
     if model.f_pvalue < 0.05:  # Check if the overall model is significant.
-        mc = pairwise_tukeyhsd(data['absorbedPAR_umol_m2_s1'], data['architecture'])
-        anova_output.write(f'\nPost-hoc (Tukeyhsd) Results:\n{mc}\n')
+        posthoc = sp.posthoc_tukey_hsd(data['absorbedPAR_umol_m2_s1'], data['architecture'])
+        posthoc = posthoc.map(lambda x: f"{x:.3f}")
+        anova_output.write(f'\nPost-hoc (Tukeyhsd) Results:\n{posthoc}\n')
 
     # Assumption Checks: Levene's Test and Shapiro-Wilk Test for normality
     levene_stat, levene_p = levene(*[group['absorbedPAR_umol_m2_s1'] for name, group in data.groupby('architecture')])

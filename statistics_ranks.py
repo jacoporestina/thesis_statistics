@@ -1,7 +1,7 @@
 import pandas as pd
 import statsmodels.api as sm
 from statsmodels.formula.api import ols
-from statsmodels.stats.multicomp import pairwise_tukeyhsd
+import scikit_posthocs as sp
 import matplotlib.pyplot as plt
 import seaborn as sns
 from scipy.stats import levene, shapiro
@@ -41,9 +41,10 @@ def process_anova(input_file, output_anova, output_assumptions, qqplot_path):
         anova_output.write(f"\nANOVA results for rank {rank}:\n{anova_results}\n")
 
         # Post-hoc test (TukeyHSD).
-        if model.f_pvalue < 0.05:  # Check if the overall model is significant.
-            mc = pairwise_tukeyhsd(rank_data['absorbedPAR_umol_m2_s1'], rank_data['architecture'])
-            anova_output.write(f'\nPost-hoc (TukeyHSD) Results for rank {rank}:\n{mc}\n')
+    if model.f_pvalue < 0.05:  # Check if the overall model is significant.
+        posthoc = sp.posthoc_tukey_hsd(data['absorbedPAR_umol_m2_s1'], data['architecture'])
+        posthoc = posthoc.map(lambda x: f"{x:.3f}")
+        anova_output.write(f'\nPost-hoc (Tukeyhsd) Results:\n{posthoc}\n')
 
         # Assumption Checks: Levene's Test and Shapiro-Wilk Test for normality
         levene_stat, levene_p = levene(*[group['absorbedPAR_umol_m2_s1'] for name, group in data.groupby('architecture')])
@@ -71,14 +72,14 @@ def process_anova(input_file, output_anova, output_assumptions, qqplot_path):
 files = [
     {
         'input': 'combined_high_ranks.csv',
-        'output_anova': 'output_statistics/high_density_anova_results.txt',
-        'output_assumption': 'output_statistics/high_density_assumptions.txt',
+        'output_anova': 'output_statistics/ANOVA_high_ranks.txt',
+        'output_assumption': 'output_statistics/assumptions_high_ranks.txt',
         'qqplot': 'qq_plots/high_density_qqplot.png'
     },
     {
         'input': 'combined_low_ranks.csv',
-        'output_anova': 'output_statistics/low_density_anova_results.txt',
-        'output_assumption': 'output_statistics/low_density_assumptions.txt',
+        'output_anova': 'output_statistics/ANOVA_low_ranks.txt',
+        'output_assumption': 'output_statistics/assumptions_low_ranks.txt',
         'qqplot': 'qq_plots/low_density_qqplot.png'
     }
 ]
