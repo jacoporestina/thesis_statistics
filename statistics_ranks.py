@@ -71,13 +71,13 @@ def process_anova(input_file, output_anova, output_assumptions, qqplot_path):
 # Define input files and corresponding output paths
 files = [
     {
-        'input': 'combined_files/combined_high_ranks_cleaned.csv',
+        'input': 'log_transformed/combined_high_ranks_cleaned.csv',
         'output_anova': 'output_statistics/ANOVA_high_ranks.txt',
         'output_assumption': 'output_statistics/assumptions_high_ranks.txt',
         'qqplot': 'qq_plots/high_density_qqplot.png'
     },
     {
-        'input': 'combined_files/combined_low_ranks_cleaned.csv',
+        'input': 'log_transformed/combined_low_ranks_cleaned.csv',
         'output_anova': 'output_statistics/ANOVA_low_ranks.txt',
         'output_assumption': 'output_statistics/assumptions_low_ranks.txt',
         'qqplot': 'qq_plots/low_density_qqplot.png'
@@ -134,6 +134,7 @@ def plot_absorbedPAR(mean_values, density_label, output_file):
     plt.title(f'Absorbed PAR over Leaf Ranks for {density_label} Density')
     plt.xlabel('Rank')
     plt.ylabel('Absorbed PAR (umol m-2 s-1)')
+    plt.ylim(0, 250)
     plt.legend(title='Architecture Type')
     plt.savefig(output_file)
     plt.close()

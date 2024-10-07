@@ -46,6 +46,9 @@ def process_data(input_file, output_anova, output_assumptions, qqplot_path):
     if model.f_pvalue < 0.05:  # Check if the overall model is significant.
         posthoc = sp.posthoc_tukey_hsd(data['absorbedPAR_umol_m2_s1'], data['architecture'])
         posthoc = posthoc.map(lambda x: f"{x:.3f}")
+        tukey_hsd_file = output_anova.replace('ANOVA', 'Tukey_HSD').replace('.txt', '.csv') # Generate the output filename
+        posthoc.to_csv(tukey_hsd_file, index=True) # Save the post-hoc results as CSV with index for comparison label
+        print(f"Tukey HSD results saved to {tukey_hsd_file}")
         anova_output.write(f'\nPost-hoc (Tukeyhsd) Results:\n{posthoc}\n')
 
     # Assumption Checks: Levene's Test and Shapiro-Wilk Test for normality
@@ -69,13 +72,13 @@ def process_data(input_file, output_anova, output_assumptions, qqplot_path):
 # Define input files and corresponding output paths for high and low densities.
 files = [
     {
-        'input_file': 'combined_high_sensors.csv',
+        'input_file': 'log_transformed/combined_high_sensors_cleaned.csv',
         'output_anova': 'output_statistics/ANOVA_sensors_high.txt',
         'output_assumptions': 'output_statistics/assumptions_sensors_high.txt',
         'qqplot_path': 'qq_plots/sensors_high.png',
     },
     {
-        'input_file': 'combined_low_sensors.csv',
+        'input_file': 'log_transformed/combined_low_sensors_cleaned.csv',
         'output_anova': 'output_statistics/ANOVA_sensors_low.txt',
         'output_assumptions': 'output_statistics/assumptions_sensors_low.txt',
         'qqplot_path': 'qq_plots/sensors_low.png',
@@ -96,8 +99,8 @@ print("Analysis completed for both datasets.")
 
 # Plotting part.
 # Load datasets for high and low densities
-data_high = pd.read_csv('combined_high_sensors.csv')
-data_low = pd.read_csv('combined_low_sensors.csv')
+data_high = pd.read_csv('combined_files/combined_high_sensors_cleaned.csv')
+data_low = pd.read_csv('combined_files/combined_low_sensors_cleaned.csv')
 
 # Function to calculate mean, std dev, and confidence intervals
 def calculate_statistics(data):
@@ -112,19 +115,34 @@ def calculate_statistics(data):
 mean_values_high = calculate_statistics(data_high)
 mean_values_low = calculate_statistics(data_low)
 
+# Get significant letters from tukey test for barplot.
+def significance_letters(dataframe: pd.DataFrame) -> pd.DataFrame:
+    letter = ord('a')
+    for i in range(len(dataframe)):
+        dataframe.iloc[i,i] = 0
+        dataframe.iloc[i,:i] = [1 for x in dataframe.iloc[i,:i]]
+        dataframe.iloc[i, :] = [chr(letter) if x == 0 else '' for x in dataframe.iloc[i, :]]
+        letter += 1
+
+    return dataframe[:-1]
+
 # Plotting function to avoid repetition
 def barplot_absorbedPAR(mean_values, density_label, output_file):
     fig, ax = plt.subplots(figsize=(10, 6))
-    
-    # Plotting lineplot for each architecture type within the current density
+    significants =  significance_letters(pd.read_csv(f'output_statistics\Tukey_HSD_sensors_{density_label.lower()}.csv'))
+    print(significants)
+
+    # Plotting barplot for each architecture type for each density
     for architecture in mean_values['architecture'].unique():
         architecture_data = mean_values[mean_values['architecture'] == architecture]
         ax.bar(architecture_data['architecture'], architecture_data['mean'], yerr=architecture_data['std_dev'], 
         width=0.5, edgecolor='black', linewidth=0.5, capsize=5, color='green')
+        ax.text(architecture_data['architecture'], architecture_data['mean'] + architecture_data['std_dev']+ 1, s="".join(significants.loc[:,architecture].values), ha='center', va='bottom', fontsize=12)
 
     # Set the title and labels
     ax.set_title(f'Total Absorbed PAR sensors for {density_label} density')
     ax.set_xlabel('Architecture')
+    ax.set_ylim(0, 50)
     ax.set_ylabel('Absorbed PAR (umol m-2 s-1)')
 
     plt.savefig(output_file)

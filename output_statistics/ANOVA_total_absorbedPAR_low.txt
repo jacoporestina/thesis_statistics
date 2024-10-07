@@ -1,47 +1,47 @@
 
 ANOVA results for total absorbedPAR: 
-                        sum_sq     df          F  PR(>F)
-C(architecture)  1.426155e+06    4.0  91.610178  <0.001
-Residual         1.926497e+06  495.0        NaN     NaN 
+                        sum_sq     df           F  PR(>F)
+C(architecture)  1.508215e+06    4.0  248.262999  <0.001
+Residual         7.335648e+05  483.0         NaN     NaN 
 
 Model summary: 
                               OLS Regression Results                              
 ==================================================================================
-Dep. Variable:     absorbedPAR_umol_m2_s1   R-squared:                       0.425
-Model:                                OLS   Adj. R-squared:                  0.421
-Method:                     Least Squares   F-statistic:                     91.61
-Date:                    Fri, 04 Oct 2024   Prob (F-statistic):           2.97e-58
-Time:                            12:55:11   Log-Likelihood:                -2773.6
-No. Observations:                     500   AIC:                             5557.
-Df Residuals:                         495   BIC:                             5578.
+Dep. Variable:     absorbedPAR_umol_m2_s1   R-squared:                       0.673
+Model:                                OLS   Adj. R-squared:                  0.670
+Method:                     Least Squares   F-statistic:                     248.3
+Date:                    Mon, 07 Oct 2024   Prob (F-statistic):          1.12e-115
+Time:                            12:53:15   Log-Likelihood:                -2477.4
+No. Observations:                     488   AIC:                             4965.
+Df Residuals:                         483   BIC:                             4986.
 Df Model:                               4                                         
 Covariance Type:                nonrobust                                         
 ====================================================================================================
                                        coef    std err          t      P>|t|      [0.025      0.975]
 ----------------------------------------------------------------------------------------------------
-Intercept                         1169.3798      6.239    187.445      0.000    1157.123    1181.637
-C(architecture)[T.architectureB]    60.2749      8.823      6.832      0.000      42.941      77.609
-C(architecture)[T.architectureC]   -83.5474      8.823     -9.470      0.000    -100.882     -66.213
-C(architecture)[T.architectureD]    60.0528      8.823      6.807      0.000      42.718      77.387
-C(architecture)[T.control]          30.9950      8.823      3.513      0.000      13.661      48.329
+Intercept                         1174.0651      3.957    296.710      0.000    1166.290    1181.840
+C(architecture)[T.architectureB]    69.0149      5.582     12.365      0.000      58.048      79.982
+C(architecture)[T.architectureC]   -75.7507      5.582    -13.571      0.000     -86.718     -64.783
+C(architecture)[T.architectureD]    73.8948      5.596     13.205      0.000      62.899      84.890
+C(architecture)[T.control]          43.9049      5.582      7.866      0.000      32.938      54.872
 ==============================================================================
-Omnibus:                      226.150   Durbin-Watson:                   1.969
-Prob(Omnibus):                  0.000   Jarque-Bera (JB):             1294.839
-Skew:                          -1.917   Prob(JB):                    6.75e-282
-Kurtosis:                       9.888   Cond. No.                         5.83
+Omnibus:                        0.757   Durbin-Watson:                   1.949
+Prob(Omnibus):                  0.685   Jarque-Bera (JB):                0.843
+Skew:                           0.034   Prob(JB):                        0.656
+Kurtosis:                       2.808   Cond. No.                         5.84
 ==============================================================================
 
 Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
-Descriptive statistics:        repetition  absorbedPAR_umol_m2_s1  area_m2[m^2]
-count  500.000000              500.000000    500.000000
-mean    50.500000             1182.934893      0.045249
-std     28.894979               81.967936      0.001985
-min      1.000000              811.175639      0.033605
-25%     25.750000             1130.378706      0.045824
-50%     50.500000             1199.168227      0.045855
-75%     75.250000             1242.388595      0.045880
-max    100.000000             1349.182486      0.045948 
+Descriptive statistics:        repetition  absorbedPAR_umol_m2_s1  area_m2[m^2]  log_absorbedPAR_umol_m2_s1
+count  488.000000              488.000000    488.000000                  488.000000
+mean    50.235656             1196.217492      0.045860                    7.085290
+std     28.947020               67.847216      0.000033                    0.057389
+min      1.000000             1027.456091      0.045777                    6.934841
+25%     25.000000             1151.013336      0.045838                    7.048398
+50%     50.000000             1206.267364      0.045861                    7.095286
+75%     75.250000             1246.006056      0.045883                    7.127699
+max    100.000000             1357.121138      0.045948                    7.213121 
 
 Post-hoc (Tukeyhsd) Results:
               architectureA architectureB architectureC architectureD control

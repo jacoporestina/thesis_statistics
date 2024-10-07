@@ -69,13 +69,13 @@ def process_data(input_file, output_anova, output_assumptions, qqplot_path):
 # Define input files and corresponding output paths for high and low densities.
 files = [
     {
-        'input_file': 'combined_files/total_absorbedPAR_high.csv',
+        'input_file': 'log_transformed/combined_total_absorbedPAR_high_cleaned.csv',
         'output_anova': 'output_statistics/ANOVA_total_absorbedPAR_high.txt',
         'output_assumptions': 'output_statistics/assumptions_total_absorbedPAR_high.txt',
         'qqplot_path': 'qq_plots/total_absorbedPAR_high.png',
     },
     {
-        'input_file': 'combined_files/total_absorbedPAR_low.csv',
+        'input_file': 'log_transformed/combined_total_absorbedPAR_low_cleaned.csv',
         'output_anova': 'output_statistics/ANOVA_total_absorbedPAR_low.txt',
         'output_assumptions': 'output_statistics/assumptions_total_absorbedPAR_low.txt',
         'qqplot_path': 'qq_plots/total_absorbedPAR_low.png',
@@ -96,8 +96,8 @@ print("Analysis completed for both datasets.")
 
 # Plotting part.
 # Load datasets for high and low densities
-data_high = pd.read_csv('combined_files/total_absorbedPAR_high.csv')
-data_low = pd.read_csv('combined_files/total_absorbedPAR_low.csv')
+data_high = pd.read_csv('combined_files/combined_total_absorbedPAR_high_cleaned.csv')
+data_low = pd.read_csv('combined_files/combined_total_absorbedPAR_low_cleaned.csv')
 
 # Function to calculate mean, std dev, and confidence intervals
 def calculate_statistics(data):
@@ -125,6 +125,7 @@ def barplot_absorbedPAR(mean_values, density_label, output_file):
     # Set the title and labels
     ax.set_title(f'Total Absorbed PAR for {density_label} density')
     ax.set_xlabel('Architecture')
+    ax.set_ylim(0, 1200)
     ax.set_ylabel('Absorbed PAR (umol m-2 s-1)')
 
     plt.savefig(output_file)

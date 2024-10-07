@@ -1,0 +1,6 @@
+,architectureA,architectureB,architectureC,architectureD,control
+architectureA,1.000,1.000,1.000,1.000,1.000
+architectureB,1.000,1.000,1.000,1.000,0.000
+architectureC,1.000,1.000,1.000,1.000,1.000
+architectureD,1.000,1.000,1.000,1.000,1.000
+control,1.000,0.000,1.000,1.000,1.000
