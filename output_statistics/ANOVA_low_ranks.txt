@@ -1,130 +1,130 @@
 
 ANOVA results for rank 1:
-                       sum_sq     df          F  PR(>F)
-C(architecture)  11272.431859    4.0  61.306539  <0.001
-Residual         22661.974369  493.0        NaN     NaN
+                   sum_sq     df          F  PR(>F)
+C(architecture)  0.844394    4.0  58.821227  <0.001
+Residual         1.769285  493.0        NaN     NaN
 
 Post-hoc (Tukeyhsd) Results:
               architectureA architectureB architectureC architectureD control
 architectureA         1.000         0.000         0.000         0.000   0.000
-architectureB         0.000         1.000         1.000         0.000   0.000
-architectureC         0.000         1.000         1.000         1.000   1.000
-architectureD         0.000         0.000         1.000         1.000   0.000
-control               0.000         0.000         1.000         0.000   1.000
+architectureB         0.000         1.000         0.000         0.000   0.000
+architectureC         0.000         0.000         1.000         0.000   0.000
+architectureD         0.000         0.000         0.000         1.000   0.000
+control               0.000         0.000         0.000         0.000   1.000
 
 ANOVA results for rank 2:
-                       sum_sq     df          F  PR(>F)
-C(architecture)   3825.387285    4.0  22.507962  <0.001
-Residual         20904.719653  492.0        NaN     NaN
+                   sum_sq     df          F  PR(>F)
+C(architecture)  0.732376    4.0  22.972569  <0.001
+Residual         3.921295  492.0        NaN     NaN
 
 Post-hoc (Tukeyhsd) Results:
               architectureA architectureB architectureC architectureD control
 architectureA         1.000         0.000         0.000         0.000   0.000
-architectureB         0.000         1.000         1.000         0.000   0.000
-architectureC         0.000         1.000         1.000         1.000   1.000
-architectureD         0.000         0.000         1.000         1.000   0.000
-control               0.000         0.000         1.000         0.000   1.000
+architectureB         0.000         1.000         0.000         0.000   0.000
+architectureC         0.000         0.000         1.000         0.000   0.000
+architectureD         0.000         0.000         0.000         1.000   0.000
+control               0.000         0.000         0.000         0.000   1.000
 
 ANOVA results for rank 3:
-                       sum_sq     df          F  PR(>F)
-C(architecture)  10695.089915    4.0  48.399631  <0.001
-Residual         27014.146942  489.0        NaN     NaN
+                   sum_sq     df          F  PR(>F)
+C(architecture)  1.694983    4.0  52.375758  <0.001
+Residual         3.956253  489.0        NaN     NaN
 
 Post-hoc (Tukeyhsd) Results:
               architectureA architectureB architectureC architectureD control
 architectureA         1.000         0.000         0.000         0.000   0.000
-architectureB         0.000         1.000         1.000         0.000   0.000
-architectureC         0.000         1.000         1.000         1.000   1.000
-architectureD         0.000         0.000         1.000         1.000   0.000
-control               0.000         0.000         1.000         0.000   1.000
+architectureB         0.000         1.000         0.000         0.000   0.000
+architectureC         0.000         0.000         1.000         0.000   0.000
+architectureD         0.000         0.000         0.000         1.000   0.000
+control               0.000         0.000         0.000         0.000   1.000
 
 ANOVA results for rank 4:
-                       sum_sq     df          F  PR(>F)
-C(architecture)  24143.603826    4.0  57.260938  <0.001
-Residual         51440.296891  488.0        NaN     NaN
+                   sum_sq     df          F  PR(>F)
+C(architecture)  1.311307    4.0  59.397462  <0.001
+Residual         2.693372  488.0        NaN     NaN
 
 Post-hoc (Tukeyhsd) Results:
               architectureA architectureB architectureC architectureD control
 architectureA         1.000         0.000         0.000         0.000   0.000
-architectureB         0.000         1.000         1.000         0.000   0.000
-architectureC         0.000         1.000         1.000         1.000   1.000
-architectureD         0.000         0.000         1.000         1.000   0.000
-control               0.000         0.000         1.000         0.000   1.000
+architectureB         0.000         1.000         0.000         0.000   0.000
+architectureC         0.000         0.000         1.000         0.000   0.000
+architectureD         0.000         0.000         0.000         1.000   0.000
+control               0.000         0.000         0.000         0.000   1.000
 
 ANOVA results for rank 5:
-                       sum_sq     df           F  PR(>F)
-C(architecture)  49801.651026    4.0  114.604689  <0.001
-Residual         52689.381358  485.0         NaN     NaN
+                   sum_sq     df           F  PR(>F)
+C(architecture)  0.895602    4.0  110.439629  <0.001
+Residual         0.983268  485.0         NaN     NaN
 
 Post-hoc (Tukeyhsd) Results:
               architectureA architectureB architectureC architectureD control
 architectureA         1.000         0.000         0.000         0.000   0.000
-architectureB         0.000         1.000         1.000         0.000   0.000
-architectureC         0.000         1.000         1.000         1.000   1.000
-architectureD         0.000         0.000         1.000         1.000   0.000
-control               0.000         0.000         1.000         0.000   1.000
+architectureB         0.000         1.000         0.000         0.000   0.000
+architectureC         0.000         0.000         1.000         0.000   0.000
+architectureD         0.000         0.000         0.000         1.000   0.000
+control               0.000         0.000         0.000         0.000   1.000
 
 ANOVA results for rank 6:
-                       sum_sq     df          F  PR(>F)
-C(architecture)  32908.203591    4.0  51.350194  <0.001
-Residual         77864.296907  486.0        NaN     NaN
+                   sum_sq     df          F  PR(>F)
+C(architecture)  0.383020    4.0  48.550122  <0.001
+Residual         0.958534  486.0        NaN     NaN
 
 Post-hoc (Tukeyhsd) Results:
               architectureA architectureB architectureC architectureD control
 architectureA         1.000         0.000         0.000         0.000   0.000
-architectureB         0.000         1.000         1.000         0.000   0.000
-architectureC         0.000         1.000         1.000         1.000   1.000
-architectureD         0.000         0.000         1.000         1.000   0.000
-control               0.000         0.000         1.000         0.000   1.000
+architectureB         0.000         1.000         0.000         0.000   0.000
+architectureC         0.000         0.000         1.000         0.000   0.000
+architectureD         0.000         0.000         0.000         1.000   0.000
+control               0.000         0.000         0.000         0.000   1.000
 
 ANOVA results for rank 7:
-                        sum_sq     df           F  PR(>F)
-C(architecture)  125895.641304    4.0  179.404272  <0.001
-Residual          85437.175818  487.0         NaN     NaN
+                   sum_sq     df           F  PR(>F)
+C(architecture)  0.951780    4.0  167.396766  <0.001
+Residual         0.692243  487.0         NaN     NaN
 
 Post-hoc (Tukeyhsd) Results:
               architectureA architectureB architectureC architectureD control
 architectureA         1.000         0.000         0.000         0.000   0.000
-architectureB         0.000         1.000         1.000         0.000   0.000
-architectureC         0.000         1.000         1.000         1.000   1.000
-architectureD         0.000         0.000         1.000         1.000   0.000
-control               0.000         0.000         1.000         0.000   1.000
+architectureB         0.000         1.000         0.000         0.000   0.000
+architectureC         0.000         0.000         1.000         0.000   0.000
+architectureD         0.000         0.000         0.000         1.000   0.000
+control               0.000         0.000         0.000         0.000   1.000
 
 ANOVA results for rank 8:
-                        sum_sq     df           F  PR(>F)
-C(architecture)  143259.258936    4.0  142.057203  <0.001
-Residual         124040.798478  492.0         NaN     NaN
+                   sum_sq     df           F  PR(>F)
+C(architecture)  0.846004    4.0  148.928346  <0.001
+Residual         0.698715  492.0         NaN     NaN
 
 Post-hoc (Tukeyhsd) Results:
               architectureA architectureB architectureC architectureD control
 architectureA         1.000         0.000         0.000         0.000   0.000
-architectureB         0.000         1.000         1.000         0.000   0.000
-architectureC         0.000         1.000         1.000         1.000   1.000
-architectureD         0.000         0.000         1.000         1.000   0.000
-control               0.000         0.000         1.000         0.000   1.000
+architectureB         0.000         1.000         0.000         0.000   0.000
+architectureC         0.000         0.000         1.000         0.000   0.000
+architectureD         0.000         0.000         0.000         1.000   0.000
+control               0.000         0.000         0.000         0.000   1.000
 
 ANOVA results for rank 9:
-                        sum_sq     df           F  PR(>F)
-C(architecture)  240246.064639    4.0  343.543707  <0.001
-Residual          85316.713178  488.0         NaN     NaN
+                   sum_sq     df           F  PR(>F)
+C(architecture)  0.982905    4.0  340.263165  <0.001
+Residual         0.352417  488.0         NaN     NaN
 
 Post-hoc (Tukeyhsd) Results:
               architectureA architectureB architectureC architectureD control
 architectureA         1.000         0.000         0.000         0.000   0.000
-architectureB         0.000         1.000         1.000         0.000   0.000
-architectureC         0.000         1.000         1.000         1.000   1.000
-architectureD         0.000         0.000         1.000         1.000   0.000
-control               0.000         0.000         1.000         0.000   1.000
+architectureB         0.000         1.000         0.000         0.000   0.000
+architectureC         0.000         0.000         1.000         0.000   0.000
+architectureD         0.000         0.000         0.000         1.000   0.000
+control               0.000         0.000         0.000         0.000   1.000
 
 ANOVA results for rank 10:
-                        sum_sq     df           F  PR(>F)
-C(architecture)  361841.753971    4.0  256.375432  <0.001
-Residual         173599.067033  492.0         NaN     NaN
+                   sum_sq     df           F  PR(>F)
+C(architecture)  1.691279    4.0  266.450717  <0.001
+Residual         0.780735  492.0         NaN     NaN
 
 Post-hoc (Tukeyhsd) Results:
               architectureA architectureB architectureC architectureD control
 architectureA         1.000         0.000         0.000         0.000   0.000
-architectureB         0.000         1.000         1.000         0.000   0.000
-architectureC         0.000         1.000         1.000         1.000   1.000
-architectureD         0.000         0.000         1.000         1.000   0.000
-control               0.000         0.000         1.000         0.000   1.000
+architectureB         0.000         1.000         0.000         0.000   0.000
+architectureC         0.000         0.000         1.000         0.000   0.000
+architectureD         0.000         0.000         0.000         1.000   0.000
+control               0.000         0.000         0.000         0.000   1.000

@@ -1,0 +1,11 @@
+group1,group2,meandiff,p-adj,lower,upper,reject
+architectureA,architectureB,0.0247,0.0,0.0192,0.0302,True
+architectureA,architectureC,-0.029,0.0,-0.0345,-0.0235,True
+architectureA,architectureD,0.0265,0.0,0.021,0.0321,True
+architectureA,control,0.0159,0.0,0.0103,0.0214,True
+architectureB,architectureC,-0.0537,0.0,-0.0592,-0.0481,True
+architectureB,architectureD,0.0019,0.8895,-0.0037,0.0074,False
+architectureB,control,-0.0088,0.0001,-0.0143,-0.0033,True
+architectureC,architectureD,0.0555,0.0,0.05,0.061,True
+architectureC,control,0.0448,0.0,0.0393,0.0503,True
+architectureD,control,-0.0107,0.0,-0.0162,-0.0051,True
