@@ -1,0 +1,37 @@
+Descriptive Statistics:
+
+# A tibble: 5 × 4
+  architecture  mean_absorbedPAR median_absorbedPAR sd_absorbedPAR
+  <fct>                    <dbl>              <dbl>          <dbl>
+1 architectureA             840.               842.           44.7
+2 architectureB             889.               885.           65.7
+3 architectureC             795.               791.           42.1
+4 architectureD             921.               921.           41.0
+5 control                   817.               813.           47.5
+
+
+Kruskal-Wallis test results for total absorbed PAR:
+
+Statistic = 246.734852, p-value = 0.000000
+
+
+Post-hoc (Dunn) Results:
+
+                      Comparison          Z      P.unadj        P.adj
+1  architectureA - architectureB  -4.846897 1.254075e-06 1.254075e-05
+2  architectureA - architectureC   5.219519 1.793881e-07 1.793881e-06
+3  architectureB - architectureC  10.091805 6.005520e-24 6.005520e-23
+4  architectureA - architectureD  -8.436164 3.279224e-17 3.279224e-16
+5  architectureB - architectureD  -3.598319 3.202801e-04 3.202801e-03
+6  architectureC - architectureD -13.690124 1.163106e-42 1.163106e-41
+7        architectureA - control   2.620850 8.771084e-03 8.771084e-02
+8        architectureB - control   7.474324 7.760182e-14 7.760182e-13
+9        architectureC - control  -2.592092 9.539413e-03 9.539413e-02
+10       architectureD - control  11.063591 1.884007e-28 1.884007e-27
+
+Significance Letters:
+
+architectureA  architectureB  architectureC  architectureD   architectureB  architectureC 
+          "ab"           "ac"        "abcde"         "acdf"        "cdefg"         "defg" 
+ architectureD        control 
+          "fg"          "beg" 

@@ -1,0 +1,260 @@
+
+Kruskal-Wallis test results for rank 1:
+
+Statistic: 14.206862, p-value: 0.006663
+
+
+Post-hoc (Dunn) Results:
+
+                      Comparison           Z      P.unadj       P.adj
+1  architectureA - architectureB -2.10728087 0.0350932406 0.350932406
+2  architectureA - architectureC  1.37949988 0.1677406846 1.000000000
+3  architectureB - architectureC  3.48167541 0.0004982873 0.004982873
+4  architectureA - architectureD -1.17649606 0.2393967045 1.000000000
+5  architectureB - architectureD  0.92878218 0.3530019827 1.000000000
+6  architectureC - architectureD -2.55183951 0.0107155866 0.107155866
+7        architectureA - control -1.09107716 0.2752389324 1.000000000
+8        architectureB - control  1.01143920 0.3118062687 1.000000000
+9        architectureC - control -2.46482875 0.0137078750 0.137078750
+10       architectureD - control  0.08379477 0.9332196048 1.000000000
+
+Significance Letters:
+
+architectureA  architectureB  architectureC  architectureD   architectureB 
+          "ab"            "a"           "ab"           "ab"           "ab" 
+ architectureC  architectureD        control 
+           "b"           "ab"           "ab" 
+
+Kruskal-Wallis test results for rank 2:
+
+Statistic: 14.206862, p-value: 0.006663
+
+
+Post-hoc (Dunn) Results:
+
+                      Comparison           Z      P.unadj       P.adj
+1  architectureA - architectureB -2.10728087 0.0350932406 0.350932406
+2  architectureA - architectureC  1.37949988 0.1677406846 1.000000000
+3  architectureB - architectureC  3.48167541 0.0004982873 0.004982873
+4  architectureA - architectureD -1.17649606 0.2393967045 1.000000000
+5  architectureB - architectureD  0.92878218 0.3530019827 1.000000000
+6  architectureC - architectureD -2.55183951 0.0107155866 0.107155866
+7        architectureA - control -1.09107716 0.2752389324 1.000000000
+8        architectureB - control  1.01143920 0.3118062687 1.000000000
+9        architectureC - control -2.46482875 0.0137078750 0.137078750
+10       architectureD - control  0.08379477 0.9332196048 1.000000000
+
+Significance Letters:
+
+architectureA  architectureB  architectureC  architectureD   architectureB 
+          "ab"            "a"           "ab"           "ab"           "ab" 
+ architectureC  architectureD        control 
+           "b"           "ab"           "ab" 
+
+Kruskal-Wallis test results for rank 3:
+
+Statistic: 14.206862, p-value: 0.006663
+
+
+Post-hoc (Dunn) Results:
+
+                      Comparison           Z      P.unadj       P.adj
+1  architectureA - architectureB -2.10728087 0.0350932406 0.350932406
+2  architectureA - architectureC  1.37949988 0.1677406846 1.000000000
+3  architectureB - architectureC  3.48167541 0.0004982873 0.004982873
+4  architectureA - architectureD -1.17649606 0.2393967045 1.000000000
+5  architectureB - architectureD  0.92878218 0.3530019827 1.000000000
+6  architectureC - architectureD -2.55183951 0.0107155866 0.107155866
+7        architectureA - control -1.09107716 0.2752389324 1.000000000
+8        architectureB - control  1.01143920 0.3118062687 1.000000000
+9        architectureC - control -2.46482875 0.0137078750 0.137078750
+10       architectureD - control  0.08379477 0.9332196048 1.000000000
+
+Significance Letters:
+
+architectureA  architectureB  architectureC  architectureD   architectureB 
+          "ab"            "a"           "ab"           "ab"           "ab" 
+ architectureC  architectureD        control 
+           "b"           "ab"           "ab" 
+
+Kruskal-Wallis test results for rank 4:
+
+Statistic: 14.206862, p-value: 0.006663
+
+
+Post-hoc (Dunn) Results:
+
+                      Comparison           Z      P.unadj       P.adj
+1  architectureA - architectureB -2.10728087 0.0350932406 0.350932406
+2  architectureA - architectureC  1.37949988 0.1677406846 1.000000000
+3  architectureB - architectureC  3.48167541 0.0004982873 0.004982873
+4  architectureA - architectureD -1.17649606 0.2393967045 1.000000000
+5  architectureB - architectureD  0.92878218 0.3530019827 1.000000000
+6  architectureC - architectureD -2.55183951 0.0107155866 0.107155866
+7        architectureA - control -1.09107716 0.2752389324 1.000000000
+8        architectureB - control  1.01143920 0.3118062687 1.000000000
+9        architectureC - control -2.46482875 0.0137078750 0.137078750
+10       architectureD - control  0.08379477 0.9332196048 1.000000000
+
+Significance Letters:
+
+architectureA  architectureB  architectureC  architectureD   architectureB 
+          "ab"            "a"           "ab"           "ab"           "ab" 
+ architectureC  architectureD        control 
+           "b"           "ab"           "ab" 
+
+Kruskal-Wallis test results for rank 5:
+
+Statistic: 14.206862, p-value: 0.006663
+
+
+Post-hoc (Dunn) Results:
+
+                      Comparison           Z      P.unadj       P.adj
+1  architectureA - architectureB -2.10728087 0.0350932406 0.350932406
+2  architectureA - architectureC  1.37949988 0.1677406846 1.000000000
+3  architectureB - architectureC  3.48167541 0.0004982873 0.004982873
+4  architectureA - architectureD -1.17649606 0.2393967045 1.000000000
+5  architectureB - architectureD  0.92878218 0.3530019827 1.000000000
+6  architectureC - architectureD -2.55183951 0.0107155866 0.107155866
+7        architectureA - control -1.09107716 0.2752389324 1.000000000
+8        architectureB - control  1.01143920 0.3118062687 1.000000000
+9        architectureC - control -2.46482875 0.0137078750 0.137078750
+10       architectureD - control  0.08379477 0.9332196048 1.000000000
+
+Significance Letters:
+
+architectureA  architectureB  architectureC  architectureD   architectureB 
+          "ab"            "a"           "ab"           "ab"           "ab" 
+ architectureC  architectureD        control 
+           "b"           "ab"           "ab" 
+
+Kruskal-Wallis test results for rank 6:
+
+Statistic: 14.206862, p-value: 0.006663
+
+
+Post-hoc (Dunn) Results:
+
+                      Comparison           Z      P.unadj       P.adj
+1  architectureA - architectureB -2.10728087 0.0350932406 0.350932406
+2  architectureA - architectureC  1.37949988 0.1677406846 1.000000000
+3  architectureB - architectureC  3.48167541 0.0004982873 0.004982873
+4  architectureA - architectureD -1.17649606 0.2393967045 1.000000000
+5  architectureB - architectureD  0.92878218 0.3530019827 1.000000000
+6  architectureC - architectureD -2.55183951 0.0107155866 0.107155866
+7        architectureA - control -1.09107716 0.2752389324 1.000000000
+8        architectureB - control  1.01143920 0.3118062687 1.000000000
+9        architectureC - control -2.46482875 0.0137078750 0.137078750
+10       architectureD - control  0.08379477 0.9332196048 1.000000000
+
+Significance Letters:
+
+architectureA  architectureB  architectureC  architectureD   architectureB 
+          "ab"            "a"           "ab"           "ab"           "ab" 
+ architectureC  architectureD        control 
+           "b"           "ab"           "ab" 
+
+Kruskal-Wallis test results for rank 7:
+
+Statistic: 14.206862, p-value: 0.006663
+
+
+Post-hoc (Dunn) Results:
+
+                      Comparison           Z      P.unadj       P.adj
+1  architectureA - architectureB -2.10728087 0.0350932406 0.350932406
+2  architectureA - architectureC  1.37949988 0.1677406846 1.000000000
+3  architectureB - architectureC  3.48167541 0.0004982873 0.004982873
+4  architectureA - architectureD -1.17649606 0.2393967045 1.000000000
+5  architectureB - architectureD  0.92878218 0.3530019827 1.000000000
+6  architectureC - architectureD -2.55183951 0.0107155866 0.107155866
+7        architectureA - control -1.09107716 0.2752389324 1.000000000
+8        architectureB - control  1.01143920 0.3118062687 1.000000000
+9        architectureC - control -2.46482875 0.0137078750 0.137078750
+10       architectureD - control  0.08379477 0.9332196048 1.000000000
+
+Significance Letters:
+
+architectureA  architectureB  architectureC  architectureD   architectureB 
+          "ab"            "a"           "ab"           "ab"           "ab" 
+ architectureC  architectureD        control 
+           "b"           "ab"           "ab" 
+
+Kruskal-Wallis test results for rank 8:
+
+Statistic: 14.206862, p-value: 0.006663
+
+
+Post-hoc (Dunn) Results:
+
+                      Comparison           Z      P.unadj       P.adj
+1  architectureA - architectureB -2.10728087 0.0350932406 0.350932406
+2  architectureA - architectureC  1.37949988 0.1677406846 1.000000000
+3  architectureB - architectureC  3.48167541 0.0004982873 0.004982873
+4  architectureA - architectureD -1.17649606 0.2393967045 1.000000000
+5  architectureB - architectureD  0.92878218 0.3530019827 1.000000000
+6  architectureC - architectureD -2.55183951 0.0107155866 0.107155866
+7        architectureA - control -1.09107716 0.2752389324 1.000000000
+8        architectureB - control  1.01143920 0.3118062687 1.000000000
+9        architectureC - control -2.46482875 0.0137078750 0.137078750
+10       architectureD - control  0.08379477 0.9332196048 1.000000000
+
+Significance Letters:
+
+architectureA  architectureB  architectureC  architectureD   architectureB 
+          "ab"            "a"           "ab"           "ab"           "ab" 
+ architectureC  architectureD        control 
+           "b"           "ab"           "ab" 
+
+Kruskal-Wallis test results for rank 9:
+
+Statistic: 14.206862, p-value: 0.006663
+
+
+Post-hoc (Dunn) Results:
+
+                      Comparison           Z      P.unadj       P.adj
+1  architectureA - architectureB -2.10728087 0.0350932406 0.350932406
+2  architectureA - architectureC  1.37949988 0.1677406846 1.000000000
+3  architectureB - architectureC  3.48167541 0.0004982873 0.004982873
+4  architectureA - architectureD -1.17649606 0.2393967045 1.000000000
+5  architectureB - architectureD  0.92878218 0.3530019827 1.000000000
+6  architectureC - architectureD -2.55183951 0.0107155866 0.107155866
+7        architectureA - control -1.09107716 0.2752389324 1.000000000
+8        architectureB - control  1.01143920 0.3118062687 1.000000000
+9        architectureC - control -2.46482875 0.0137078750 0.137078750
+10       architectureD - control  0.08379477 0.9332196048 1.000000000
+
+Significance Letters:
+
+architectureA  architectureB  architectureC  architectureD   architectureB 
+          "ab"            "a"           "ab"           "ab"           "ab" 
+ architectureC  architectureD        control 
+           "b"           "ab"           "ab" 
+
+Kruskal-Wallis test results for rank 10:
+
+Statistic: 14.206862, p-value: 0.006663
+
+
+Post-hoc (Dunn) Results:
+
+                      Comparison           Z      P.unadj       P.adj
+1  architectureA - architectureB -2.10728087 0.0350932406 0.350932406
+2  architectureA - architectureC  1.37949988 0.1677406846 1.000000000
+3  architectureB - architectureC  3.48167541 0.0004982873 0.004982873
+4  architectureA - architectureD -1.17649606 0.2393967045 1.000000000
+5  architectureB - architectureD  0.92878218 0.3530019827 1.000000000
+6  architectureC - architectureD -2.55183951 0.0107155866 0.107155866
+7        architectureA - control -1.09107716 0.2752389324 1.000000000
+8        architectureB - control  1.01143920 0.3118062687 1.000000000
+9        architectureC - control -2.46482875 0.0137078750 0.137078750
+10       architectureD - control  0.08379477 0.9332196048 1.000000000
+
+Significance Letters:
+
+architectureA  architectureB  architectureC  architectureD   architectureB 
+          "ab"            "a"           "ab"           "ab"           "ab" 
+ architectureC  architectureD        control 
+           "b"           "ab"           "ab" 
