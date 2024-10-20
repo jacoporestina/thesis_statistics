@@ -1,37 +1,11 @@
-Descriptive Statistics:
-
-# A tibble: 5 × 4
-  architecture  mean_absorbedPAR median_absorbedPAR sd_absorbedPAR
-  <fct>                    <dbl>              <dbl>          <dbl>
-1 architectureA             20.7               20.8           4.53
-2 architectureB             23.3               22.4           5.44
-3 architectureC             37.2               36.5           5.83
-4 architectureD             16.9               16.7           4.75
-5 control                   23.4               22.7           4.84
-
 
 Kruskal-Wallis test results for total absorbed PAR:
-
-Statistic = 277.231264, p-value = 0.000000
-
+Statistic=277.2312637978771, p-value=<0.001
 
 Post-hoc (Dunn) Results:
-
-                      Comparison          Z      P.unadj        P.adj
-1  architectureA - architectureB  -2.587642 9.663527e-03 9.663527e-02
-2  architectureA - architectureC -12.018729 2.832951e-33 2.832951e-32
-3  architectureB - architectureC  -9.503728 2.025080e-21 2.025080e-20
-4  architectureA - architectureD   3.895841 9.785874e-05 9.785874e-04
-5  architectureB - architectureD   6.513035 7.364756e-11 7.364756e-10
-6  architectureC - architectureD  15.944121 3.130115e-57 3.130115e-56
-7        architectureA - control  -2.851119 4.356567e-03 4.356567e-02
-8        architectureB - control  -0.265506 7.906197e-01 1.000000e+00
-9        architectureC - control   9.238222 2.506274e-20 2.506274e-19
-10       architectureD - control  -6.776511 1.231125e-11 1.231125e-10
-
-Significance Letters:
-
-architectureA  architectureB  architectureC  architectureD   architectureB  architectureC 
-           "a"           "ab"           "ac"          "acd"        "abcde"          "cde" 
- architectureD        control 
-          "de"           "be" 
+              architectureA architectureB architectureC architectureD control
+architectureA         1.000         0.097         0.000         0.001   0.044
+architectureB         0.097         1.000         0.000         0.000   1.000
+architectureC         0.000         0.000         1.000         0.000   0.000
+architectureD         0.001         0.000         0.000         1.000   0.000
+control               0.044         1.000         0.000         0.000   1.000

@@ -10,8 +10,8 @@ Model summary:
 Dep. Variable:     log_absorbedPAR_umol_m2_s1   R-squared:                       0.582
 Model:                                    OLS   Adj. R-squared:                  0.579
 Method:                         Least Squares   F-statistic:                     170.5
-Date:                        Mon, 07 Oct 2024   Prob (F-statistic):           2.69e-91
-Time:                                17:55:32   Log-Likelihood:                 443.33
+Date:                        Sun, 20 Oct 2024   Prob (F-statistic):           2.69e-91
+Time:                                12:49:35   Log-Likelihood:                 443.33
 No. Observations:                         494   AIC:                            -876.7
 Df Residuals:                             489   BIC:                            -855.7
 Df Model:                                   4                                         

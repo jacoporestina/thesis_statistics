@@ -1,67 +1,55 @@
-# Define the Kruskal-Wallis function
-process_kruskal <- function(input_file, output_kruskal) {
-  # Load the data
-  data <- read_csv(input_file)
+# Load necessary libraries
+library(car)         # For Levene's test
+library(agricolae)   # For LSD test
+library(ggplot2)     # For QQ plots
+
+# Read the data
+data <- read.csv("combined_files/combined_high_ranks_cleaned.csv")
+
+# Get unique ranks
+ranks <- unique(data$rank)
+
+# Initialize a text file to save outputs
+sink("output_statistics/anova_ranks_high.txt")
+
+# Loop through each rank
+for (rank in ranks) {
+  # Filter data for the current rank
+  subset_data <- data[data$rank == rank, ]
   
-  # Ensure architecture is a factor
-  data$architecture <- as.factor(data$architecture)
+  # Convert architecture to factor explicitly
+  subset_data$architecture <- as.factor(subset_data$architecture)
   
-  # Create output file
-  kruskal_output <- file(output_kruskal, open = "wt")
+  # Perform one-way ANOVA
+  anova_result <- aov(absorbedPAR_umol_m2_s1 ~ architecture, data = subset_data)
+  cat("\nANOVA for Rank:", rank, "\n")
+  print(summary(anova_result))
+
+  # Post-hoc LSD test
+  lsd_test <- LSD.test(anova_result, "architecture", console=FALSE)
+  cat("\nLSD Test for Rank:", rank, "\n")
+  print(lsd_test)
   
-  # Process data by rank
-  ranks <- unique(data$rank)
-  for (rank in ranks) {
-    # Filter data for the current rank
-    rank_data <- filter(data, rank == rank)
-    
-    # Perform Kruskal-Wallis test
-    kruskal_result <- kruskal.test(absorbedPAR_umol_m2_s1 ~ architecture, data = rank_data)
-    
-    # Write Kruskal-Wallis results for this rank to the file
-    writeLines(sprintf("\nKruskal-Wallis test results for rank %d:\n", rank), kruskal_output)
-    writeLines(sprintf("Statistic: %f, p-value: %f\n", kruskal_result$statistic, kruskal_result$p.value), kruskal_output)
-    
-    # Post-hoc test (Dunn's test) if significant
-    if (kruskal_result$p.value < 0.05) {
-      posthoc_results <- dunnTest(absorbedPAR_umol_m2_s1 ~ architecture, data = rank_data, method = "bonferroni")
-      
-      # Write post-hoc results
-      writeLines("\nPost-hoc (Dunn) Results:\n", kruskal_output)
-      writeLines(capture.output(posthoc_results), kruskal_output)
-      
-      # Extract adjusted p-values and calculate letter groupings
-      comp_matrix <- posthoc_results$res
-      p_values <- setNames(comp_matrix$P.adj, comp_matrix$Comparison)
-      
-      # Generate letter groupings based on significance
-      group_letters <- multcompLetters(p_values)
-      
-      # Write letter groupings
-      writeLines("\nSignificance Letters:\n", kruskal_output)
-      writeLines(capture.output(group_letters$Letters), kruskal_output)
-    }
-  }
+  # Normality test (Shapiro-Wilk test on residuals)
+  residuals_data <- residuals(anova_result)
+  shapiro_test <- shapiro.test(residuals_data)
+  cat("\nShapiro-Wilk Normality Test for Rank:", rank, "\n")
+  print(shapiro_test)
   
-  # Close the output file
-  close(kruskal_output)
+  # Homogeneity of variances (Levene's Test)
+  levene_test <- leveneTest(absorbedPAR_umol_m2_s1 ~ architecture, data = subset_data)
+  cat("\nLevene's Test for Homogeneity of Variances for Rank:", rank, "\n")
+  print(levene_test)
+  
+  # Generate QQ plot for residuals and save as image
+  qqplot_filename <- paste0("qq_plots/qqplot_rank_", rank, ".png")
+  png(qqplot_filename)
+  qqnorm(residuals_data)
+  qqline(residuals_data)
+  dev.off()
+  
+  cat("\n---------------------------------------------\n")
 }
 
-# Define input files and corresponding output paths
-files <- list(
-  list(
-    input = "combined_files/combined_high_ranks_cleaned.csv",
-    output_kruskal = "output_statistics/Kruskal_high_ranks.txt"
-  ),
-  list(
-    input = "combined_files/combined_low_ranks_cleaned.csv",
-    output_kruskal = "output_statistics/Kruskal_low_ranks.txt"
-  )
-)
-
-# Loop through each file and apply the Kruskal-Wallis function
-for (file_info in files) {
-  process_kruskal(file_info$input, file_info$output_kruskal)
-}
-
-print("Kruskal-Wallis processing complete for all files.")
+# Close the text file
+sink()
