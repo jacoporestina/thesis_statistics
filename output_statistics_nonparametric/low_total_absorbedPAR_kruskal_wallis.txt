@@ -1,0 +1,64 @@
+
+Kruskal-Wallis Test:
+
+	Kruskal-Wallis rank sum test
+
+data:  absorbedPAR_umol_m2_s1 by architecture
+Kruskal-Wallis chi-squared = 727.44, df = 9, p-value < 2.2e-16
+
+
+Dunn's Test:
+                        Comparison           Z      P.unadj        P.adj
+1  architecture_A - architecture_B  -7.3088006 2.695374e-13 1.212918e-11
+2  architecture_A - architecture_C  -8.7749239 1.710194e-18 7.695875e-17
+3  architecture_B - architecture_C  -1.4438236 1.487886e-01 1.000000e+00
+4  architecture_A - architecture_D  -9.1753916 4.499362e-20 2.024713e-18
+5  architecture_B - architecture_D  -1.8432736 6.528908e-02 1.000000e+00
+6  architecture_C - architecture_D  -0.4004677 6.888121e-01 1.000000e+00
+7  architecture_A - architecture_E  -7.7909390 6.651302e-15 2.993086e-13
+8  architecture_B - architecture_E  -0.4623393 6.438380e-01 1.000000e+00
+9  architecture_C - architecture_E   0.9839849 3.251229e-01 1.000000e+00
+10 architecture_D - architecture_E   1.3844526 1.662199e-01 1.000000e+00
+11 architecture_A - architecture_F  -3.8421913 1.219408e-04 5.487334e-03
+12 architecture_B - architecture_F   3.4578442 5.445162e-04 2.450323e-02
+13 architecture_C - architecture_F   4.9104329 9.087553e-07 4.089399e-05
+14 architecture_D - architecture_F   5.3098829 1.096957e-07 4.936306e-06
+15 architecture_E - architecture_F   3.9289486 8.531806e-05 3.839313e-03
+16 architecture_A - architecture_G   2.2897446 2.203613e-02 9.916258e-01
+17 architecture_B - architecture_G   9.6109445 7.188654e-22 3.234894e-20
+18 architecture_C - architecture_G  11.0866884 1.455777e-28 6.550996e-27
+19 architecture_D - architecture_G  11.4881610 1.512984e-30 6.808430e-29
+20 architecture_E - architecture_G  10.1002343 5.511038e-24 2.479967e-22
+21 architecture_F - architecture_G   6.1356803 8.479554e-10 3.815799e-08
+22 architecture_A - architecture_H   6.0557074 1.398019e-09 6.291087e-08
+23 architecture_B - architecture_H  13.3672889 9.390137e-41 4.225562e-39
+24 architecture_C - architecture_H  14.8526512 6.687084e-50 3.009188e-48
+25 architecture_D - architecture_H  15.2541238 1.545557e-52 6.955007e-51
+26 architecture_E - architecture_H  13.8661971 1.015182e-43 4.568319e-42
+27 architecture_F - architecture_H   9.8920248 4.508161e-23 2.028673e-21
+28 architecture_G - architecture_H   3.7754608 1.597121e-04 7.187045e-03
+29 architecture_A - architecture_I   8.6939655 3.500040e-18 1.575018e-16
+30 architecture_B - architecture_I  15.9623039 2.339339e-57 1.052703e-55
+31 architecture_C - architecture_I  17.4465897 3.654085e-68 1.644338e-66
+32 architecture_D - architecture_I  17.8460397 3.102744e-71 1.396235e-69
+33 architecture_E - architecture_I  16.4651054 6.534872e-61 2.940692e-59
+34 architecture_F - architecture_I  12.5044597 7.057802e-36 3.176011e-34
+35 architecture_G - architecture_I   6.4317746 1.261227e-10 5.675520e-09
+36 architecture_H - architecture_I   2.6754301 7.463343e-03 3.358504e-01
+37        architecture_A - control  -2.6040089 9.214035e-03 4.146316e-01
+38        architecture_B - control   4.6928958 2.693647e-06 1.212141e-04
+39        architecture_C - control   6.1486153 7.816232e-10 3.517304e-08
+40        architecture_D - control   6.5480652 5.828727e-11 2.622927e-09
+41        architecture_E - control   5.1671309 2.377147e-07 1.069716e-05
+42        architecture_F - control   1.2350516 2.168113e-01 1.000000e+00
+43        architecture_G - control  -4.8944067 9.860274e-07 4.437123e-05
+44        architecture_H - control  -8.6507512 5.116155e-18 2.302270e-16
+45        architecture_I - control -11.2694081 1.858148e-29 8.361666e-28
+
+Significant Letters:
+architecture_A architecture_B architecture_C architecture_D architecture_E 
+          "ab"            "c"            "c"            "c"            "c" 
+architecture_F architecture_G architecture_H architecture_I        control 
+           "d"            "a"            "e"            "e"           "bd" 
+
+---------------------------------------------

@@ -1,0 +1,62 @@
+
+ANOVA Analysis:
+              Df  Sum Sq     Mean Sq  F value Pr(>F)
+architecture   9 9191885 1021320.534 625.4664      0
+Residuals    978 1596971    1632.894       NA     NA
+
+Post-hoc LSD Test:
+
+Means for Each Group:
+               absorbedPAR_umol_m2_s1      std   r       se       LCL       UCL
+architecture_A              1174.2183 40.60493  99 4.061266 1166.2485 1182.1881
+architecture_B              1247.9702 43.77468  98 4.081934 1239.9598 1255.9806
+architecture_C              1262.0541 38.93909  99 4.061266 1254.0843 1270.0239
+architecture_D              1266.2061 39.52037  99 4.061266 1258.2363 1274.1759
+architecture_E              1253.7627 46.16615  99 4.061266 1245.7929 1261.7325
+architecture_F              1214.4405 37.17266  98 4.081934 1206.4301 1222.4508
+architecture_G              1143.8679 42.46309 100 4.040909 1135.9381 1151.7978
+architecture_H              1065.0773 35.77040 100 4.040909 1057.1475 1073.0072
+architecture_I               949.9452 29.73989  98 4.081934  941.9348  957.9555
+control                     1201.4901 46.96850  98 4.081934 1193.4797 1209.5004
+                     Min      Max      Q25       Q50       Q75
+architecture_A 1081.9440 1273.686 1143.413 1176.6990 1202.5836
+architecture_B 1151.0426 1357.156 1220.300 1249.5756 1280.0634
+architecture_C 1162.6378 1344.666 1236.971 1262.3264 1284.7211
+architecture_D 1158.4722 1356.009 1236.099 1269.0954 1292.5361
+architecture_E 1150.2808 1362.540 1217.328 1257.9443 1285.1643
+architecture_F 1120.8941 1289.473 1189.888 1212.9402 1238.3550
+architecture_G 1039.1099 1239.675 1115.379 1148.3593 1168.9737
+architecture_H  973.0910 1145.997 1037.849 1063.6416 1089.4468
+architecture_I  875.4194 1029.059  931.425  948.0286  970.1038
+control        1090.4058 1303.944 1165.969 1198.8785 1237.3235
+
+Groups (Significant Letters):
+               absorbedPAR_umol_m2_s1 groups
+architecture_D              1266.2061      a
+architecture_C              1262.0541     ab
+architecture_E              1253.7627     bc
+architecture_B              1247.9702      c
+architecture_F              1214.4405      d
+control                     1201.4901      e
+architecture_A              1174.2183      f
+architecture_G              1143.8679      g
+architecture_H              1065.0773      h
+architecture_I               949.9452      i
+
+Shapiro-Wilk Normality Test:
+
+	Shapiro-Wilk normality test
+
+data:  residuals_data
+W = 0.99811, p-value = 0.3424
+
+
+Levene's Test for Homogeneity of Variances:
+Levene's Test for Homogeneity of Variance (center = median)
+       Df F value    Pr(>F)    
+group   9  3.4682 0.0003159 ***
+      978                      
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+---------------------------------------------

@@ -1,0 +1,620 @@
+
+ANOVA for Rank: 1 
+              Df   Sum Sq    Mean Sq  F value       Pr(>F)
+architecture   9 26158.65 2906.51716 61.83744 1.355077e-89
+Residuals    979 46015.49   47.00255       NA           NA
+
+Post-hoc LSD Test for Rank: 1 
+
+Means for Each Group:
+               absorbedPAR_umol_m2_s1      std   r        se      LCL      UCL
+architecture_A               51.02390 7.296022  99 0.6890379 49.67174 52.37607
+architecture_B               54.99711 6.775954 100 0.6855840 53.65173 56.34250
+architecture_C               50.95191 8.843355  97 0.6961051 49.58588 52.31794
+architecture_D               51.23423 8.847137 100 0.6855840 49.88885 52.57962
+architecture_E               54.73875 7.678362 100 0.6855840 53.39337 56.08413
+architecture_F               56.37471 6.403225  98 0.6925444 55.01567 57.73376
+architecture_G               56.86119 5.936230 100 0.6855840 55.51581 58.20657
+architecture_H               58.16390 5.317513  99 0.6890379 56.81174 59.51606
+architecture_I               63.57927 4.336663  97 0.6961051 62.21324 64.94530
+control                      43.23005 5.640342  99 0.6890379 41.87789 44.58221
+                    Min      Max      Q25      Q50      Q75
+architecture_A 33.47340 66.35182 45.85932 51.04988 55.49126
+architecture_B 38.64712 71.95268 50.20141 55.67524 59.77800
+architecture_C 33.74320 72.51055 44.35275 52.30703 55.56942
+architecture_D 33.46211 70.80588 44.49816 50.84338 58.24412
+architecture_E 39.19585 72.99373 48.46140 55.04917 59.67456
+architecture_F 40.75725 72.23974 52.19027 56.47672 60.50202
+architecture_G 42.14923 70.99762 53.20380 56.93441 60.94401
+architecture_H 46.00950 70.20062 54.60583 58.37582 61.85530
+architecture_I 52.82325 74.59901 60.47163 63.87774 66.15186
+control        30.60664 56.63122 39.88968 42.96763 47.30530
+
+Groups (Significant Letters):
+               absorbedPAR_umol_m2_s1 groups
+architecture_I               63.57927      a
+architecture_H               58.16390      b
+architecture_G               56.86119     bc
+architecture_F               56.37471    bcd
+architecture_B               54.99711     cd
+architecture_E               54.73875      d
+architecture_D               51.23423      e
+architecture_A               51.02390      e
+architecture_C               50.95191      e
+control                      43.23005      f
+
+Shapiro-Wilk Normality Test for Rank: 1 
+
+	Shapiro-Wilk normality test
+
+data:  residuals_data
+W = 0.99755, p-value = 0.1469
+
+
+Levene's Test for Homogeneity of Variances for Rank: 1 
+Levene's Test for Homogeneity of Variance (center = median)
+       Df F value    Pr(>F)    
+group   9  8.7981 8.305e-13 ***
+      979                      
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+---------------------------------------------
+
+ANOVA for Rank: 2 
+              Df   Sum Sq    Mean Sq  F value       Pr(>F)
+architecture   9 11223.70 1247.07736 33.70146 6.198627e-52
+Residuals    980 36263.59   37.00366       NA           NA
+
+Post-hoc LSD Test for Rank: 2 
+
+Means for Each Group:
+               absorbedPAR_umol_m2_s1      std   r        se      LCL      UCL
+architecture_A               32.10924 7.176385 100 0.6083064 30.91551 33.30298
+architecture_B               34.99168 6.562794 100 0.6083064 33.79795 36.18541
+architecture_C               29.07460 6.652786  97 0.6176415 27.86255 30.28665
+architecture_D               30.47056 7.007112  99 0.6113709 29.27082 31.67031
+architecture_E               32.72130 6.284942 100 0.6083064 31.52756 33.91503
+architecture_F               34.87630 5.998157  98 0.6144822 33.67045 36.08215
+architecture_G               36.85982 4.814934  98 0.6144822 35.65396 38.06567
+architecture_H               38.25450 4.475491 100 0.6083064 37.06077 39.44824
+architecture_I               40.60135 4.036768  98 0.6144822 39.39549 41.80720
+control                      32.82704 6.836885 100 0.6083064 31.63331 34.02078
+                    Min      Max      Q25      Q50      Q75
+architecture_A 17.97784 50.14609 26.91391 31.62679 36.51746
+architecture_B 21.39978 49.08267 29.83969 34.80355 39.74219
+architecture_C 14.02223 46.63577 25.14282 29.34929 33.57383
+architecture_D 16.24407 49.74242 24.89506 30.41617 34.78584
+architecture_E 18.12827 46.72124 29.04792 32.71079 36.83277
+architecture_F 25.79838 48.28650 29.35947 34.67535 39.04607
+architecture_G 25.49966 49.33110 33.61712 36.21145 40.16844
+architecture_H 29.25873 49.65338 35.12893 37.95940 41.17629
+architecture_I 30.93441 49.79605 37.93071 40.80442 42.83872
+control        18.34414 51.17210 27.38944 32.58533 37.86633
+
+Groups (Significant Letters):
+               absorbedPAR_umol_m2_s1 groups
+architecture_I               40.60135      a
+architecture_H               38.25450      b
+architecture_G               36.85982      b
+architecture_B               34.99168      c
+architecture_F               34.87630      c
+control                      32.82704      d
+architecture_E               32.72130      d
+architecture_A               32.10924     de
+architecture_D               30.47056     ef
+architecture_C               29.07460      f
+
+Shapiro-Wilk Normality Test for Rank: 2 
+
+	Shapiro-Wilk normality test
+
+data:  residuals_data
+W = 0.99542, p-value = 0.004635
+
+
+Levene's Test for Homogeneity of Variances for Rank: 2 
+Levene's Test for Homogeneity of Variance (center = median)
+       Df F value    Pr(>F)    
+group   9  6.9511 9.152e-10 ***
+      980                      
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+---------------------------------------------
+
+ANOVA for Rank: 3 
+              Df   Sum Sq    Mean Sq  F value       Pr(>F)
+architecture   9 14412.07 1601.34128 31.71336 5.126313e-49
+Residuals    980 49484.34   50.49422       NA           NA
+
+Post-hoc LSD Test for Rank: 3 
+
+Means for Each Group:
+               absorbedPAR_umol_m2_s1      std   r        se      LCL      UCL
+architecture_A               34.54667 6.811686  99 0.7141727 33.14518 35.94815
+architecture_B               41.77940 8.158511 100 0.7105929 40.38494 43.17386
+architecture_C               33.45207 8.177011  99 0.7141727 32.05059 34.85356
+architecture_D               33.96602 7.939059  99 0.7141727 32.56453 35.36750
+architecture_E               35.92818 7.621062  98 0.7178072 34.51957 37.33680
+architecture_F               39.45844 7.605473 100 0.7105929 38.06398 40.85290
+architecture_G               43.59805 6.759356 100 0.7105929 42.20359 44.99251
+architecture_H               43.47192 5.843519  99 0.7141727 42.07044 44.87340
+architecture_I               42.06196 4.247310  98 0.7178072 40.65334 43.47057
+control                      37.05871 6.915177  98 0.7178072 35.65009 38.46732
+                    Min      Max      Q25      Q50      Q75
+architecture_A 20.99077 53.38004 29.23589 34.22925 39.23336
+architecture_B 20.80896 60.25207 35.84029 41.35166 47.72415
+architecture_C 15.78717 53.94427 27.65883 32.74172 38.36964
+architecture_D 17.01531 53.33814 27.71526 33.80145 39.27634
+architecture_E 19.35909 53.51568 29.89427 35.94359 40.14680
+architecture_F 22.06308 58.44704 33.77867 39.28045 44.71724
+architecture_G 29.75811 58.79345 38.35669 43.20001 48.14785
+architecture_H 29.41745 57.08839 39.26168 42.88326 47.93769
+architecture_I 32.41447 51.41893 38.91089 42.21296 45.02638
+control        21.44520 52.64959 32.71477 37.32927 41.30238
+
+Groups (Significant Letters):
+               absorbedPAR_umol_m2_s1 groups
+architecture_G               43.59805      a
+architecture_H               43.47192      a
+architecture_I               42.06196      a
+architecture_B               41.77940      a
+architecture_F               39.45844      b
+control                      37.05871      c
+architecture_E               35.92818     cd
+architecture_A               34.54667     de
+architecture_D               33.96602     de
+architecture_C               33.45207      e
+
+Shapiro-Wilk Normality Test for Rank: 3 
+
+	Shapiro-Wilk normality test
+
+data:  residuals_data
+W = 0.99502, p-value = 0.002464
+
+
+Levene's Test for Homogeneity of Variances for Rank: 3 
+Levene's Test for Homogeneity of Variance (center = median)
+       Df F value    Pr(>F)    
+group   9  4.9292 1.714e-06 ***
+      980                      
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+---------------------------------------------
+
+ANOVA for Rank: 4 
+              Df    Sum Sq   Mean Sq  F value       Pr(>F)
+architecture   9  39283.92 4364.8796 41.76466 2.075831e-63
+Residuals    981 102525.59  104.5113       NA           NA
+
+Post-hoc LSD Test for Rank: 4 
+
+Means for Each Group:
+               absorbedPAR_umol_m2_s1       std   r       se      LCL      UCL
+architecture_A               59.82435 11.165333 100 1.022308 57.81819 61.83051
+architecture_B               69.43408 12.578804 100 1.022308 67.42791 71.44024
+architecture_C               53.10626 11.846575 100 1.022308 51.10010 55.11243
+architecture_D               54.22980  9.807819  98 1.032687 52.20327 56.25633
+architecture_E               62.47715 10.918433  98 1.032687 60.45062 64.50368
+architecture_F               70.60663 10.529582  99 1.027458 68.59036 72.62290
+architecture_G               70.50450  9.809659  99 1.027458 68.48824 72.52077
+architecture_H               70.51384  7.629736 100 1.022308 68.50768 72.52000
+architecture_I               65.52142  6.875233  99 1.027458 63.50515 67.53769
+control                      65.36740  9.653744  98 1.032687 63.34087 67.39393
+                    Min       Max      Q25      Q50      Q75
+architecture_A 31.08729  85.07640 52.34495 59.04843 67.58229
+architecture_B 45.65371 103.67022 60.33049 68.13221 77.84926
+architecture_C 24.61630  79.37202 43.94222 54.40722 61.49041
+architecture_D 33.61064  78.37432 47.65974 53.06609 61.10956
+architecture_E 36.71286  89.73771 55.37161 61.22703 69.30591
+architecture_F 51.51226 100.35846 62.82884 69.55235 77.53946
+architecture_G 47.89006  92.94340 64.31591 68.86243 77.65808
+architecture_H 49.96663  86.76795 65.04670 71.07242 76.76169
+architecture_I 49.83506  78.08659 61.34311 65.45699 70.85077
+control        45.39399  89.15973 58.67132 65.46469 72.40843
+
+Groups (Significant Letters):
+               absorbedPAR_umol_m2_s1 groups
+architecture_F               70.60663      a
+architecture_H               70.51384      a
+architecture_G               70.50450      a
+architecture_B               69.43408      a
+architecture_I               65.52142      b
+control                      65.36740      b
+architecture_E               62.47715      c
+architecture_A               59.82435      c
+architecture_D               54.22980      d
+architecture_C               53.10626      d
+
+Shapiro-Wilk Normality Test for Rank: 4 
+
+	Shapiro-Wilk normality test
+
+data:  residuals_data
+W = 0.99658, p-value = 0.02985
+
+
+Levene's Test for Homogeneity of Variances for Rank: 4 
+Levene's Test for Homogeneity of Variance (center = median)
+       Df F value    Pr(>F)    
+group   9   4.778 2.976e-06 ***
+      981                      
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+---------------------------------------------
+
+ANOVA for Rank: 5 
+              Df    Sum Sq   Mean Sq  F value       Pr(>F)
+architecture   9  62986.86 6998.5405 57.55873 3.121926e-84
+Residuals    977 118793.00  121.5896       NA           NA
+
+Post-hoc LSD Test for Rank: 5 
+
+Means for Each Group:
+               absorbedPAR_umol_m2_s1       std   r       se       LCL
+architecture_A               107.8732 11.413005  98 1.113872 105.68731
+architecture_B               102.9168 11.818599  97 1.119598 100.71966
+architecture_C                90.3121 13.099221 100 1.102677  88.14821
+architecture_D                97.4487 13.605216  99 1.108232  95.27391
+architecture_E               102.7498 12.326136  98 1.113872 100.56396
+architecture_F               105.8004 11.377600 100 1.102677 103.63650
+architecture_G               107.7542  8.800622  99 1.108232 105.57938
+architecture_H               102.2268  7.970791  98 1.113872 100.04092
+architecture_I                91.6713  5.080063  98 1.113872  89.48544
+control                      119.0892 11.811747 100 1.102677 116.92535
+                     UCL      Min      Max       Q25       Q50       Q75
+architecture_A 110.05902 81.60507 133.5330  99.63193 108.66614 115.52374
+architecture_B 105.11385 75.01123 132.4130  93.55953 103.90083 111.45216
+architecture_C  92.47598 59.36901 119.2857  81.58132  91.03090 100.05785
+architecture_D  99.62349 60.68136 128.4797  88.39236  98.33291 106.82329
+architecture_E 104.93567 72.05279 129.4270  95.76689 103.03698 110.77417
+architecture_F 107.96427 75.86072 132.8088  98.09823 106.10442 113.55861
+architecture_G 109.92896 85.94152 125.9223 102.60883 108.22851 114.36821
+architecture_H 104.41264 81.91279 124.4731  96.57910 102.59143 107.58004
+architecture_I  93.85716 80.60713 104.5276  88.23951  91.10779  94.95202
+control        121.25312 96.59999 146.2887 110.03553 120.19902 127.24555
+
+Groups (Significant Letters):
+               absorbedPAR_umol_m2_s1 groups
+control                      119.0892      a
+architecture_A               107.8732      b
+architecture_G               107.7542      b
+architecture_F               105.8004     bc
+architecture_B               102.9168     cd
+architecture_E               102.7498     cd
+architecture_H               102.2268      d
+architecture_D                97.4487      e
+architecture_I                91.6713      f
+architecture_C                90.3121      f
+
+Shapiro-Wilk Normality Test for Rank: 5 
+
+	Shapiro-Wilk normality test
+
+data:  residuals_data
+W = 0.99773, p-value = 0.1938
+
+
+Levene's Test for Homogeneity of Variances for Rank: 5 
+Levene's Test for Homogeneity of Variance (center = median)
+       Df F value    Pr(>F)    
+group   9  10.615 8.233e-16 ***
+      977                      
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+---------------------------------------------
+
+ANOVA for Rank: 6 
+              Df    Sum Sq   Mean Sq  F value       Pr(>F)
+architecture   9  82658.04 9184.2265 66.16229 7.149022e-95
+Residuals    980 136037.34  138.8136       NA           NA
+
+Post-hoc LSD Test for Rank: 6 
+
+Means for Each Group:
+               absorbedPAR_umol_m2_s1       std   r       se      LCL      UCL
+architecture_A               137.7876 11.326311 100 1.178192 135.4755 140.0997
+architecture_B               120.5036 13.718046 100 1.178192 118.1915 122.8156
+architecture_C               131.0952 15.958647  99 1.184127 128.7715 133.4189
+architecture_D               130.8006 13.697936  99 1.184127 128.4769 133.1244
+architecture_E               128.9651 14.830173 100 1.178192 126.6531 131.2772
+architecture_F               129.2305 10.078626 100 1.178192 126.9185 131.5426
+architecture_G               125.4797  8.985217  98 1.190154 123.1442 127.8153
+architecture_H               118.8485  8.027841  99 1.184127 116.5248 121.1722
+architecture_I               103.6650  6.149647 100 1.178192 101.3529 105.9770
+control                      132.5004 11.127663  95 1.208799 130.1282 134.8725
+                     Min      Max      Q25      Q50      Q75
+architecture_A 111.28096 160.7033 130.4448 137.7592 145.6083
+architecture_B  86.50595 154.6593 111.6831 120.2430 131.3703
+architecture_C  90.70719 166.6107 120.2685 129.4890 144.1205
+architecture_D  99.12133 159.9650 122.1276 130.6239 140.2646
+architecture_E  95.10199 166.0164 118.0096 128.1798 138.9554
+architecture_F 107.19961 150.8201 121.9605 129.0065 135.7658
+architecture_G 101.72952 150.2972 118.7132 126.0658 131.4146
+architecture_H 101.49065 137.2235 114.2436 119.7078 124.4452
+architecture_I  89.30260 117.8174  99.2564 103.4881 107.8811
+control        108.41541 160.8294 125.5542 130.4343 139.3162
+
+Groups (Significant Letters):
+               absorbedPAR_umol_m2_s1 groups
+architecture_A               137.7876      a
+control                      132.5004      b
+architecture_C               131.0952     bc
+architecture_D               130.8006     bc
+architecture_F               129.2305     bc
+architecture_E               128.9651      c
+architecture_G               125.4797      d
+architecture_B               120.5036      e
+architecture_H               118.8485      e
+architecture_I               103.6650      f
+
+Shapiro-Wilk Normality Test for Rank: 6 
+
+	Shapiro-Wilk normality test
+
+data:  residuals_data
+W = 0.99784, p-value = 0.2302
+
+
+Levene's Test for Homogeneity of Variances for Rank: 6 
+Levene's Test for Homogeneity of Variance (center = median)
+       Df F value    Pr(>F)    
+group   9  13.714 < 2.2e-16 ***
+      980                      
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+---------------------------------------------
+
+ANOVA for Rank: 7 
+              Df   Sum Sq    Mean Sq F value        Pr(>F)
+architecture   9 401674.5 44630.5037 289.439 5.478539e-268
+Residuals    973 150033.3   154.1966      NA            NA
+
+Post-hoc LSD Test for Rank: 7 
+
+Means for Each Group:
+               absorbedPAR_umol_m2_s1       std   r       se      LCL      UCL
+architecture_A               179.5611 10.136961  99 1.248015 177.1120 182.0102
+architecture_B               159.2464 15.687911  99 1.248015 156.7973 161.6955
+architecture_C               180.6705 11.724448  97 1.260815 178.1962 183.1447
+architecture_D               182.1684 11.289721  98 1.254366 179.7069 184.6300
+architecture_E               177.2755 13.223984  99 1.248015 174.8264 179.7246
+architecture_F               169.4477 11.572864  98 1.254366 166.9861 171.9093
+architecture_G               156.7987  9.994991 100 1.241759 154.3618 159.2355
+architecture_H               143.1100  6.443472  96 1.267365 140.6229 145.5970
+architecture_I               121.1942  5.755185  98 1.254366 118.7326 123.6558
+control                      135.3620 20.973307  99 1.248015 132.9129 137.8112
+                     Min      Max      Q25      Q50      Q75
+architecture_A 155.83629 202.4961 172.6174 180.4768 186.2408
+architecture_B 123.29855 191.7098 149.0834 160.0068 170.9860
+architecture_C 153.36870 207.3646 173.8660 180.8521 188.4095
+architecture_D 152.90153 205.3173 174.5866 182.5437 188.7695
+architecture_E 139.53261 203.7514 166.7299 178.5260 186.6369
+architecture_F 141.87676 197.1923 162.3769 170.1297 177.0127
+architecture_G 131.27411 176.4545 150.1843 157.6479 164.4736
+architecture_H 128.04709 158.1295 138.9481 142.1626 147.6624
+architecture_I 107.94171 134.6475 117.9961 120.6749 125.7445
+control         91.23398 179.1632 121.6276 137.4480 148.0057
+
+Groups (Significant Letters):
+               absorbedPAR_umol_m2_s1 groups
+architecture_D               182.1684      a
+architecture_C               180.6705     ab
+architecture_A               179.5611     ab
+architecture_E               177.2755      b
+architecture_F               169.4477      c
+architecture_B               159.2464      d
+architecture_G               156.7987      d
+architecture_H               143.1100      e
+control                      135.3620      f
+architecture_I               121.1942      g
+
+Shapiro-Wilk Normality Test for Rank: 7 
+
+	Shapiro-Wilk normality test
+
+data:  residuals_data
+W = 0.99027, p-value = 4.271e-06
+
+
+Levene's Test for Homogeneity of Variances for Rank: 7 
+Levene's Test for Homogeneity of Variance (center = median)
+       Df F value    Pr(>F)    
+group   9  23.231 < 2.2e-16 ***
+      973                      
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+---------------------------------------------
+
+ANOVA for Rank: 8 
+              Df   Sum Sq    Mean Sq  F value        Pr(>F)
+architecture   9 580571.0 64507.8872 278.4002 1.196638e-262
+Residuals    978 226611.6   231.7092       NA            NA
+
+Post-hoc LSD Test for Rank: 8 
+
+Means for Each Group:
+               absorbedPAR_umol_m2_s1      std   r       se      LCL      UCL
+architecture_A               184.0320 13.87714 100 1.522200 181.0448 187.0191
+architecture_B               189.4576 20.84165  98 1.537654 186.4402 192.4751
+architecture_C               209.9658 13.96568  97 1.545560 206.9328 212.9988
+architecture_D               207.8859 15.07380  99 1.529868 204.8837 210.8881
+architecture_E               197.3586 16.18148 100 1.522200 194.3715 200.3458
+architecture_F               183.9758 14.35144  98 1.537654 180.9583 186.9933
+architecture_G               165.7131 14.66781 100 1.522200 162.7260 168.7003
+architecture_H               151.4778 12.43297  99 1.529868 148.4756 154.4801
+architecture_I               128.8396 11.54344  99 1.529868 125.8374 131.8418
+control                      192.5463 17.29478  98 1.537654 189.5289 195.5638
+                    Min      Max      Q25      Q50      Q75
+architecture_A 153.2085 216.6383 174.4573 185.6554 193.4522
+architecture_B 141.0357 234.3086 175.4376 191.5546 203.2279
+architecture_C 174.5077 235.7679 202.2813 211.0620 220.9910
+architecture_D 175.6055 244.1122 195.7168 208.5241 220.5849
+architecture_E 156.5767 235.1571 184.7576 199.8764 208.9272
+architecture_F 145.6533 216.7036 173.6665 185.6726 194.3502
+architecture_G 131.5300 194.9340 153.4428 166.7491 177.9837
+architecture_H 122.0641 181.3633 142.6244 151.7519 161.2478
+architecture_I 101.9098 158.0922 121.6120 129.1096 136.3836
+control        144.8206 225.4032 180.6486 192.0410 204.6542
+
+Groups (Significant Letters):
+               absorbedPAR_umol_m2_s1 groups
+architecture_C               209.9658      a
+architecture_D               207.8859      a
+architecture_E               197.3586      b
+control                      192.5463      c
+architecture_B               189.4576      c
+architecture_A               184.0320      d
+architecture_F               183.9758      d
+architecture_G               165.7131      e
+architecture_H               151.4778      f
+architecture_I               128.8396      g
+
+Shapiro-Wilk Normality Test for Rank: 8 
+
+	Shapiro-Wilk normality test
+
+data:  residuals_data
+W = 0.99594, p-value = 0.01067
+
+
+Levene's Test for Homogeneity of Variances for Rank: 8 
+Levene's Test for Homogeneity of Variance (center = median)
+       Df F value    Pr(>F)    
+group   9  6.0833 2.389e-08 ***
+      978                      
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+---------------------------------------------
+
+ANOVA for Rank: 9 
+              Df   Sum Sq    Mean Sq F value Pr(>F)
+architecture   9 842282.1 93586.9045 443.034      0
+Residuals    978 206593.6   211.2409      NA     NA
+
+Post-hoc LSD Test for Rank: 9 
+
+Means for Each Group:
+               absorbedPAR_umol_m2_s1      std   r       se      LCL      UCL
+architecture_A               208.2171 17.06672 100 1.453413 205.3650 211.0693
+architecture_B               241.8642 12.23680  97 1.475717 238.9683 244.7602
+architecture_C               247.7589 10.16845 100 1.453413 244.9067 250.6110
+architecture_D               247.6656 10.87698  99 1.460735 244.7991 250.5321
+architecture_E               234.8135 14.79644 100 1.453413 231.9613 237.6657
+architecture_F               217.2602 16.03108 100 1.453413 214.4080 220.1123
+architecture_G               198.2416 14.89315  98 1.468169 195.3605 201.1227
+architecture_H               178.3424 16.90878 100 1.453413 175.4902 181.1946
+architecture_I               154.7583 13.50190  95 1.491170 151.8320 157.6846
+control                      224.3133 16.74498  99 1.460735 221.4468 227.1798
+                    Min      Max      Q25      Q50      Q75
+architecture_A 163.5551 254.5618 196.9923 210.6164 220.3729
+architecture_B 214.8693 268.3212 233.5939 243.4459 249.8620
+architecture_C 223.9293 268.1381 238.8662 249.2782 254.7442
+architecture_D 218.3161 274.2912 240.3810 249.0676 255.3129
+architecture_E 193.1109 262.0090 224.5155 237.2147 248.1164
+architecture_F 176.0648 253.4113 205.9789 217.4273 228.7271
+architecture_G 158.7748 236.2678 188.8839 199.0941 208.5235
+architecture_H 140.0122 220.6236 167.0704 177.4681 189.4659
+architecture_I 122.4486 187.5542 145.8441 153.3335 161.9902
+control        183.9374 252.8499 213.5154 226.4918 235.8174
+
+Groups (Significant Letters):
+               absorbedPAR_umol_m2_s1 groups
+architecture_C               247.7589      a
+architecture_D               247.6656      a
+architecture_B               241.8642      b
+architecture_E               234.8135      c
+control                      224.3133      d
+architecture_F               217.2602      e
+architecture_A               208.2171      f
+architecture_G               198.2416      g
+architecture_H               178.3424      h
+architecture_I               154.7583      i
+
+Shapiro-Wilk Normality Test for Rank: 9 
+
+	Shapiro-Wilk normality test
+
+data:  residuals_data
+W = 0.99585, p-value = 0.009238
+
+
+Levene's Test for Homogeneity of Variances for Rank: 9 
+Levene's Test for Homogeneity of Variance (center = median)
+       Df F value    Pr(>F)    
+group   9  5.1432 7.821e-07 ***
+      978                      
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+---------------------------------------------
+
+ANOVA for Rank: 10 
+              Df    Sum Sq     Mean Sq  F value       Pr(>F)
+architecture   9 1063895.7 118210.6349 332.3294 7.77995e-291
+Residuals    982  349300.6    355.7032       NA           NA
+
+Post-hoc LSD Test for Rank: 10 
+
+Means for Each Group:
+               absorbedPAR_umol_m2_s1      std   r       se      LCL      UCL
+architecture_A               176.8851 16.55935  99 1.895511 173.1654 180.6049
+architecture_B               232.5821 23.15402 100 1.886010 228.8810 236.2832
+architecture_C               235.7497 22.69277 100 1.886010 232.0486 239.4508
+architecture_D               233.6110 20.67326  99 1.895511 229.8913 237.3307
+architecture_E               225.7314 18.24819  99 1.895511 222.0117 229.4511
+architecture_F               209.6647 18.58323  98 1.905157 205.9260 213.4033
+architecture_G               183.2195 18.19145 100 1.886010 179.5184 186.9205
+architecture_H               161.4081 16.03893  99 1.895511 157.6884 165.1278
+architecture_I               137.8416 12.52395  98 1.905157 134.1029 141.5802
+control                      219.8440 19.37675 100 1.886010 216.1429 223.5451
+                    Min      Max      Q25      Q50      Q75
+architecture_A 139.0699 210.8257 165.0896 178.7361 186.9344
+architecture_B 180.9286 279.2777 221.6246 230.8077 249.5990
+architecture_C 178.3292 278.8274 221.7385 236.5387 251.6125
+architecture_D 187.0050 282.4076 220.4805 231.2724 247.1380
+architecture_E 179.9537 270.8240 215.3534 225.1746 239.1412
+architecture_F 164.4477 252.5189 198.1529 210.3768 222.0823
+architecture_G 138.6678 220.6447 168.7405 185.1729 194.2419
+architecture_H 127.2401 199.0153 150.7288 160.4753 170.5087
+architecture_I 103.5462 167.8420 128.3143 139.1868 146.9155
+control        179.6886 257.9775 205.6578 219.7048 236.2223
+
+Groups (Significant Letters):
+               absorbedPAR_umol_m2_s1 groups
+architecture_C               235.7497      a
+architecture_D               233.6110      a
+architecture_B               232.5821      a
+architecture_E               225.7314      b
+control                      219.8440      c
+architecture_F               209.6647      d
+architecture_G               183.2195      e
+architecture_A               176.8851      f
+architecture_H               161.4081      g
+architecture_I               137.8416      h
+
+Shapiro-Wilk Normality Test for Rank: 10 
+
+	Shapiro-Wilk normality test
+
+data:  residuals_data
+W = 0.9959, p-value = 0.009814
+
+
+Levene's Test for Homogeneity of Variances for Rank: 10 
+Levene's Test for Homogeneity of Variance (center = median)
+       Df F value    Pr(>F)    
+group   9  4.5877 5.942e-06 ***
+      982                      
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+---------------------------------------------
