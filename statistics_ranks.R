@@ -49,7 +49,10 @@ perform_analysis <- function(file_name, output_prefix) {
     subset_data$architecture <- as.factor(subset_data$architecture)
     
     # Perform one-way ANOVA
-    anova_result <- aov(absorbedPAR_umol_m2_s1 ~ architecture, data = subset_data)
+    anova_result <- aov(
+      absorbedPAR_umol_m2_s1 ~ architecture, 
+      data = subset_data
+    )
     lsd_test <- LSD.test(anova_result, "architecture", console = FALSE)
     
     # Format and print the ANOVA output
@@ -62,12 +65,17 @@ perform_analysis <- function(file_name, output_prefix) {
     print(shapiro_test)
     
     # Homogeneity of variances (Levene's Test)
-    levene_test <- leveneTest(absorbedPAR_umol_m2_s1 ~ architecture, data = subset_data)
+    levene_test <- leveneTest(
+      absorbedPAR_umol_m2_s1 ~ architecture, 
+      data = subset_data
+    )
     cat("\nLevene's Test for Homogeneity of Variances for Rank:", rank, "\n")
     print(levene_test)
     
     # Generate QQ plot for residuals and save as image
-    qqplot_filename <- paste0("qq_plots/qqplot_", output_prefix, "_rank_", rank, ".png")
+    qqplot_filename <- paste0(
+      "qq_plots/qqplot_", output_prefix, "_rank_", rank, ".png"
+    )
     png(qqplot_filename)
     qqnorm(residuals_data)
     qqline(residuals_data)
@@ -75,14 +83,25 @@ perform_analysis <- function(file_name, output_prefix) {
     
     # Create a histogram for absorbedPAR_umol_m2_s1
     p <- ggplot(subset_data, aes(x = absorbedPAR_umol_m2_s1)) +
-      geom_histogram(binwidth = 10, fill = "blue", color = "black", alpha = 0.7) +
-      labs(title = paste("Histogram of absorbedPAR_umol_m2_s1 for Rank", rank),
-           x = "absorbedPAR_umol_m2_s1",
-           y = "Frequency") +
+      geom_histogram(
+        binwidth = 10, fill = "blue", color = "black", alpha = 0.7
+      ) +
+      labs(
+        title = paste(
+          "Histogram of absorbedPAR_umol_m2_s1 for Rank", rank
+        ),
+        x = "absorbedPAR_umol_m2_s1",
+        y = "Frequency"
+      ) +
       theme_minimal()
     
     # Save the plot as a PNG file
-    ggsave(filename = paste0("distribution_plots/histogram_", output_prefix, "_rank_", rank, ".png"), plot = p)
+    ggsave(
+      filename = paste0(
+        "distribution_plots/histogram_", output_prefix, "_rank_", rank, ".png"
+      ), 
+      plot = p
+    )
     
     cat("\n---------------------------------------------\n")
   }
@@ -91,7 +110,10 @@ perform_analysis <- function(file_name, output_prefix) {
   sink()
 
   # Non-parametric analysis
-  sink(paste0("output_statistics_nonparametric/", output_prefix, "_kruskal_wallis_ranks.txt"))
+  sink(paste0(
+    "output_statistics_nonparametric/", output_prefix, 
+    "_kruskal_wallis_ranks.txt"
+  ))
 
   # Loop through each rank for non-parametric analysis
   for (rank in ranks) {
@@ -102,12 +124,19 @@ perform_analysis <- function(file_name, output_prefix) {
     subset_data$architecture <- as.factor(subset_data$architecture)
     
     # Perform Kruskal-Wallis test
-    kruskal_result <- kruskal.test(absorbedPAR_umol_m2_s1 ~ architecture, data = subset_data)
+    kruskal_result <- kruskal.test(
+      absorbedPAR_umol_m2_s1 ~ architecture, 
+      data = subset_data
+    )
     cat("\nKruskal-Wallis Test for Rank:", rank, "\n")
     print(kruskal_result)
     
     # Perform Dunn's test using the FSA package
-    dunn_result <- dunnTest(absorbedPAR_umol_m2_s1 ~ architecture, data = subset_data, method = "bonferroni")
+    dunn_result <- dunnTest(
+      absorbedPAR_umol_m2_s1 ~ architecture, 
+      data = subset_data, 
+      method = "bonferroni"
+    )
     cat("\nDunn's Test for Rank:", rank, "\n")
     print(dunn_result)
     
@@ -116,12 +145,16 @@ perform_analysis <- function(file_name, output_prefix) {
     comparisons <- dunn_result$res$Comparison
     
     # Generate a matrix of p-values for pairwise comparisons
-    p_matrix <- matrix(1, nrow = length(unique(subset_data$architecture)),
-                       ncol = length(unique(subset_data$architecture)))
+    p_matrix <- matrix(
+      1, 
+      nrow = length(unique(subset_data$architecture)),
+      ncol = length(unique(subset_data$architecture))
+    )
     rownames(p_matrix) <- levels(subset_data$architecture)
     colnames(p_matrix) <- levels(subset_data$architecture)
     
-    # Fill in the p-value matrix based on the pairwise comparisons, only if p_values is not empty
+    # Fill in the p-value matrix based on the pairwise comparisons, 
+    # only if p_values is not empty
     if (length(p_values) > 0) {
       for (i in seq_along(p_values)) {
         comparison <- unlist(strsplit(comparisons[i], " - "))
@@ -149,5 +182,11 @@ perform_analysis <- function(file_name, output_prefix) {
 }
 
 # Analyze both high and low density files
-perform_analysis("combined_files/combined_high_ranks_cleaned.csv", "high_density")
-perform_analysis("combined_files/combined_low_ranks_cleaned.csv", "low_density")
+perform_analysis(
+  "combined_files/combined_high_ranks_cleaned.csv", 
+  "high_density"
+)
+perform_analysis(
+  "combined_files/combined_low_ranks_cleaned.csv", 
+  "low_density"
+)
