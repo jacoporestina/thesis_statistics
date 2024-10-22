@@ -1,61 +1,52 @@
 
 ANOVA Analysis:
-              Df    Sum Sq     Mean Sq  F value Pr(>F)
-architecture   9 18107.445 2011.938283 517.2009      0
-Residuals    949  3691.659    3.890052       NA     NA
+              Df    Sum Sq     Mean Sq  F value        Pr(>F)
+architecture   6 15229.055 2538.175845 699.3228 6.879935e-282
+Residuals    659  2391.825    3.629477       NA            NA
 
 Post-hoc LSD Test:
 
 Means for Each Group:
                absorbedPAR_umol_m2_s1      std   r        se       LCL
-architecture_A               3.553519 1.107460  91 0.2067555  3.147769
-architecture_B               5.435619 1.932373  98 0.1992346  5.044628
-architecture_C               2.533717 1.164867  93 0.2045202  2.132353
-architecture_D               3.176221 1.266600  95 0.2023559  2.779105
-architecture_E               3.958466 1.350284  93 0.2045202  3.557102
-architecture_F               5.990559 2.161253 100 0.1972321  5.603497
-architecture_G               7.899086 2.215600 100 0.1972321  7.512024
-architecture_H              10.798968 2.660521  98 0.1992346 10.407977
-architecture_I              17.645053 3.126523  95 0.2023559 17.247937
-control                      4.811918 1.528049  96 0.2012992  4.416875
+architecture_A               3.553519 1.107460  91 0.1997107  3.161373
+architecture_B               5.435619 1.932373  98 0.1924460  5.057738
+architecture_C               2.533717 1.164867  93 0.1975516  2.145811
+architecture_D               3.958466 1.350284  93 0.1975516  3.570559
+architecture_E               7.899086 2.215600 100 0.1905119  7.525003
+architecture_F              17.645053 3.126523  95 0.1954610 17.261252
+control                      4.811918 1.528049  96 0.1944404  4.430121
                      UCL        Min       Max       Q25       Q50       Q75
-architecture_A  3.959270  1.2442279  6.753144  2.716356  3.478995  4.104774
-architecture_B  5.826610  2.0391117 10.600248  4.004387  5.060835  6.715225
-architecture_C  2.935081  0.5470081  5.542508  1.699863  2.277495  3.221244
-architecture_D  3.573338  0.8774364  6.559204  2.309176  3.077069  3.970219
-architecture_E  4.359830  1.7978040  7.722521  3.029958  3.570447  4.791996
-architecture_F  6.377621  1.9614565 11.207210  4.532161  5.535239  7.580810
-architecture_G  8.286147  3.2108095 13.208599  6.437314  7.617961  9.416898
-architecture_H 11.189960  4.8819074 17.293720  8.975418 10.540552 12.733853
-architecture_I 18.042170 11.4310864 24.979381 15.638051 17.328903 19.335110
-control         5.206961  1.6155927  8.650352  3.810661  4.524462  5.952074
+architecture_A  3.945665  1.2442279  6.753144  2.716356  3.478995  4.104774
+architecture_B  5.813500  2.0391117 10.600248  4.004387  5.060835  6.715225
+architecture_C  2.921623  0.5470081  5.542508  1.699863  2.277495  3.221244
+architecture_D  4.346372  1.7978040  7.722521  3.029958  3.570447  4.791996
+architecture_E  8.273169  3.2108095 13.208599  6.437314  7.617961  9.416898
+architecture_F 18.028855 11.4310864 24.979381 15.638051 17.328903 19.335110
+control         5.193715  1.6155927  8.650352  3.810661  4.524462  5.952074
 
 Groups (Significant Letters):
                absorbedPAR_umol_m2_s1 groups
-architecture_I              17.645053      a
-architecture_H              10.798968      b
-architecture_G               7.899086      c
-architecture_F               5.990559      d
-architecture_B               5.435619      e
-control                      4.811918      f
-architecture_E               3.958466      g
-architecture_A               3.553519     gh
-architecture_D               3.176221      h
-architecture_C               2.533717      i
+architecture_F              17.645053      a
+architecture_E               7.899086      b
+architecture_B               5.435619      c
+control                      4.811918      d
+architecture_D               3.958466      e
+architecture_A               3.553519      e
+architecture_C               2.533717      f
 
 Shapiro-Wilk Normality Test:
 
 	Shapiro-Wilk normality test
 
 data:  residuals_data
-W = 0.97766, p-value = 5.755e-11
+W = 0.969, p-value = 1.161e-10
 
 
 Levene's Test for Homogeneity of Variances:
 Levene's Test for Homogeneity of Variance (center = median)
        Df F value    Pr(>F)    
-group   9  19.027 < 2.2e-16 ***
-      949                      
+group   6  21.788 < 2.2e-16 ***
+      659                      
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
