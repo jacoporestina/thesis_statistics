@@ -8,33 +8,33 @@ Kruskal-Wallis chi-squared = 410.37, df = 6, p-value < 2.2e-16
 
 
 Dunn's Test:
-                        Comparison          Z      P.unadj        P.adj
-1  architecture_A - architecture_B -5.2523506 1.501703e-07 3.153576e-06
-2  architecture_A - architecture_C -7.3211944 2.457735e-13 5.161244e-12
-3  architecture_B - architecture_C -2.0533764 4.003608e-02 8.407577e-01
-4  architecture_A - architecture_D -5.0566987 4.265763e-07 8.958102e-06
-5  architecture_B - architecture_D  0.1832477 8.546037e-01 1.000000e+00
-6  architecture_C - architecture_D  2.2322176 2.560058e-02 5.376123e-01
-7  architecture_A - architecture_E  2.9938963 2.754395e-03 5.784230e-02
-8  architecture_B - architecture_E  8.3158394 9.110515e-17 1.913208e-15
-9  architecture_C - architecture_E 10.4219857 1.968008e-25 4.132817e-24
-10 architecture_D - architecture_E  8.1101084 5.057461e-16 1.062067e-14
-11 architecture_A - architecture_F  9.1345247 6.569472e-20 1.379589e-18
-12 architecture_B - architecture_F 14.4616128 2.117767e-47 4.447311e-46
-13 architecture_C - architecture_F 16.5878442 8.532867e-62 1.791902e-60
-14 architecture_D - architecture_F 14.2412364 5.081988e-46 1.067217e-44
-15 architecture_E - architecture_F  6.2186284 5.015196e-10 1.053191e-08
-16        architecture_A - control  2.2172760 2.660424e-02 5.586890e-01
-17        architecture_B - control  7.5218715 5.399764e-14 1.133950e-12
-18        architecture_C - control  9.6185934 6.673753e-22 1.401488e-20
-19        architecture_D - control  7.3187525 2.502868e-13 5.256023e-12
-20        architecture_E - control -0.7771735 4.370564e-01 1.000000e+00
-21        architecture_F - control -6.9763994 3.028409e-12 6.359660e-11
+                          Comparison          Z      P.unadj        P.adj
+1  A-Gradient45-90 - B-Gradient90-45 -5.2523506 1.501703e-07 3.153576e-06
+2      A-Gradient45-90 - C-Uniform90 -7.3211944 2.457735e-13 5.161244e-12
+3      B-Gradient90-45 - C-Uniform90 -2.0533764 4.003608e-02 8.407577e-01
+4          A-Gradient45-90 - control  2.2172760 2.660424e-02 5.586890e-01
+5          B-Gradient90-45 - control  7.5218715 5.399764e-14 1.133950e-12
+6              C-Uniform90 - control  9.6185934 6.673753e-22 1.401488e-20
+7      A-Gradient45-90 - D-Uniform70 -5.0566987 4.265763e-07 8.958102e-06
+8      B-Gradient90-45 - D-Uniform70  0.1832477 8.546037e-01 1.000000e+00
+9          C-Uniform90 - D-Uniform70  2.2322176 2.560058e-02 5.376123e-01
+10             control - D-Uniform70 -7.3187525 2.502868e-13 5.256023e-12
+11     A-Gradient45-90 - E-Uniform50  2.9938963 2.754395e-03 5.784230e-02
+12     B-Gradient90-45 - E-Uniform50  8.3158394 9.110515e-17 1.913208e-15
+13         C-Uniform90 - E-Uniform50 10.4219857 1.968008e-25 4.132817e-24
+14             control - E-Uniform50  0.7771735 4.370564e-01 1.000000e+00
+15         D-Uniform70 - E-Uniform50  8.1101084 5.057461e-16 1.062067e-14
+16     A-Gradient45-90 - F-Uniform30  9.1345247 6.569472e-20 1.379589e-18
+17     B-Gradient90-45 - F-Uniform30 14.4616128 2.117767e-47 4.447311e-46
+18         C-Uniform90 - F-Uniform30 16.5878442 8.532867e-62 1.791902e-60
+19             control - F-Uniform30  6.9763994 3.028409e-12 6.359660e-11
+20         D-Uniform70 - F-Uniform30 14.2412364 5.081988e-46 1.067217e-44
+21         E-Uniform50 - F-Uniform30  6.2186284 5.015196e-10 1.053191e-08
 
 Significant Letters:
-architecture_A architecture_B architecture_C architecture_D architecture_E 
-           "a"            "b"            "b"            "b"            "a" 
-architecture_F        control 
-           "c"            "a" 
+A-Gradient45-90 B-Gradient90-45     C-Uniform90         control     D-Uniform70 
+            "a"             "b"             "b"             "a"             "b" 
+    E-Uniform50     F-Uniform30 
+            "a"             "c" 
 
 ---------------------------------------------

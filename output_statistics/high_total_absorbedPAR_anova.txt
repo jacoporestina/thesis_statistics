@@ -7,32 +7,32 @@ Residuals    681 1491616   2190.332       NA            NA
 Post-hoc LSD Test:
 
 Means for Each Group:
-               absorbedPAR_umol_m2_s1      std   r       se      LCL      UCL
-architecture_A               847.3536 41.29922  96 4.776606 837.9750 856.7323
-architecture_B               901.0700 59.77575  98 4.727614 891.7876 910.3525
-architecture_C               919.4507 41.17013 100 4.680099 910.2615 928.6398
-architecture_D               896.8391 49.47517  97 4.751920 887.5089 906.1693
-architecture_E               816.5637 49.82084 100 4.680099 807.3745 825.7528
-architecture_F               741.2471 31.70809  98 4.727614 731.9646 750.5295
-control                      825.0734 49.17096  99 4.703676 815.8380 834.3089
-                    Min       Max      Q25      Q50      Q75
-architecture_A 755.5797  941.8929 822.4551 849.8112 871.6826
-architecture_B 757.6284 1033.9917 859.9796 901.1577 942.0027
-architecture_C 828.7613 1027.7168 890.6571 919.1277 951.2212
-architecture_D 763.6852 1015.5661 861.9009 904.9532 929.9072
-architecture_E 705.8451  934.1693 779.1571 819.8591 852.2995
-architecture_F 653.3838  803.6810 719.7301 745.0252 763.3071
-control        713.6253  940.9363 792.7730 823.0891 858.4775
+                absorbedPAR_umol_m2_s1      std   r       se      LCL      UCL
+A-Gradient45-90               847.3536 41.29922  96 4.776606 837.9750 856.7323
+B-Gradient90-45               901.0700 59.77575  98 4.727614 891.7876 910.3525
+C-Uniform90                   919.4507 41.17013 100 4.680099 910.2615 928.6398
+control                       825.0734 49.17096  99 4.703676 815.8380 834.3089
+D-Uniform70                   896.8391 49.47517  97 4.751920 887.5089 906.1693
+E-Uniform50                   816.5637 49.82084 100 4.680099 807.3745 825.7528
+F-Uniform30                   741.2471 31.70809  98 4.727614 731.9646 750.5295
+                     Min       Max      Q25      Q50      Q75
+A-Gradient45-90 755.5797  941.8929 822.4551 849.8112 871.6826
+B-Gradient90-45 757.6284 1033.9917 859.9796 901.1577 942.0027
+C-Uniform90     828.7613 1027.7168 890.6571 919.1277 951.2212
+control         713.6253  940.9363 792.7730 823.0891 858.4775
+D-Uniform70     763.6852 1015.5661 861.9009 904.9532 929.9072
+E-Uniform50     705.8451  934.1693 779.1571 819.8591 852.2995
+F-Uniform30     653.3838  803.6810 719.7301 745.0252 763.3071
 
 Groups (Significant Letters):
-               absorbedPAR_umol_m2_s1 groups
-architecture_C               919.4507      a
-architecture_B               901.0700      b
-architecture_D               896.8391      b
-architecture_A               847.3536      c
-control                      825.0734      d
-architecture_E               816.5637      d
-architecture_F               741.2471      e
+                absorbedPAR_umol_m2_s1 groups
+C-Uniform90                   919.4507      a
+B-Gradient90-45               901.0700      b
+D-Uniform70                   896.8391      b
+A-Gradient45-90               847.3536      c
+control                       825.0734      d
+E-Uniform50                   816.5637      d
+F-Uniform30                   741.2471      e
 
 Shapiro-Wilk Normality Test:
 

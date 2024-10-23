@@ -7,32 +7,32 @@ Residuals    683  9428.777   13.80494       NA            NA
 Post-hoc LSD Test for Rank: 1 
 
 Means for Each Group:
-               absorbedPAR_umol_m2_s1      std   r        se       LCL      UCL
-architecture_A              11.433017 3.450648  99 0.3734218 10.699824 12.16621
-architecture_B              14.269621 4.235469  99 0.3734218 13.536429 15.00281
-architecture_C               9.565681 3.659319 100 0.3715500  8.836163 10.29520
-architecture_D              12.351117 3.935632  98 0.3753222 11.614193 13.08804
-architecture_E              19.706439 3.896890 100 0.3715500 18.976922 20.43596
-architecture_F              28.146429 3.725533  96 0.3792117 27.401868 28.89099
-control                     12.359551 2.966788  98 0.3753222 11.622627 13.09647
-                     Min      Max       Q25       Q50      Q75
-architecture_A  5.393427 19.69869  8.636588 11.263187 13.69709
-architecture_B  7.189063 23.94112 10.925850 13.977210 16.90242
-architecture_C  3.175306 18.01053  6.752652  9.237533 11.96333
-architecture_D  5.775006 22.75261  9.640914 11.546181 14.95728
-architecture_E  9.467196 29.44722 17.044692 19.707476 22.43043
-architecture_F 20.403432 36.09815 25.228458 28.578639 30.51728
-control         6.228034 18.62791 10.180142 11.900566 14.84123
+                absorbedPAR_umol_m2_s1      std   r        se       LCL
+A-Gradient45-90              11.433017 3.450648  99 0.3734218 10.699824
+B-Gradient90-45              14.269621 4.235469  99 0.3734218 13.536429
+C-Uniform90                   9.565681 3.659319 100 0.3715500  8.836163
+control                      12.359551 2.966788  98 0.3753222 11.622627
+D-Uniform70                  12.351117 3.935632  98 0.3753222 11.614193
+E-Uniform50                  19.706439 3.896890 100 0.3715500 18.976922
+F-Uniform30                  28.146429 3.725533  96 0.3792117 27.401868
+                     UCL       Min      Max       Q25       Q50      Q75
+A-Gradient45-90 12.16621  5.393427 19.69869  8.636588 11.263187 13.69709
+B-Gradient90-45 15.00281  7.189063 23.94112 10.925850 13.977210 16.90242
+C-Uniform90     10.29520  3.175306 18.01053  6.752652  9.237533 11.96333
+control         13.09647  6.228034 18.62791 10.180142 11.900566 14.84123
+D-Uniform70     13.08804  5.775006 22.75261  9.640914 11.546181 14.95728
+E-Uniform50     20.43596  9.467196 29.44722 17.044692 19.707476 22.43043
+F-Uniform30     28.89099 20.403432 36.09815 25.228458 28.578639 30.51728
 
 Groups (Significant Letters):
-               absorbedPAR_umol_m2_s1 groups
-architecture_F              28.146429      a
-architecture_E              19.706439      b
-architecture_B              14.269621      c
-control                     12.359551      d
-architecture_D              12.351117      d
-architecture_A              11.433017      d
-architecture_C               9.565681      e
+                absorbedPAR_umol_m2_s1 groups
+F-Uniform30                  28.146429      a
+E-Uniform50                  19.706439      b
+B-Gradient90-45              14.269621      c
+control                      12.359551      d
+D-Uniform70                  12.351117      d
+A-Gradient45-90              11.433017      d
+C-Uniform90                   9.565681      e
 
 Shapiro-Wilk Normality Test for Rank: 1 
 
@@ -60,32 +60,32 @@ Residuals    677  4764.392    7.037507       NA            NA
 Post-hoc LSD Test for Rank: 2 
 
 Means for Each Group:
-               absorbedPAR_umol_m2_s1      std   r        se       LCL
-architecture_A               7.229800 2.442725  99 0.2666194  6.706299
-architecture_B              10.627516 3.357867  99 0.2666194 10.104016
-architecture_C               5.600231 2.261892  94 0.2736185  5.062988
-architecture_D               7.918176 2.283172  98 0.2679763  7.392011
-architecture_E              13.211632 2.353615  95 0.2721746 12.677225
-architecture_F              20.800912 3.218114 100 0.2652830 20.280036
-control                      8.380512 2.363033  99 0.2666194  7.857012
-                     UCL       Min      Max       Q25       Q50       Q75
-architecture_A  7.753300  3.327128 13.27043  5.534418  6.713496  8.625702
-architecture_B 11.151016  5.383825 18.48832  7.670937 10.222229 13.275496
-architecture_C  6.137474  1.869709 12.03257  4.216395  4.932872  6.539081
-architecture_D  8.444341  3.806132 13.90637  6.185043  7.639273  9.472844
-architecture_E 13.746040  7.855390 19.70705 11.703990 13.457421 14.651920
-architecture_F 21.321789 12.751507 28.96587 18.275500 20.655057 23.135948
-control         8.904012  3.885748 15.22193  6.578817  8.012891 10.327084
+                absorbedPAR_umol_m2_s1      std   r        se       LCL
+A-Gradient45-90               7.229800 2.442725  99 0.2666194  6.706299
+B-Gradient90-45              10.627516 3.357867  99 0.2666194 10.104016
+C-Uniform90                   5.600231 2.261892  94 0.2736185  5.062988
+control                       8.380512 2.363033  99 0.2666194  7.857012
+D-Uniform70                   7.918176 2.283172  98 0.2679763  7.392011
+E-Uniform50                  13.211632 2.353615  95 0.2721746 12.677225
+F-Uniform30                  20.800912 3.218114 100 0.2652830 20.280036
+                      UCL       Min      Max       Q25       Q50       Q75
+A-Gradient45-90  7.753300  3.327128 13.27043  5.534418  6.713496  8.625702
+B-Gradient90-45 11.151016  5.383825 18.48832  7.670937 10.222229 13.275496
+C-Uniform90      6.137474  1.869709 12.03257  4.216395  4.932872  6.539081
+control          8.904012  3.885748 15.22193  6.578817  8.012891 10.327084
+D-Uniform70      8.444341  3.806132 13.90637  6.185043  7.639273  9.472844
+E-Uniform50     13.746040  7.855390 19.70705 11.703990 13.457421 14.651920
+F-Uniform30     21.321789 12.751507 28.96587 18.275500 20.655057 23.135948
 
 Groups (Significant Letters):
-               absorbedPAR_umol_m2_s1 groups
-architecture_F              20.800912      a
-architecture_E              13.211632      b
-architecture_B              10.627516      c
-control                      8.380512      d
-architecture_D               7.918176     de
-architecture_A               7.229800      e
-architecture_C               5.600231      f
+                absorbedPAR_umol_m2_s1 groups
+F-Uniform30                  20.800912      a
+E-Uniform50                  13.211632      b
+B-Gradient90-45              10.627516      c
+control                       8.380512      d
+D-Uniform70                   7.918176     de
+A-Gradient45-90               7.229800      e
+C-Uniform90                   5.600231      f
 
 Shapiro-Wilk Normality Test for Rank: 2 
 
@@ -113,32 +113,32 @@ Residuals    678 11310.6   16.68231       NA            NA
 Post-hoc LSD Test for Rank: 3 
 
 Means for Each Group:
-               absorbedPAR_umol_m2_s1      std   r        se       LCL
-architecture_A              11.182077 4.007939  99 0.4104974 10.376078
-architecture_B              15.576556 4.754077  99 0.4104974 14.770557
-architecture_C               8.881896 3.830593  98 0.4125865  8.071795
-architecture_D              10.463201 3.449972  94 0.4212735  9.636043
-architecture_E              17.428101 4.084556  96 0.4168621 16.609605
-architecture_F              25.355490 3.858452 100 0.4084398 24.553532
-control                     13.290426 4.440528  99 0.4104974 12.484427
-                     UCL       Min      Max       Q25       Q50      Q75
-architecture_A 11.988076  3.222324 21.13726  8.190820 10.389061 14.23297
-architecture_B 16.382555  6.000936 27.03292 11.979226 15.480300 19.24870
-architecture_C  9.691997  3.773851 20.36153  5.963978  7.803147 11.52566
-architecture_D 11.290358  2.856526 19.11114  8.278422 10.187012 12.37291
-architecture_E 18.246597  8.680816 27.96362 14.252787 17.889480 19.73425
-architecture_F 26.157449 16.262941 33.66125 22.755443 25.063800 28.09017
-control        14.096425  5.557041 24.11773  9.866570 13.035556 15.88229
+                absorbedPAR_umol_m2_s1      std   r        se       LCL
+A-Gradient45-90              11.182077 4.007939  99 0.4104974 10.376078
+B-Gradient90-45              15.576556 4.754077  99 0.4104974 14.770557
+C-Uniform90                   8.881896 3.830593  98 0.4125865  8.071795
+control                      13.290426 4.440528  99 0.4104974 12.484427
+D-Uniform70                  10.463201 3.449972  94 0.4212735  9.636043
+E-Uniform50                  17.428101 4.084556  96 0.4168621 16.609605
+F-Uniform30                  25.355490 3.858452 100 0.4084398 24.553532
+                      UCL       Min      Max       Q25       Q50      Q75
+A-Gradient45-90 11.988076  3.222324 21.13726  8.190820 10.389061 14.23297
+B-Gradient90-45 16.382555  6.000936 27.03292 11.979226 15.480300 19.24870
+C-Uniform90      9.691997  3.773851 20.36153  5.963978  7.803147 11.52566
+control         14.096425  5.557041 24.11773  9.866570 13.035556 15.88229
+D-Uniform70     11.290358  2.856526 19.11114  8.278422 10.187012 12.37291
+E-Uniform50     18.246597  8.680816 27.96362 14.252787 17.889480 19.73425
+F-Uniform30     26.157449 16.262941 33.66125 22.755443 25.063800 28.09017
 
 Groups (Significant Letters):
-               absorbedPAR_umol_m2_s1 groups
-architecture_F              25.355490      a
-architecture_E              17.428101      b
-architecture_B              15.576556      c
-control                     13.290426      d
-architecture_A              11.182077      e
-architecture_D              10.463201      e
-architecture_C               8.881896      f
+                absorbedPAR_umol_m2_s1 groups
+F-Uniform30                  25.355490      a
+E-Uniform50                  17.428101      b
+B-Gradient90-45              15.576556      c
+control                      13.290426      d
+A-Gradient45-90              11.182077      e
+D-Uniform70                  10.463201      e
+C-Uniform90                   8.881896      f
 
 Shapiro-Wilk Normality Test for Rank: 3 
 
@@ -166,32 +166,32 @@ Residuals    681 27008.91   39.66066       NA            NA
 Post-hoc LSD Test for Rank: 4 
 
 Means for Each Group:
-               absorbedPAR_umol_m2_s1      std  r        se      LCL      UCL
-architecture_A               21.08967 5.464536 98 0.6361608 19.84060 22.33874
-architecture_B               26.82815 7.482869 99 0.6329397 25.58540 28.07090
-architecture_C               16.36657 5.954041 99 0.6329397 15.12382 17.60932
-architecture_D               21.81902 6.323269 99 0.6329397 20.57628 23.06177
-architecture_E               30.57421 6.016004 99 0.6329397 29.33146 31.81696
-architecture_F               37.86436 4.592117 96 0.6427533 36.60235 39.12638
-control                      26.72066 7.653786 98 0.6361608 25.47159 27.96973
-                     Min      Max      Q25      Q50      Q75
-architecture_A  8.737303 34.77536 17.34756 20.82759 24.56869
-architecture_B 10.866473 45.00025 21.80544 26.35346 31.54770
-architecture_C  5.110906 31.47312 12.18116 16.02937 20.05286
-architecture_D  8.585426 38.36080 16.85115 21.53517 26.19185
-architecture_E 17.663932 47.36593 26.26414 29.59147 35.13663
-architecture_F 27.463606 47.20698 34.86539 37.13749 41.38129
-control        13.713103 46.93777 19.74749 26.20164 30.91472
+                absorbedPAR_umol_m2_s1      std  r        se      LCL      UCL
+A-Gradient45-90               21.08967 5.464536 98 0.6361608 19.84060 22.33874
+B-Gradient90-45               26.82815 7.482869 99 0.6329397 25.58540 28.07090
+C-Uniform90                   16.36657 5.954041 99 0.6329397 15.12382 17.60932
+control                       26.72066 7.653786 98 0.6361608 25.47159 27.96973
+D-Uniform70                   21.81902 6.323269 99 0.6329397 20.57628 23.06177
+E-Uniform50                   30.57421 6.016004 99 0.6329397 29.33146 31.81696
+F-Uniform30                   37.86436 4.592117 96 0.6427533 36.60235 39.12638
+                      Min      Max      Q25      Q50      Q75
+A-Gradient45-90  8.737303 34.77536 17.34756 20.82759 24.56869
+B-Gradient90-45 10.866473 45.00025 21.80544 26.35346 31.54770
+C-Uniform90      5.110906 31.47312 12.18116 16.02937 20.05286
+control         13.713103 46.93777 19.74749 26.20164 30.91472
+D-Uniform70      8.585426 38.36080 16.85115 21.53517 26.19185
+E-Uniform50     17.663932 47.36593 26.26414 29.59147 35.13663
+F-Uniform30     27.463606 47.20698 34.86539 37.13749 41.38129
 
 Groups (Significant Letters):
-               absorbedPAR_umol_m2_s1 groups
-architecture_F               37.86436      a
-architecture_E               30.57421      b
-architecture_B               26.82815      c
-control                      26.72066      c
-architecture_D               21.81902      d
-architecture_A               21.08967      d
-architecture_C               16.36657      e
+                absorbedPAR_umol_m2_s1 groups
+F-Uniform30                   37.86436      a
+E-Uniform50                   30.57421      b
+B-Gradient90-45               26.82815      c
+control                       26.72066      c
+D-Uniform70                   21.81902      d
+A-Gradient45-90               21.08967      d
+C-Uniform90                   16.36657      e
 
 Shapiro-Wilk Normality Test for Rank: 4 
 
@@ -219,32 +219,32 @@ Residuals    684 59856.92   87.51012       NA           NA
 Post-hoc LSD Test for Rank: 5 
 
 Means for Each Group:
-               absorbedPAR_umol_m2_s1       std   r        se      LCL      UCL
-architecture_A               49.60040  8.883809  95 0.9597704 47.71595 51.48485
-architecture_B               50.44226 11.520246 100 0.9354684 48.60553 52.27900
-architecture_C               38.11799 10.613979 100 0.9354684 36.28125 39.95472
-architecture_D               45.34937  9.063668  99 0.9401812 43.50338 47.19536
-architecture_E               60.82111  8.746432 100 0.9354684 58.98437 62.65784
-architecture_F               64.89443  4.925621  98 0.9449658 63.03905 66.74981
-control                      60.51490 10.186403  99 0.9401812 58.66891 62.36088
-                    Min      Max      Q25      Q50      Q75
-architecture_A 28.03992 69.36720 43.84469 48.44618 54.87067
-architecture_B 24.66161 74.28874 43.38630 50.83379 57.57589
-architecture_C 15.63405 67.05003 30.10646 38.03943 45.97600
-architecture_D 27.51630 68.29790 38.19828 45.53385 52.05093
-architecture_E 41.42533 85.17639 55.04003 60.71454 67.30502
-architecture_F 52.74805 78.08418 61.39014 65.30769 68.01615
-control        36.66801 86.06324 53.36409 60.50740 66.80849
+                absorbedPAR_umol_m2_s1       std   r        se      LCL
+A-Gradient45-90               49.60040  8.883809  95 0.9597704 47.71595
+B-Gradient90-45               50.44226 11.520246 100 0.9354684 48.60553
+C-Uniform90                   38.11799 10.613979 100 0.9354684 36.28125
+control                       60.51490 10.186403  99 0.9401812 58.66891
+D-Uniform70                   45.34937  9.063668  99 0.9401812 43.50338
+E-Uniform50                   60.82111  8.746432 100 0.9354684 58.98437
+F-Uniform30                   64.89443  4.925621  98 0.9449658 63.03905
+                     UCL      Min      Max      Q25      Q50      Q75
+A-Gradient45-90 51.48485 28.03992 69.36720 43.84469 48.44618 54.87067
+B-Gradient90-45 52.27900 24.66161 74.28874 43.38630 50.83379 57.57589
+C-Uniform90     39.95472 15.63405 67.05003 30.10646 38.03943 45.97600
+control         62.36088 36.66801 86.06324 53.36409 60.50740 66.80849
+D-Uniform70     47.19536 27.51630 68.29790 38.19828 45.53385 52.05093
+E-Uniform50     62.65784 41.42533 85.17639 55.04003 60.71454 67.30502
+F-Uniform30     66.74981 52.74805 78.08418 61.39014 65.30769 68.01615
 
 Groups (Significant Letters):
-               absorbedPAR_umol_m2_s1 groups
-architecture_F               64.89443      a
-architecture_E               60.82111      b
-control                      60.51490      b
-architecture_B               50.44226      c
-architecture_A               49.60040      c
-architecture_D               45.34937      d
-architecture_C               38.11799      e
+                absorbedPAR_umol_m2_s1 groups
+F-Uniform30                   64.89443      a
+E-Uniform50                   60.82111      b
+control                       60.51490      b
+B-Gradient90-45               50.44226      c
+A-Gradient45-90               49.60040      c
+D-Uniform70                   45.34937      d
+C-Uniform90                   38.11799      e
 
 Shapiro-Wilk Normality Test for Rank: 5 
 
@@ -272,32 +272,32 @@ Residuals    686 111334.51  162.2952       NA           NA
 Post-hoc LSD Test for Rank: 6 
 
 Means for Each Group:
-               absorbedPAR_umol_m2_s1       std   r       se      LCL      UCL
-architecture_A               87.98375 14.704062 100 1.273951 85.48244 90.48507
-architecture_B               71.95531 13.966800  96 1.300221 69.40242 74.50820
-architecture_C               69.45636 14.973255 100 1.273951 66.95505 71.95767
-architecture_D               79.88398 14.395816 100 1.273951 77.38267 82.38529
-architecture_E               85.27244  9.750146  99 1.280369 82.75853 87.78635
-architecture_F               85.75973  6.768006 100 1.273951 83.25842 88.26105
-control                      91.06938 12.366583  98 1.286885 88.54267 93.59609
-                    Min       Max      Q25      Q50      Q75
-architecture_A 59.15556 120.35706 77.05370 86.98627 99.09192
-architecture_B 38.94072 104.31285 62.88723 71.63265 77.58760
-architecture_C 36.86498 103.27395 60.13067 70.30020 79.22183
-architecture_D 47.28395 112.77423 68.69482 77.99712 90.62708
-architecture_E 62.91207 110.16031 79.27836 85.84627 91.57461
-architecture_F 73.01750  99.78003 80.12656 85.51205 90.77925
-control        59.93847 119.83344 83.98431 90.66329 99.83126
+                absorbedPAR_umol_m2_s1       std   r       se      LCL      UCL
+A-Gradient45-90               87.98375 14.704062 100 1.273951 85.48244 90.48507
+B-Gradient90-45               71.95531 13.966800  96 1.300221 69.40242 74.50820
+C-Uniform90                   69.45636 14.973255 100 1.273951 66.95505 71.95767
+control                       91.06938 12.366583  98 1.286885 88.54267 93.59609
+D-Uniform70                   79.88398 14.395816 100 1.273951 77.38267 82.38529
+E-Uniform50                   85.27244  9.750146  99 1.280369 82.75853 87.78635
+F-Uniform30                   85.75973  6.768006 100 1.273951 83.25842 88.26105
+                     Min       Max      Q25      Q50      Q75
+A-Gradient45-90 59.15556 120.35706 77.05370 86.98627 99.09192
+B-Gradient90-45 38.94072 104.31285 62.88723 71.63265 77.58760
+C-Uniform90     36.86498 103.27395 60.13067 70.30020 79.22183
+control         59.93847 119.83344 83.98431 90.66329 99.83126
+D-Uniform70     47.28395 112.77423 68.69482 77.99712 90.62708
+E-Uniform50     62.91207 110.16031 79.27836 85.84627 91.57461
+F-Uniform30     73.01750  99.78003 80.12656 85.51205 90.77925
 
 Groups (Significant Letters):
-               absorbedPAR_umol_m2_s1 groups
-control                      91.06938      a
-architecture_A               87.98375     ab
-architecture_F               85.75973      b
-architecture_E               85.27244      b
-architecture_D               79.88398      c
-architecture_B               71.95531      d
-architecture_C               69.45636      d
+                absorbedPAR_umol_m2_s1 groups
+control                       91.06938      a
+A-Gradient45-90               87.98375     ab
+F-Uniform30                   85.75973      b
+E-Uniform50                   85.27244      b
+D-Uniform70                   79.88398      c
+B-Gradient90-45               71.95531      d
+C-Uniform90                   69.45636      d
 
 Shapiro-Wilk Normality Test for Rank: 6 
 
@@ -325,32 +325,32 @@ Residuals    687 131912.3   192.0121       NA         NA
 Post-hoc LSD Test for Rank: 7 
 
 Means for Each Group:
-               absorbedPAR_umol_m2_s1       std   r       se       LCL      UCL
-architecture_A               139.3928 12.344195  98 1.399753 136.64454 142.1412
-architecture_B               119.4053 17.015714 100 1.385684 116.68464 122.1260
-architecture_C               130.5674 13.618460  96 1.414258 127.79057 133.3441
-architecture_D               128.9581 15.780220 100 1.385684 126.23746 131.6788
-architecture_E               121.2072 10.584314 100 1.385684 118.48648 123.9278
-architecture_F               103.9230  6.986328 100 1.385684 101.20233 106.6437
-control                      100.4681 17.486897 100 1.385684  97.74742 103.1888
-                     Min      Max       Q25      Q50      Q75
-architecture_A 113.39873 170.3840 131.20671 140.1432 146.9214
-architecture_B  74.57466 166.0590 108.77063 118.1543 132.0660
-architecture_C 100.84182 160.4675 120.71187 132.3041 139.6106
-architecture_D  88.42709 168.8038 118.54060 129.4733 139.4638
-architecture_E  95.11830 145.7861 114.85612 121.7765 128.5153
-architecture_F  88.45178 122.1719  98.67471 103.2969 109.1042
-control         58.80158 145.4426  89.23403 101.1770 113.1688
+                absorbedPAR_umol_m2_s1       std   r       se       LCL
+A-Gradient45-90               139.3928 12.344195  98 1.399753 136.64454
+B-Gradient90-45               119.4053 17.015714 100 1.385684 116.68464
+C-Uniform90                   130.5674 13.618460  96 1.414258 127.79057
+control                       100.4681 17.486897 100 1.385684  97.74742
+D-Uniform70                   128.9581 15.780220 100 1.385684 126.23746
+E-Uniform50                   121.2072 10.584314 100 1.385684 118.48648
+F-Uniform30                   103.9230  6.986328 100 1.385684 101.20233
+                     UCL       Min      Max       Q25      Q50      Q75
+A-Gradient45-90 142.1412 113.39873 170.3840 131.20671 140.1432 146.9214
+B-Gradient90-45 122.1260  74.57466 166.0590 108.77063 118.1543 132.0660
+C-Uniform90     133.3441 100.84182 160.4675 120.71187 132.3041 139.6106
+control         103.1888  58.80158 145.4426  89.23403 101.1770 113.1688
+D-Uniform70     131.6788  88.42709 168.8038 118.54060 129.4733 139.4638
+E-Uniform50     123.9278  95.11830 145.7861 114.85612 121.7765 128.5153
+F-Uniform30     106.6437  88.45178 122.1719  98.67471 103.2969 109.1042
 
 Groups (Significant Letters):
-               absorbedPAR_umol_m2_s1 groups
-architecture_A               139.3928      a
-architecture_C               130.5674      b
-architecture_D               128.9581      b
-architecture_E               121.2072      c
-architecture_B               119.4053      c
-architecture_F               103.9230      d
-control                      100.4681      d
+                absorbedPAR_umol_m2_s1 groups
+A-Gradient45-90               139.3928      a
+C-Uniform90                   130.5674      b
+D-Uniform70                   128.9581      b
+E-Uniform50                   121.2072      c
+B-Gradient90-45               119.4053      c
+F-Uniform30                   103.9230      d
+control                       100.4681      d
 
 Shapiro-Wilk Normality Test for Rank: 7 
 
@@ -378,32 +378,32 @@ Residuals    686 205325.3   299.308       NA            NA
 Post-hoc LSD Test for Rank: 8 
 
 Means for Each Group:
-               absorbedPAR_umol_m2_s1      std   r       se      LCL      UCL
-architecture_A               145.4352 14.02826  97 1.756602 141.9863 148.8842
-architecture_B               143.5246 23.28792  98 1.747616 140.0933 146.9559
-architecture_C               168.6241 16.21909  98 1.747616 165.1928 172.0555
-architecture_D               152.0117 17.47770 100 1.730052 148.6149 155.4085
-architecture_E               126.0851 14.60136 100 1.730052 122.6883 129.4819
-architecture_F               106.4363 11.70340 100 1.730052 103.0395 109.8332
-control                      137.3190 20.93822 100 1.730052 133.9222 140.7159
-                     Min      Max       Q25      Q50      Q75
-architecture_A 112.24304 171.0022 137.89730 145.6042 154.4273
-architecture_B  96.65309 191.5082 128.70955 141.2704 158.3073
-architecture_C 130.74193 209.4372 157.56399 170.8465 178.6703
-architecture_D 106.78895 189.2045 139.91154 155.2955 163.8503
-architecture_E  99.83709 159.7468 115.16375 123.6159 137.0435
-architecture_F  78.37079 127.8613  98.64625 105.9762 115.3194
-control         91.75022 189.6694 124.23686 136.3498 153.4211
+                absorbedPAR_umol_m2_s1      std   r       se      LCL      UCL
+A-Gradient45-90               145.4352 14.02826  97 1.756602 141.9863 148.8842
+B-Gradient90-45               143.5246 23.28792  98 1.747616 140.0933 146.9559
+C-Uniform90                   168.6241 16.21909  98 1.747616 165.1928 172.0555
+control                       137.3190 20.93822 100 1.730052 133.9222 140.7159
+D-Uniform70                   152.0117 17.47770 100 1.730052 148.6149 155.4085
+E-Uniform50                   126.0851 14.60136 100 1.730052 122.6883 129.4819
+F-Uniform30                   106.4363 11.70340 100 1.730052 103.0395 109.8332
+                      Min      Max       Q25      Q50      Q75
+A-Gradient45-90 112.24304 171.0022 137.89730 145.6042 154.4273
+B-Gradient90-45  96.65309 191.5082 128.70955 141.2704 158.3073
+C-Uniform90     130.74193 209.4372 157.56399 170.8465 178.6703
+control          91.75022 189.6694 124.23686 136.3498 153.4211
+D-Uniform70     106.78895 189.2045 139.91154 155.2955 163.8503
+E-Uniform50      99.83709 159.7468 115.16375 123.6159 137.0435
+F-Uniform30      78.37079 127.8613  98.64625 105.9762 115.3194
 
 Groups (Significant Letters):
-               absorbedPAR_umol_m2_s1 groups
-architecture_C               168.6241      a
-architecture_D               152.0117      b
-architecture_A               145.4352      c
-architecture_B               143.5246      c
-control                      137.3190      d
-architecture_E               126.0851      e
-architecture_F               106.4363      f
+                absorbedPAR_umol_m2_s1 groups
+C-Uniform90                   168.6241      a
+D-Uniform70                   152.0117      b
+A-Gradient45-90               145.4352      c
+B-Gradient90-45               143.5246      c
+control                       137.3190      d
+E-Uniform50                   126.0851      e
+F-Uniform30                   106.4363      f
 
 Shapiro-Wilk Normality Test for Rank: 8 
 
@@ -431,32 +431,32 @@ Residuals    686 308423.7    449.5972       NA            NA
 Post-hoc LSD Test for Rank: 9 
 
 Means for Each Group:
-               absorbedPAR_umol_m2_s1      std   r       se      LCL      UCL
-architecture_A               172.8937 20.54612  98 2.141898 168.6882 177.0991
-architecture_B               195.4967 26.85430 100 2.120371 191.3336 199.6599
-architecture_C               216.9113 20.33099  99 2.131053 212.7271 221.0955
-architecture_D               195.0520 23.36833  97 2.152910 190.8249 199.2791
-architecture_E               146.0226 21.57257 100 2.120371 141.8594 150.1858
-architecture_F               122.2066 15.72733 100 2.120371 118.0434 126.3698
-control                      161.1512 18.23599  99 2.131053 156.9670 165.3353
-                     Min      Max      Q25      Q50      Q75
-architecture_A 130.89363 217.7880 159.4338 173.8578 188.4645
-architecture_B 136.84944 251.8345 177.9280 198.0944 214.7081
-architecture_C 164.34585 259.0695 201.9869 217.7047 232.1776
-architecture_D 131.06204 248.1143 181.3204 195.3678 211.4490
-architecture_E  99.40911 202.1585 131.6800 146.2146 161.4942
-architecture_F  86.77300 158.8635 112.2152 121.9139 133.0221
-control        121.32960 200.0140 150.5226 163.1450 171.7684
+                absorbedPAR_umol_m2_s1      std   r       se      LCL      UCL
+A-Gradient45-90               172.8937 20.54612  98 2.141898 168.6882 177.0991
+B-Gradient90-45               195.4967 26.85430 100 2.120371 191.3336 199.6599
+C-Uniform90                   216.9113 20.33099  99 2.131053 212.7271 221.0955
+control                       161.1512 18.23599  99 2.131053 156.9670 165.3353
+D-Uniform70                   195.0520 23.36833  97 2.152910 190.8249 199.2791
+E-Uniform50                   146.0226 21.57257 100 2.120371 141.8594 150.1858
+F-Uniform30                   122.2066 15.72733 100 2.120371 118.0434 126.3698
+                      Min      Max      Q25      Q50      Q75
+A-Gradient45-90 130.89363 217.7880 159.4338 173.8578 188.4645
+B-Gradient90-45 136.84944 251.8345 177.9280 198.0944 214.7081
+C-Uniform90     164.34585 259.0695 201.9869 217.7047 232.1776
+control         121.32960 200.0140 150.5226 163.1450 171.7684
+D-Uniform70     131.06204 248.1143 181.3204 195.3678 211.4490
+E-Uniform50      99.40911 202.1585 131.6800 146.2146 161.4942
+F-Uniform30      86.77300 158.8635 112.2152 121.9139 133.0221
 
 Groups (Significant Letters):
-               absorbedPAR_umol_m2_s1 groups
-architecture_C               216.9113      a
-architecture_B               195.4967      b
-architecture_D               195.0520      b
-architecture_A               172.8937      c
-control                      161.1512      d
-architecture_E               146.0226      e
-architecture_F               122.2066      f
+                absorbedPAR_umol_m2_s1 groups
+C-Uniform90                   216.9113      a
+B-Gradient90-45               195.4967      b
+D-Uniform70                   195.0520      b
+A-Gradient45-90               172.8937      c
+control                       161.1512      d
+E-Uniform50                   146.0226      e
+F-Uniform30                   122.2066      f
 
 Shapiro-Wilk Normality Test for Rank: 9 
 
@@ -484,32 +484,32 @@ Residuals    676  65809.18     97.35086      NA     NA
 Post-hoc LSD Test for Rank: 10 
 
 Means for Each Group:
-               absorbedPAR_umol_m2_s1       std   r        se      LCL      UCL
-architecture_A               199.1601  8.642012  97 1.0018069 197.1930 201.1271
-architecture_B               250.7165 12.148868  95 1.0122973 248.7289 252.7041
-architecture_C               256.8082  4.243325  97 1.0018069 254.8412 258.7753
-architecture_D               242.5094 10.559248  98 0.9966825 240.5524 244.4663
-architecture_E               194.8319 13.483683 100 0.9866654 192.8946 196.7692
-architecture_F               145.4775 10.462879 100 0.9866654 143.5403 147.4148
-control                      212.2452  5.969079  96 1.0070111 210.2680 214.2225
-                    Min      Max      Q25      Q50      Q75
-architecture_A 175.5605 215.1272 193.5689 201.9374 205.6462
-architecture_B 218.5384 267.2007 244.0720 254.5068 259.8333
-architecture_C 246.2634 267.2496 254.1471 256.6838 259.5248
-architecture_D 211.9333 260.6435 235.5976 244.9477 250.6597
-architecture_E 162.0681 217.7057 185.4486 197.0575 204.7774
-architecture_F 118.5506 166.7902 138.6628 146.2598 152.7883
-control        196.7333 222.8093 208.6381 213.4160 216.5142
+                absorbedPAR_umol_m2_s1       std   r        se      LCL
+A-Gradient45-90               199.1601  8.642012  97 1.0018069 197.1930
+B-Gradient90-45               250.7165 12.148868  95 1.0122973 248.7289
+C-Uniform90                   256.8082  4.243325  97 1.0018069 254.8412
+control                       212.2452  5.969079  96 1.0070111 210.2680
+D-Uniform70                   242.5094 10.559248  98 0.9966825 240.5524
+E-Uniform50                   194.8319 13.483683 100 0.9866654 192.8946
+F-Uniform30                   145.4775 10.462879 100 0.9866654 143.5403
+                     UCL      Min      Max      Q25      Q50      Q75
+A-Gradient45-90 201.1271 175.5605 215.1272 193.5689 201.9374 205.6462
+B-Gradient90-45 252.7041 218.5384 267.2007 244.0720 254.5068 259.8333
+C-Uniform90     258.7753 246.2634 267.2496 254.1471 256.6838 259.5248
+control         214.2225 196.7333 222.8093 208.6381 213.4160 216.5142
+D-Uniform70     244.4663 211.9333 260.6435 235.5976 244.9477 250.6597
+E-Uniform50     196.7692 162.0681 217.7057 185.4486 197.0575 204.7774
+F-Uniform30     147.4148 118.5506 166.7902 138.6628 146.2598 152.7883
 
 Groups (Significant Letters):
-               absorbedPAR_umol_m2_s1 groups
-architecture_C               256.8082      a
-architecture_B               250.7165      b
-architecture_D               242.5094      c
-control                      212.2452      d
-architecture_A               199.1601      e
-architecture_E               194.8319      f
-architecture_F               145.4775      g
+                absorbedPAR_umol_m2_s1 groups
+C-Uniform90                   256.8082      a
+B-Gradient90-45               250.7165      b
+D-Uniform70                   242.5094      c
+control                       212.2452      d
+A-Gradient45-90               199.1601      e
+E-Uniform50                   194.8319      f
+F-Uniform30                   145.4775      g
 
 Shapiro-Wilk Normality Test for Rank: 10 
 
