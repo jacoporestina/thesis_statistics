@@ -93,10 +93,4 @@ The scripts and notebooks generate various outputs:
 - **Statistical Results**: Detailed summaries of statistical tests.
 - **Combined Data Files**: Consolidated datasets ready for further analysis.
 
-## License
 
-This repository is distributed under the [MIT License](LICENSE).
-
-## Author
-
-[Jacopo Restina] - Contributions to data visualization and statistical analysis in plant science research.
