@@ -3,33 +3,33 @@ Kruskal-Wallis Test:
 
 	Kruskal-Wallis rank sum test
 
-data:  absorbedPAR_umol_m2_s1 by architecture
+data:  absorbedPAR_umol_m2_s1_crop by architecture
 Kruskal-Wallis chi-squared = 463.42, df = 6, p-value < 2.2e-16
 
 
 Dunn's Test:
-                          Comparison          Z      P.unadj        P.adj
-1  A-Gradient45-90 - B-Gradient90-45  -5.388323 7.111830e-08 1.493484e-06
-2      A-Gradient45-90 - C-Uniform90   3.303137 9.560950e-04 2.007799e-02
-3      B-Gradient90-45 - C-Uniform90   8.783047 1.591053e-18 3.341212e-17
-4          A-Gradient45-90 - control  -4.042590 5.286398e-05 1.110144e-03
-5          B-Gradient90-45 - control   1.343777 1.790205e-01 1.000000e+00
-6              C-Uniform90 - control  -7.412584 1.238616e-13 2.601094e-12
-7      A-Gradient45-90 - D-Uniform70  -1.261008 2.073058e-01 1.000000e+00
-8      B-Gradient90-45 - D-Uniform70   4.134212 3.561747e-05 7.479669e-04
-9          C-Uniform90 - D-Uniform70  -4.589155 4.450435e-06 9.345914e-05
-10             control - D-Uniform70   2.787151 5.317374e-03 1.116649e-01
-11     A-Gradient45-90 - E-Uniform50 -10.034532 1.074674e-23 2.256816e-22
-12     B-Gradient90-45 - E-Uniform50  -4.708967 2.489753e-06 5.228482e-05
-13         C-Uniform90 - E-Uniform50 -13.472435 2.272451e-41 4.772146e-40
-14             control - E-Uniform50  -6.034864 1.590969e-09 3.341036e-08
-15         D-Uniform70 - E-Uniform50  -8.800798 1.358462e-18 2.852770e-17
-16     A-Gradient45-90 - F-Uniform30 -14.779611 1.983075e-49 4.164457e-48
-17     B-Gradient90-45 - F-Uniform30  -9.608693 7.347540e-22 1.542983e-20
-18         C-Uniform90 - F-Uniform30 -18.200312 5.131505e-74 1.077616e-72
-19             control - F-Uniform30 -10.893201 1.241969e-27 2.608134e-26
-20         D-Uniform70 - F-Uniform30 -13.586811 4.795251e-42 1.007003e-40
-21         E-Uniform50 - F-Uniform30  -4.984483 6.212757e-07 1.304679e-05
+                          Comparison         Z      P.unadj        P.adj
+1  A-Gradient45-90 - B-Gradient90-45  5.388323 7.111830e-08 1.493484e-06
+2      A-Gradient45-90 - C-Uniform90 -3.303137 9.560950e-04 2.007799e-02
+3      B-Gradient90-45 - C-Uniform90 -8.783047 1.591053e-18 3.341212e-17
+4          A-Gradient45-90 - control  4.042590 5.286398e-05 1.110144e-03
+5          B-Gradient90-45 - control -1.343777 1.790205e-01 1.000000e+00
+6              C-Uniform90 - control  7.412584 1.238616e-13 2.601094e-12
+7      A-Gradient45-90 - D-Uniform70  1.261008 2.073058e-01 1.000000e+00
+8      B-Gradient90-45 - D-Uniform70 -4.134212 3.561747e-05 7.479669e-04
+9          C-Uniform90 - D-Uniform70  4.589155 4.450435e-06 9.345914e-05
+10             control - D-Uniform70 -2.787151 5.317374e-03 1.116649e-01
+11     A-Gradient45-90 - E-Uniform50 10.034532 1.074674e-23 2.256816e-22
+12     B-Gradient90-45 - E-Uniform50  4.708967 2.489753e-06 5.228482e-05
+13         C-Uniform90 - E-Uniform50 13.472435 2.272451e-41 4.772146e-40
+14             control - E-Uniform50  6.034864 1.590969e-09 3.341036e-08
+15         D-Uniform70 - E-Uniform50  8.800798 1.358462e-18 2.852770e-17
+16     A-Gradient45-90 - F-Uniform30 14.779611 1.983075e-49 4.164457e-48
+17     B-Gradient90-45 - F-Uniform30  9.608693 7.347540e-22 1.542983e-20
+18         C-Uniform90 - F-Uniform30 18.200312 5.131505e-74 1.077616e-72
+19             control - F-Uniform30 10.893201 1.241969e-27 2.608134e-26
+20         D-Uniform70 - F-Uniform30 13.586811 4.795251e-42 1.007003e-40
+21         E-Uniform50 - F-Uniform30  4.984483 6.212757e-07 1.304679e-05
 
 Significant Letters:
 A-Gradient45-90 B-Gradient90-45     C-Uniform90         control     D-Uniform70 
