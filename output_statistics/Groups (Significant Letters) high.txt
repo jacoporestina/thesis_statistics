@@ -1,0 +1,99 @@
+Groups (Significant Letters) Rank 10:
+                absorbedPAR_umol_m2_s1 groups
+C-Uniform90                   256.8082      a
+B-Gradient90-45               250.7165      b
+D-Uniform70                   242.5094      c
+control                       212.2452      d
+A-Gradient45-90               199.1601      e
+E-Uniform50                   194.8319      f
+F-Uniform30                   145.4775      g
+
+Groups (Significant Letters) rank 9:
+                absorbedPAR_umol_m2_s1 groups
+C-Uniform90                   216.9113      a
+B-Gradient90-45               195.4967      b
+D-Uniform70                   195.0520      b
+A-Gradient45-90               172.8937      c
+control                       161.1512      d
+E-Uniform50                   146.0226      e
+F-Uniform30                   122.2066      f
+
+Groups (Significant Letters) Rank 8:
+                absorbedPAR_umol_m2_s1 groups
+C-Uniform90                   168.6241      a
+D-Uniform70                   152.0117      b
+A-Gradient45-90               145.4352      c
+B-Gradient90-45               143.5246      c
+control                       137.3190      d
+E-Uniform50                   126.0851      e
+F-Uniform30                   106.4363      f
+
+Groups (Significant Letters) Rank 7:
+                absorbedPAR_umol_m2_s1 groups
+A-Gradient45-90               139.3928      a
+C-Uniform90                   130.5674      b
+D-Uniform70                   128.9581      b
+E-Uniform50                   121.2072      c
+B-Gradient90-45               119.4053      c
+F-Uniform30                   103.9230      d
+control                       100.4681      d
+
+Groups (Significant Letters) Rank 6 :
+                absorbedPAR_umol_m2_s1 groups
+control                       91.06938      a
+A-Gradient45-90               87.98375     ab
+F-Uniform30                   85.75973      b
+E-Uniform50                   85.27244      b
+D-Uniform70                   79.88398      c
+B-Gradient90-45               71.95531      d
+C-Uniform90                   69.45636      d
+
+Groups (Significant Letters) rank 5 :
+                absorbedPAR_umol_m2_s1 groups
+F-Uniform30                   64.89443      a
+E-Uniform50                   60.82111      b
+control                       60.51490      b
+B-Gradient90-45               50.44226      c
+A-Gradient45-90               49.60040      c
+D-Uniform70                   45.34937      d
+C-Uniform90                   38.11799      e
+
+Groups (Significant Letters) rank 4 :
+                absorbedPAR_umol_m2_s1 groups
+F-Uniform30                   37.86436      a
+E-Uniform50                   30.57421      b
+B-Gradient90-45               26.82815      c
+control                       26.72066      c
+D-Uniform70                   21.81902      d
+A-Gradient45-90               21.08967      d
+C-Uniform90                   16.36657      e
+
+Groups (Significant Letters) rank 3:
+                absorbedPAR_umol_m2_s1 groups
+F-Uniform30                  25.355490      a
+E-Uniform50                  17.428101      b
+B-Gradient90-45              15.576556      c
+control                      13.290426      d
+A-Gradient45-90              11.182077      e
+D-Uniform70                  10.463201      e
+C-Uniform90                   8.881896      f
+
+Groups (Significant Letters) rank 2:
+                absorbedPAR_umol_m2_s1 groups
+F-Uniform30                  20.800912      a
+E-Uniform50                  13.211632      b
+B-Gradient90-45              10.627516      c
+control                       8.380512      d
+D-Uniform70                   7.918176     de
+A-Gradient45-90               7.229800      e
+C-Uniform90                   5.600231      f
+
+Groups (Significant Letters) rank 1 :
+                absorbedPAR_umol_m2_s1 groups
+F-Uniform30                  28.146429      a
+E-Uniform50                  19.706439      b
+B-Gradient90-45              14.269621      c
+control                      12.359551      d
+D-Uniform70                  12.351117      d
+A-Gradient45-90              11.433017      d
+C-Uniform90                   9.565681      e
